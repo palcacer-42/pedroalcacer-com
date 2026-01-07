@@ -327,3 +327,13 @@ Theme: MIT License
 2. Enable GitHub Pages in settings
 3. Add your custom domain
 4. Start adding your content!
+
+## Development Log
+
+### January 7, 2026
+
+*   **Homepage Links Fixed:** Corrected all navigation links on the homepage, including the main call-to-action buttons, the primary navigation menu, and the language switcher. The links now correctly navigate within the selected language.
+*   **Simplified Code:** Refactored the layout templates (`baseof.html`, `index.html`) for simplicity and easier future maintenance, following best practices.
+*   **Project Documentation:** Initialized this `README.md` file to document the project structure, setup, and progress.
+
+---

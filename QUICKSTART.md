@@ -69,9 +69,9 @@ Replace `YOUR_USERNAME` with your actual GitHub username.
 
 ### 6️⃣ **Set Up Custom Domain** (Optional but Recommended)
 
-#### For `pedroalcacer.com`:
+#### For `pedroalcacer.com`:/home/palcacer/websites/pedroalcacer.com/
 
-**With your domain registrar** (wherever you bought the domain):
+**With your domain registrar** (wherever you bought /home/palcacer/websites/pedroalcacer.com/the domain):
 1. Find **DNS settings** 
 2. Add **CNAME record**:
    - Name: `www`
