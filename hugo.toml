@@ -5,7 +5,7 @@ theme = "pedroalcacer"
 
 # Multi-language configuration
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 [languages]
   [languages.en]
