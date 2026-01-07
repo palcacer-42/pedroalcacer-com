@@ -35,27 +35,27 @@ defaultContentLanguageInSubdir = true
     weight = 1
   [[menu.main]]
     name = "Biography"
-    url = "/biography/"
+    url = "biography"
     weight = 2
   [[menu.main]]
     name = "Instruments"
-    url = "/instruments/"
+    url = "instruments"
     weight = 3
   [[menu.main]]
     name = "Discography"
-    url = "/discs/"
+    url = "discs"
     weight = 4
   [[menu.main]]
     name = "Media"
-    url = "/media/"
+    url = "media"
     weight = 5
   [[menu.main]]
     name = "Programs"
-    url = "/programs/"
+    url = "programs"
     weight = 6
   [[menu.main]]
     name = "Contact"
-    url = "/contact/"
+    url = "contact"
     weight = 7
 
 # Output formats
