@@ -1,49 +1,36 @@
 ---
 title: "Recordings"
 description: "Discography and recordings featuring Pedro Alcàcer"
----
-
-## Discography
-
-### As Soloist
-
-**Luis Milán - Primer libro Intitulado "El Maestro"**
-- Vihuela: Pedro Alcàcer
-
-### Ensemble Recordings
-
-**Kassia** - Burak Özdemir & Musica Sequenza
-
-**Villa Vivaldi** - Ensemble Volcania
-
-**Heinrich Schütz - Dafne** - Capella ducale & Musica fiata (Roland Wilson)
-
-**Carlo Filago - Sacri concerti a voce sola con la partitura per l'organo** - Ensemble les Nations
-
-**Vivaldi - Sonate per Violoncello e continuo** - Bologna Baroque
-
-**Nicola Porpora - 6 Cello Sonatas** - Adriano Maria Fazio (Cello)
-
-**A. Giannettini - L'uomo in bivio** - Cantar Lontano (Marco Mencoboni)
-
----
-
-title: "Discs"
 discs:
-  - title: "El Vuelo de Ícaro"
-    subtitle: "Pedro Alcacer"
-    image: "/images/icaro.jpg"
-    description: "First solo album by Pedro Alcacer."
-  - title: "Fantasía"
-    subtitle: "Pedro Alcacer"
-    image: "/images/fantasia.jpg"
-    description: "Second solo album by Pedro Alcacer."
-  - title: "Live in Madrid"
-    subtitle: "Pedro Alcacer"
-    image: "/images/live_in_madrid.jpg"
-    description: "Live album recorded in Madrid."
-  - title: "A Tribute to Paco de Lucía"
-    subtitle: "Various Artists"
-    image: "/images/tribute_to_paco.jpg"
-    description: "Collaboration album with other artists."
+  - title: 'Luis Milán Primer libro Intitulado "El Maestro"'
+    artist: "Pedro Alcàcer"
+    role: "Vihuela"
+    image: "/images/discs/milan.png"
+    url: "https://srsr.li/pedro-alcacer-luis-milan-el-maestro"
+  - title: "Kassia"
+    artist: "Burak Özdemir & Musica Sequenza"
+    image: "/images/discs/kassia.png"
+  - title: "Villa Vivaldi"
+    artist: "Ensemble Volcania"
+    image: "/images/discs/villa-vivaldi.png"
+    url: "https://open.spotify.com/intl-es/album/69eWxyHuCkq3g9ON9ZuN5f?si=2G3zeSBwRo6QPHkESm1rRw"
+  - title: "Heinrich Schütz - Dafne"
+    artist: "Capella ducale - Musica fiata (Roland Wilson)"
+    image: "/images/discs/schutz.png"
+    url: "https://open.spotify.com/intl-es/album/3YBHZ0Ilr2K66tnuweQuId?si=hvs_aiQIQb2vypyr1gZWOQ"
+  - title: "Carlo Filago - Sacri concerti a voce sola con la partitura per l'organo"
+    artist: "Ensemble les Nations"
+    image: "/images/discs/filago.png"
+    url: "https://open.spotify.com/intl-es/album/2uZnONe772XkJrcaSuFYqT?si=8-Tc1yiDQwmgCFZ_7bc34A"
+  - title: "Vivaldi - Sonate per Violoncello e continuo"
+    artist: "Bologna Baroque"
+    image: "/images/discs/vivaldi-sonate.png"
+  - title: "A. Giannettini - L'uomo in bivio"
+    artist: "Cantar Lontano (Marco Mencoboni)"
+    image: "/images/discs/giannettini.png"
+    url: "https://open.spotify.com/album/2x66kHPtZAP3H1HDcACplU"
+  - title: "Nicola Porpora - 6 cello Sonatas"
+    artist: "Adriano Maria Fazio - Cello"
+    image: "/images/discs/porpora.png"
+    url: "https://open.spotify.com/album/5wHAtd2J4CTaK1c6HVn9kV?si=6ll567kZRmmiV3abetCkXw"
 ---

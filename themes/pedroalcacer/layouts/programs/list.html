@@ -1,19 +1,31 @@
 {{ define "main" }}
 <div class="container">
-  <h1 class="title">{{ .Title }}</h1>
-  <div class="columns is-multiline">
-    {{ range .Params.programs }}
-    <div class="column is-one-third">
-      <div class="card">
-        <div class="card-content">
-          <p class="title">{{ .title }}</p>
-          <div class="content">
-            {{ .description | markdownify }}
-          </div>
-        </div>
-      </div>
+    <h1 class="title">{{ .Title }}</h1>
+    <div class="content">
+        {{ .Content }}
     </div>
-    {{ end }}
-  </div>
+
+    <div class="columns">
+        <div class="column">
+            <h2><a href="{{ "programs/solo" | relURL }}">Solo Programs</a></h2>
+            {{ with .Site.GetPage "programs/solo" }}
+                <ul>
+                    {{ range .Pages }}
+                        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+            {{ end }}
+        </div>
+        <div class="column">
+            <h2><a href="{{ "programs/ensemble" | relURL }}">Ensemble Programs</a></h2>
+            {{ with .Site.GetPage "programs/ensemble" }}
+                <ul>
+                    {{ range .Pages }}
+                        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+            {{ end }}
+        </div>
+    </div>
 </div>
 {{ end }}

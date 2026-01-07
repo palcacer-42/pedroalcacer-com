@@ -1,0 +1,28 @@
+<div class="overflow-x-auto">
+  <table class="min-w-full bg-white border border-gray-200">
+    <thead>
+      <tr class="bg-gray-100">
+        <th class="px-6 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Date</th>
+        <th class="px-6 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">City</th>
+        <th class="px-6 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Venue</th>
+        <th class="px-6 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Ensemble</th>
+        <th class="px-6 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Program</th>
+      </tr>
+    </thead>
+    <tbody class="bg-white">
+      {{ $delimiter := ";" }}
+      {{ $concerts := getCSV $delimiter "data/concerts.csv" }}
+      {{ range $i, $row := after 1 $concerts }}
+        {{ if gt (len $row) 1 }}
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 0 }}</td>
+        <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 1 }}</td>
+        <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 2 }}</td>
+        <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 3 }}</td>
+        <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 4 }}</td>
+      </tr>
+        {{ end }}
+      {{ end }}
+    </tbody>
+  </table>
+</div>
