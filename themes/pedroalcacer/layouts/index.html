@@ -1,30 +1,35 @@
 {{ define "main" }}
-<section class="home-hero">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Pedro Alcàcer</h1>
-            <p class="subtitle">Professional Lutenist & Early Music Specialist</p>
-            <p class="description">Master of the lute, theorbo, and Renaissance instruments specializing in historical performance</p>
-            <div class="hero-buttons">
-                <a href="{{ "biography/" | relLangURL }}" class="btn btn-primary">{{ i18n "learn_more" }}</a>
-                <a href="{{ "media/" | relLangURL }}" class="btn btn-secondary">{{ i18n "watch_listen" }}</a>
-            </div>
-        </div>
+<section class="hero-section">
+    <div class="hero-image">
+        <img src="{{ "/hero.jpg" | relURL }}" alt="Pedro Alcàcer">
     </div>
 </section>
 
-<section class="featured-content">
+<section class="quote-section">
     <div class="container">
-        <h2>{{ i18n "latest_news" }}</h2>
-        <div class="news-grid">
-            {{ range first 3 (where .Site.RegularPages "Type" "news") }}
-            <article class="news-card">
-                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                <p>{{ .Summary }}</p>
-                <a href="{{ .Permalink }}" class="read-more">{{ i18n "read_more" }} →</a>
-            </article>
-            {{ end }}
-        </div>
+        <blockquote class="testimonial">
+            <p>"Pedro Alcácer is an engaging and lively musician, - full of ideas and with very interesting potential."</p>
+            <footer>
+                <strong>Hopkinson Smith,</strong><br>
+                Professor of Lute, Schola Cantorum Baselensis
+            </footer>
+        </blockquote>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2><a href="https://srsr.li/pedro-alcacer-luis-milan-el-maestro" target="_blank">Listen to El Maestro in all Streaming Platforms</a></h2>
+    </div>
+</section>
+
+<section class="newsletter-section">
+    <div class="container">
+        <h3>Subscribe to the Newsletter:</h3>
+        <form class="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
     </div>
 </section>
 {{ end }}
