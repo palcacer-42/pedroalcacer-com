@@ -1,6 +1,19 @@
 ---
 title: "Instruments"
 description: "The early music instruments Pedro Alcàcer specializes in"
+instruments:
+  - title: "Vihuela"
+    image: "/images/instruments/vihuela.jpg"
+  - title: "Renaissance Lute"
+    image: "/images/instruments/renaissance-lute.jpg"
+  - title: "Renaissance Guitar"
+    image: "/images/instruments/renaissance-guitar.jpg"
+  - title: "Archlute"
+    image: "/images/instruments/archlute.jpg"
+  - title: "Theorbo"
+    image: "/images/instruments/theorbo.jpg"
+  - title: "Baroque Guitar"
+    image: "/images/instruments/baroque-guitar.jpg"
 ---
 
 ## Baroque and Renaissance Instruments

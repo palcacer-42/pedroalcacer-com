@@ -18,3 +18,11 @@ As a passionate musician, he continued his instrumental improvement with Evangel
 ## Current Activities
 
 He currently lives in Berlin and collaborates with various ensembles dedicated to early music in Europe. The artist is known for his profound experience and artistic sensitivity, which he has acquired through collaborations with outstanding musicians and teachers from all over the world. His international experience and high qualifications make him an outstanding artist in his field.
+
+Pedro Alcàcer, born in Valencia (Spain), began his musical studies at an early age, specializing in classical guitar. He later discovered his passion for early music and historical plucked string instruments, which led him to move to Barcelona to study with the renowned lutenist and musicologist, Xavier Díaz-Latorre, at the Escola Superior de Música de Catalunya (ESMUC).
+
+He continued his training in Italy, where he obtained a Master's degree in Lute and Theorbo from the "Conservatorio Statale di Musica "A. Pedrollo" in Vicenza, under the guidance of the prestigious lutenist, Massimo Lonardi. During his time in Italy, he also had the opportunity to study with other influential figures in the early music scene, such as Hopkinson Smith, Evangelina Mascardi, and Paul O'Dette.
+
+As a performer, Pedro Alcàcer has collaborated with numerous ensembles and orchestras, including the Orquesta Nacional de España, the Orquesta Sinfónica de Galicia, and the Orquesta de la Comunitat Valenciana. He has also performed in major concert halls and festivals across Europe, such as the Auditorio Nacional de Música in Madrid, the Palau de la Música Catalana in Barcelona, the Festival d'Ambronay in France, and the Utrecht Early Music Festival in the Netherlands.
+
+In addition to his work as a performer, Pedro Alcàcer is also a dedicated teacher and researcher. He has given masterclasses and workshops at various institutions, and his research focuses on the performance practice of the lute and theorbo in the 17th and 18th centuries.

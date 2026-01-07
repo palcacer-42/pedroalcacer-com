@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="container">
+  <h1 class="title">{{ .Title }}</h1>
+  <div class="columns is-multiline">
+    {{ range .Params.programs }}
+    <div class="column is-one-third">
+      <div class="card">
+        <div class="card-content">
+          <p class="title">{{ .title }}</p>
+          <div class="content">
+            {{ .description | markdownify }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

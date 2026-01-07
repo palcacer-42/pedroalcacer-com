@@ -25,3 +25,25 @@ description: "Discography and recordings featuring Pedro Alcàcer"
 **Nicola Porpora - 6 Cello Sonatas** - Adriano Maria Fazio (Cello)
 
 **A. Giannettini - L'uomo in bivio** - Cantar Lontano (Marco Mencoboni)
+
+---
+
+title: "Discs"
+discs:
+  - title: "El Vuelo de Ícaro"
+    subtitle: "Pedro Alcacer"
+    image: "/images/icaro.jpg"
+    description: "First solo album by Pedro Alcacer."
+  - title: "Fantasía"
+    subtitle: "Pedro Alcacer"
+    image: "/images/fantasia.jpg"
+    description: "Second solo album by Pedro Alcacer."
+  - title: "Live in Madrid"
+    subtitle: "Pedro Alcacer"
+    image: "/images/live_in_madrid.jpg"
+    description: "Live album recorded in Madrid."
+  - title: "A Tribute to Paco de Lucía"
+    subtitle: "Various Artists"
+    image: "/images/tribute_to_paco.jpg"
+    description: "Collaboration album with other artists."
+---

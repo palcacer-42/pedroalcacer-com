@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="container">
+    <article class="page-content">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </article>
+    <div class="gallery">
+        {{ range .Params.instruments }}
+        <div class="gallery-item">
+            <img src="{{ .image }}" alt="{{ .title }}">
+            <h3>{{ .title }}</h3>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
