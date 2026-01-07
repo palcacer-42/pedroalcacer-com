@@ -16,19 +16,18 @@
             </div>
             <ul class="nav-menu">
                 {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL | relLangURL }}" class="nav-link">{{ .Name }}</a></li>
+                <li><a href="{{ .URL | absLangURL }}" class="nav-link">{{ .Name }}</a></li>
                 {{ end }}
             </ul>
             
             <!-- Language Selector -->
             <div class="language-selector">
-                {{ range $i, $lang := $.Site.Languages }}
-                    {{ if eq $lang.Lang $.Page.Lang }}
-                        <span class="lang-current">{{ $lang.LanguageName }}</span>
+                {{ range .Site.Languages }}
+                    {{ if eq .Lang $.Page.Lang }}
+                        <span class="lang-current">{{ .LanguageName }}</span>
                     {{ else }}
-                        <a href="/{{ $lang.Lang }}/" class="lang-link">{{ $lang.LanguageName }}</a>
+                        <a href="{{ .Lang | absLangURL }}" class="lang-link">{{ .LanguageName }}</a>
                     {{ end }}
-                    {{ if lt $i (sub (len $.Site.Languages) 1) }} | {{ end }}
                 {{ end }}
             </div>
         </div>
