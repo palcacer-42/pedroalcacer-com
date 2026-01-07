@@ -1,0 +1,329 @@
+# Pedro Alcàcer - Personal Website
+
+A multi-language Hugo-based static site for Pedro Alcàcer's musician portfolio, hosted on GitHub Pages.
+
+## Overview
+
+This site replaces your previous Wix site with a free, fast, and maintainable alternative built with Hugo static site generator.
+
+**Languages Supported:** English, Spanish (Español), Catalan (Català), German (Deutsch), French (Français), Italian (Italiano)
+
+## Features
+
+- ✅ **Multi-language support** - 6 languages with automatic navigation
+- ✅ **Static & Fast** - Generates plain HTML (no database needed)
+- ✅ **SEO Friendly** - Automatic sitemaps and proper meta tags
+- ✅ **Responsive Design** - Mobile-friendly out of the box
+- ✅ **Free Hosting** - GitHub Pages (no cost)
+- ✅ **Easy to Edit** - Simple markdown files for content
+- ✅ **Custom Domain** - Use your existing pedroalcacer.com domain
+
+## Project Structure
+
+```
+pedroalcacer-site/
+├── content/              # Page content (organized by language)
+│   ├── en/              # English pages
+│   ├── es/              # Spanish pages
+│   ├── ca/              # Catalan pages
+│   ├── de/              # German pages
+│   ├── fr/              # French pages
+│   └── it/              # Italian pages
+├── themes/
+│   └── pedroalcacer/    # Custom theme
+│       ├── layouts/     # HTML templates
+│       └── static/      # CSS, images, etc.
+├── i18n/                # Translation strings
+├── hugo.toml            # Main configuration
+├── .github/workflows/   # GitHub Actions deployment
+└── public/              # Generated website (build output)
+```
+
+## Getting Started Locally
+
+### Prerequisites
+
+- Hugo 0.121.2 or later (already installed)
+- Git
+
+### Local Development
+
+1. **Clone the repository** (when you push to GitHub):
+```bash
+git clone https://github.com/yourusername/pedroalcacer-site.git
+cd pedroalcacer-site
+```
+
+2. **Start the development server**:
+```bash
+hugo server
+```
+
+3. **Visit** `http://localhost:1313` in your browser
+
+Changes to content files will automatically reload!
+
+## Adding/Editing Content
+
+### Editing an Existing Page
+
+All content is in the `content/` directory. Edit the `.md` (Markdown) files:
+
+```
+content/
+├── en/biography/_index.md
+├── en/instruments/_index.md
+├── en/discs/_index.md
+├── en/media/_index.md
+├── en/programs/_index.md
+└── en/contact/_index.md
+```
+
+Example - Edit `content/en/biography/_index.md`:
+```markdown
+---
+title: "Biography"
+description: "Learn about Pedro Alcàcer"
+---
+
+## About Pedro Alcàcer
+
+Your content here...
+```
+
+### Adding a New Page
+
+1. Create a new file in the appropriate language folder
+2. Add frontmatter (title, etc.)
+3. Write your content in Markdown
+
+Example creating a new projects page:
+```bash
+mkdir -p content/en/projects
+cat > content/en/projects/_index.md << 'EOF'
+---
+title: "Projects"
+description: "My projects"
+---
+
+## Recent Projects
+
+Content here...
+EOF
+```
+
+Then add to menu in `hugo.toml`:
+```toml
+[[menu.main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 8
+```
+
+### Translating to Other Languages
+
+1. Copy the English `.md` file to each language folder
+2. Update the content in that language
+
+Example for Spanish biography:
+```bash
+cp content/en/biography/_index.md content/es/biography/_index.md
+# Edit content/es/biography/_index.md with Spanish translation
+```
+
+## Images & Media
+
+Place images in `themes/pedroalcacer/static/images/`:
+
+Reference in Markdown:
+```markdown
+![Description]({{ "images/photo.jpg" | relURL }})
+```
+
+## Configuration
+
+Main settings in `hugo.toml`:
+
+- **baseURL** - Your website domain
+- **title** - Site title
+- **defaultContentLanguage** - Default language (en)
+- **[languages]** - Language definitions
+- **[menu.main]** - Navigation menu items
+
+## Building for Production
+
+```bash
+hugo  # Creates /public directory
+```
+
+The `public/` folder contains the complete static website ready to deploy.
+
+## Deployment to GitHub Pages
+
+### Step 1: Initialize Git Repository
+
+```bash
+cd pedroalcacer-site
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+### Step 2: Create GitHub Repository
+
+1. Go to https://github.com/new
+2. Create repository: `pedroalcacer-site`
+3. Choose **Public** (required for free GitHub Pages)
+4. **DO NOT** initialize with README (you already have files)
+
+### Step 3: Push to GitHub
+
+```bash
+git remote add origin https://github.com/yourusername/pedroalcacer-site.git
+git branch -M main
+git push -u origin main
+```
+
+### Step 4: Enable GitHub Pages
+
+1. Go to repository **Settings** → **Pages**
+2. Under "Build and deployment":
+   - **Source:** GitHub Actions
+   - The workflow file (`.github/workflows/deploy.yml`) will auto-deploy
+
+### Step 5: Point Your Domain
+
+In your domain registrar (where you bought pedroalcacer.com):
+
+1. Find **DNS settings**
+2. Add **CNAME record**:
+   - Name: `www`
+   - Value: `yourusername.github.io`
+
+Or for root domain:
+   - Add **A records** pointing to GitHub's IP addresses:
+     ```
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
+     ```
+
+3. In GitHub repository Settings → Pages → "Custom domain": `pedroalcacer.com`
+
+**Wait 10-24 hours for DNS to propagate**
+
+## Translations
+
+UI strings (buttons, labels) are in `i18n/` directory:
+
+- `i18n/en.toml` - English
+- `i18n/es.toml` - Spanish
+- `i18n/ca.toml` - Catalan
+- `i18n/de.toml` - German
+- `i18n/fr.toml` - French
+- `i18n/it.toml` - Italian
+
+Example in `i18n/en.toml`:
+```toml
+learn_more = "Learn More"
+read_more = "Read More"
+```
+
+Use in templates:
+```html
+{{ i18n "learn_more" }}
+```
+
+## Customization
+
+### Change Colors
+
+Edit `themes/pedroalcacer/static/css/style.css`:
+
+```css
+:root {
+    --primary-color: #2c3e50;      /* Dark blue */
+    --accent-color: #e74c3c;        /* Red accent */
+    --text-color: #333;
+    --bg-color: #fff;
+    /* ... */
+}
+```
+
+### Change Logo/Branding
+
+Edit `themes/pedroalcacer/layouts/baseof.html` - the navbar section:
+
+```html
+<div class="nav-brand">
+    <a href="{{ .Site.BaseURL }}{{ .Lang }}/">Pedro Alcàcer</a>
+</div>
+```
+
+### Add Social Links
+
+Edit footer in `themes/pedroalcacer/layouts/baseof.html`:
+
+```html
+<div class="social-links">
+    <a href="YOUR_FACEBOOK_URL" target="_blank">
+        <i class="fab fa-facebook"></i>
+    </a>
+    <!-- Add more links -->
+</div>
+```
+
+## Troubleshooting
+
+### Site builds but pages show "404"
+
+- Check `baseURL` in `hugo.toml` matches your domain
+- Ensure content is in `content/en/`, `content/es/`, etc.
+
+### Language switching not working
+
+- Verify all 6 languages in `hugo.toml` have corresponding `i18n/XX.toml` files
+- Check content exists in language folders
+
+### Changes not showing up
+
+- Run `hugo` to rebuild
+- Clear browser cache (Ctrl+Shift+Delete)
+- Delete `/public` and rebuild: `rm -rf public && hugo`
+
+### GitHub Pages not updating
+
+- Check **Actions** tab in GitHub repository for build errors
+- Verify `.github/workflows/deploy.yml` exists
+- Ensure repository is **Public**
+
+## Future Enhancements
+
+Possible additions:
+- [ ] Blog section with dates
+- [ ] Image galleries for performances
+- [ ] Contact form integration (Netlify Forms, Formspree)
+- [ ] Newsletter signup
+- [ ] Event calendar
+- [ ] PDF downloads (sheet music, CV)
+- [ ] Search functionality
+
+## Support & Resources
+
+- **Hugo Documentation:** https://gohugo.io/documentation/
+- **GitHub Pages Help:** https://docs.github.com/en/pages
+- **Markdown Guide:** https://www.markdownguide.org/
+
+## License
+
+Content: © 2026 Pedro Alcàcer
+Theme: MIT License
+
+---
+
+**Your website is now ready to deploy! Next steps:**
+1. Initialize Git and push to GitHub
+2. Enable GitHub Pages in settings
+3. Add your custom domain
+4. Start adding your content!

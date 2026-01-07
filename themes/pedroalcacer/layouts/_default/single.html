@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="page-content">
+    <div class="container">
+        <article class="post">
+            <h1>{{ .Title }}</h1>
+            {{ if .Params.date }}
+            <time class="post-date">{{ .Date.Format "2006-01-02" }}</time>
+            {{ end }}
+            <div class="post-body">
+                {{ .Content }}
+            </div>
+        </article>
+    </div>
+</section>
+{{ end }}

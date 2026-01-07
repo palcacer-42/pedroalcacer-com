@@ -1,0 +1,63 @@
+baseURL = "https://www.pedroalcacer.com/"
+languageCode = "en-us"
+title = "Pedro Alcàcer - Lutenist"
+theme = "pedroalcacer"
+
+# Multi-language configuration
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+  [languages.es]
+    languageName = "Español"
+    weight = 2
+  [languages.ca]
+    languageName = "Català"
+    weight = 3
+  [languages.de]
+    languageName = "Deutsch"
+    weight = 4
+  [languages.fr]
+    languageName = "Français"
+    weight = 5
+  [languages.it]
+    languageName = "Italiano"
+    weight = 6
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Biography"
+    url = "/biography/"
+    weight = 2
+  [[menu.main]]
+    name = "Instruments"
+    url = "/instruments/"
+    weight = 3
+  [[menu.main]]
+    name = "Discography"
+    url = "/discs/"
+    weight = 4
+  [[menu.main]]
+    name = "Media"
+    url = "/media/"
+    weight = 5
+  [[menu.main]]
+    name = "Programs"
+    url = "/programs/"
+    weight = 6
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 7
+
+# Output formats
+# [outputs]
+#   home = ["HTML", "JSON"]
