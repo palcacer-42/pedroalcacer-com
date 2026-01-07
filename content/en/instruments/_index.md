@@ -1,30 +1,32 @@
 ---
 title: "Instruments"
-description: "The historical instruments played by Pedro Alcàcer"
+description: "The early music instruments Pedro Alcàcer specializes in"
 ---
 
-## Historical Instruments
+## Baroque and Renaissance Instruments
 
-Pedro Alcàcer plays a variety of early music instruments, each with its own unique sound and history.
+Pedro Alcàcer specializes in the performance and teaching of early plucked string instruments, with expertise in:
 
-### Renaissance Lute
+- **Lute** - Renaissance and Baroque repertoire
+- **Theorbo** - Baroque continuo accompaniment
+- **Vihuela** - Spanish Renaissance plucked instrument
+- **Arciliuto** - Baroque variant combining lute and theorbo characteristics
+- **Liuto Rinascimentale** - Renaissance lute
 
-The Renaissance lute is a plucked string instrument with a distinctive pear-shaped body. It was the primary polyphonic instrument of the Renaissance period.
+### Instruments Featured
 
-### Baroque Lute
+[Guitarra Renacentista]({{< relref "/instruments/guitarra-renacentista" >}})
 
-The Baroque lute evolved from the Renaissance lute, featuring additional courses and different tuning systems to accommodate the musical demands of Baroque composers.
+[Guitarra Barroca]({{< relref "/instruments/guitarra-barroca" >}})
 
-### Theorbo
+[Tiorba]({{< relref "/instruments/tiorba" >}})
 
-The theorbo is a large plucked string instrument used primarily as a continuo instrument in Baroque music, supporting harmonic progression in ensemble and vocal music.
+[Arciliuto]({{< relref "/instruments/arciliuto" >}})
 
-### Vihuela
+[Liuto Rinascimentale]({{< relref "/instruments/liuto-rinascimentale" >}})
 
-The Spanish vihuela was the predecessor to the modern guitar, popular during the Renaissance in Spain and Portugal.
+[Vihuela]({{< relref "/instruments/vihuela" >}})
 
-### Arciliuto
+## Performance Practice
 
-The arciliuto is an Italian Baroque lute variant that combines features of both the lute and theorbo, used in both solo and ensemble music.
-
-Each instrument has been carefully selected and maintained to achieve authentic historical sound and performance practice.
+All instruments are performed according to historical performance practice principles, with attention to original tunings, ornamentations, and interpretation styles.

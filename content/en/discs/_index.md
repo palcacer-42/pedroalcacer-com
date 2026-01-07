@@ -1,23 +1,27 @@
 ---
-title: "Discography"
-description: "Recordings and albums"
+title: "Recordings"
+description: "Discography and recordings featuring Pedro Alcàcer"
 ---
 
 ## Discography
 
-### El Maestro - Luis Milán
+### As Soloist
 
-A comprehensive recording of Luis Milán's famous Renaissance lute works, presenting the complete vihuela repertoire adapted for lute.
+**Luis Milán - Primer libro Intitulado "El Maestro"**
+- Vihuela: Pedro Alcàcer
 
-**Format:** Digital Album
-**Available on:** All major streaming platforms
+### Ensemble Recordings
 
-[Listen on Streaming Platforms](https://srsr.li/pedro-alcacer-luis-milan-el-maestro)
+**Kassia** - Burak Özdemir & Musica Sequenza
 
-### Other Recordings
+**Villa Vivaldi** - Ensemble Volcania
 
-Pedro has participated in various ensemble recordings and collaborations with other early music specialists, documenting important works in the Renaissance and Baroque repertoire.
+**Heinrich Schütz - Dafne** - Capella ducale & Musica fiata (Roland Wilson)
 
-## Featured Performances
+**Carlo Filago - Sacri concerti a voce sola con la partitura per l'organo** - Ensemble les Nations
 
-Recordings of live performances are available through various early music labels and streaming services.
+**Vivaldi - Sonate per Violoncello e continuo** - Bologna Baroque
+
+**Nicola Porpora - 6 Cello Sonatas** - Adriano Maria Fazio (Cello)
+
+**A. Giannettini - L'uomo in bivio** - Cantar Lontano (Marco Mencoboni)

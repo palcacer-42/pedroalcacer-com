@@ -1,26 +1,17 @@
 ---
-title: "Media"
-description: "Videos and audio recordings"
+title: "Audio and Video"
+description: "Audio and video recordings of Pedro Alcàcer's performances"
 ---
 
-## Videos and Performances
+## Performance Recordings
 
-Watch Pedro Alcàcer perform on various historical lute instruments.
+Watch and listen to performances and recordings of Pedro Alcàcer with various early music ensembles and collaborators.
 
-### YouTube Channel
+### Featured Performances
 
-Subscribe to the channel for regular performances and demonstrations:
-[YouTube Channel](https://www.youtube.com/palcacer)
+- Baroque and Renaissance lute music
+- Solo performances on period instruments
+- Chamber music with early music ensembles
+- Continuo accompaniment in vocal and instrumental works
 
-## Audio Recordings
-
-Listen to high-quality recordings of Renaissance and Baroque masterworks performed on period instruments.
-
-### Streaming Platforms
-
-- **Spotify, Apple Music, Amazon Music:** El Maestro and other recordings
-- **Bandcamp:** [Pedro Alcàcer Collection](https://palcacer.bandcamp.com/album/luis-mil-n-primer-libro-intitulado-el-maestro)
-
-## Concert Performances
-
-Audio recordings from live performances at international festivals and concert venues are regularly added to the collection.
+For complete recordings and discography, see the [Recordings]({{< relref "/discs" >}}) page.

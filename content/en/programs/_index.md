@@ -1,33 +1,25 @@
 ---
 title: "Programs"
-description: "Upcoming performances and programs"
 ---
 
-## Concert Programs
+## Masterclasses and Workshops
 
-### Upcoming Performances
+Pedro Alcàcer offers specialized instruction and workshops on:
 
-Information about upcoming concerts and performances will be posted here. For booking inquiries and performance schedules, please contact directly.
+- Early music performance practice
+- Renaissance and Baroque lute technique
+- Historical performance interpretation
+- Period instruments and tuning systems
+- Continuo accompaniment
 
-## Programs
+### Solo Programs
 
-### Solo Lute Recitals
-
-Solo programs featuring Renaissance and Baroque lute works from across Europe.
+- Renaissance repertoire for lute and vihuela
+- Baroque lute and theorbo works
+- Works by Luis Milán, Silvius Leopold Weiss, and other masters
 
 ### Ensemble Programs
 
-Chamber music programs with voice, viol consort, and other early music instruments.
+Collaborative performances featuring various early music ensembles and chamber configurations.
 
-### Masterclasses
-
-Educational programs on early music instruments, historical performance practice, and Renaissance/Baroque repertoire.
-
-## Workshop Programs
-
-- Introduction to Early Music Instruments
-- Historical Performance Practice
-- Lute Technique and Repertoire
-- Renaissance and Baroque Music History
-
-For program details and booking, please contact through the contact page.
+For more information about scheduling a masterclass or performance, please contact via the [Contact]({{< relref "/contact" >}}) page.
