@@ -399,4 +399,68 @@ Theme: MIT License
 *   **Simplified Code:** Refactored the layout templates (`baseof.html`, `index.html`) for simplicity and easier future maintenance, following best practices.
 *   **Project Documentation:** Initialized this `README.md` file to document the project structure, setup, and progress.
 
+## Album Links Shortcode
+
+You can render an elegant, data-driven album card with platform links using the `album_links` shortcode.
+
+- Data file location: `data/albums/<id>.yaml` (example: `data/albums/luis-milan.yaml`).
+- Shortcode usage in any content page:
+
+```html
+{{< album_links id="luis-milan" >}}
+```
+
+- Supported link keys: `spotify`, `deezer`, `tidal`, `bandcamp`, `youtube`, `amazon`.
+- Optional keys: `cover` (URL or site path), `year`.
+
+Example `data/albums/luis-milan.yaml`:
+
+```yaml
+title: "Luis Milán: El Maestro"
+year: 2025
+cover: "/images/albums/luis-milan-cover.jpg"
+links:
+    spotify: "https://open.spotify.com/album/1B2TgPuNXzNFRmfzthtYer"
+    deezer:  "https://www.deezer.com/album/664086261"
+    tidal:   "https://listen.tidal.com/album/396979243"
+    bandcamp: "https://palcacer.bandcamp.com/album/..."
+    youtube: "https://www.youtube.com/playlist?list=..."
+    amazon:  "https://music.amazon.it/…"
+```
+
+Notes:
+- Place album cover images under `themes/pedroalcacer/static/images/albums/` or a public `static/` path and reference via `cover`.
+- The shortcode injects SVG icons for each platform (you can swap icons in `layouts/shortcodes/album_links.html`).
+- Styles are in `themes/pedroalcacer/static/css/style.css` under the `.album-card` and `.album-link-button` rules.
+
+## Concerts CSV → JSON converter
+
+To avoid Hugo parsing errors with semicolon CSVs, the project includes a small converter that outputs `data/concerts.json` used by the site.
+
+- Script: `scripts/tools/convert_concerts.py` — converts a semicolon-separated CSV to JSON compatible with Hugo.
+- Fetcher (optional): `scripts/tools/fetch_sheet_and_convert.py` — downloads a published Google Sheet as CSV and invokes the converter.
+- GitHub Action: `.github/workflows/update-concerts.yml` can be used to run the fetch/convert on a schedule or manually.
+
+Usage (local):
+
+```bash
+python3 scripts/tools/convert_concerts.py temp_migration/concerts.csv data/concerts.json
+# or to fetch a published sheet first
+python3 scripts/tools/fetch_sheet_and_convert.py <SHEET_ID>
+```
+
+If you prefer keeping the Google Sheet private, consider the documented Apps Script push option in `docs/google-apps-script/`.
+
+## Icons and Styling
+
+- Platform icons are embedded SVGs inside `layouts/shortcodes/album_links.html` and given a circular subtle background via CSS.
+- To use official brand marks, replace the inline SVGs with licensed SVG files stored in `themes/pedroalcacer/static/icons/` and adjust the shortcode.
+
+## Adding a new album page
+
+1. Create the data file: `data/albums/<id>.yaml`.
+2. Create localized content pages: `content/<lang>/discs/<id>/index.md` and include the shortcode.
+3. Rebuild the site: `hugo` or run `hugo server -D` for live preview.
+
+
 ---
