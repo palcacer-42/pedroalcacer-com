@@ -10,10 +10,11 @@
       </tr>
     </thead>
     <tbody class="bg-white">
-      {{ $delimiter := ";" }}
-      {{ $concerts := getCSV $delimiter "data/concerts.csv" }}
-      {{ range $i, $row := after 1 $concerts }}
-        {{ if gt (len $row) 1 }}
+      {{ $csvFile := resources.Get "data/concerts.csv" }}
+      {{ if $csvFile }}
+        {{ $csvData := $csvFile | transform.Unmarshal (dict "delimiter" ";") }}
+        {{ range $i, $row := after 1 $csvData }}
+          {{ if gt (len $row) 1 }}
       <tr>
         <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 0 }}</td>
         <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 1 }}</td>
@@ -21,6 +22,7 @@
         <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 3 }}</td>
         <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 4 }}</td>
       </tr>
+          {{ end }}
         {{ end }}
       {{ end }}
     </tbody>

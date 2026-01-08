@@ -67,6 +67,12 @@ defaultContentLanguageInSubdir = true
 # Ignore REF_NOT_FOUND errors for missing pages in other languages
 ignoreErrors = ["error-missing-page-ref"]
 
+# Allow HTML in markdown
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 # Output formats
 # [outputs]
 #   home = ["HTML", "JSON"]

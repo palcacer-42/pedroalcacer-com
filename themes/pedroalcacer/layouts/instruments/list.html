@@ -7,53 +7,15 @@
         </div>
         
         <div class="instruments-grid">
+            {{ range .Params.instruments }}
             <div class="instrument-card">
-                <img src="{{ "/images/DSC_9444.jpg" | relURL }}" alt="Renaissance Guitar">
+                <img src="{{ .image | relURL }}" alt="{{ .title }}">
                 <div class="instrument-info">
-                    <h3>Renaissance Guitar</h3>
-                    <p>Five-course guitar from the 16th century</p>
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .builder }}</p>
                 </div>
             </div>
-            
-            <div class="instrument-card">
-                <img src="{{ "/images/DSC_9447.jpg" | relURL }}" alt="Baroque Guitar">
-                <div class="instrument-info">
-                    <h3>Baroque Guitar</h3>
-                    <p>Ornate five-course guitar from the Baroque period</p>
-                </div>
-            </div>
-            
-            <div class="instrument-card">
-                <img src="{{ "/images/DSC_9454.jpg" | relURL }}" alt="Theorbo">
-                <div class="instrument-info">
-                    <h3>Theorbo (Tiorba)</h3>
-                    <p>Long-necked lute for continuo accompaniment</p>
-                </div>
-            </div>
-            
-            <div class="instrument-card">
-                <img src="{{ "/images/DSC_9468.jpg" | relURL }}" alt="Archlute">
-                <div class="instrument-info">
-                    <h3>Archlute (Arciliuto)</h3>
-                    <p>Italian baroque lute with extended bass strings</p>
-                </div>
-            </div>
-            
-            <div class="instrument-card">
-                <img src="{{ "/images/DSC_9478.jpg" | relURL }}" alt="Renaissance Lute">
-                <div class="instrument-info">
-                    <h3>Renaissance Lute</h3>
-                    <p>Six-course lute for Renaissance repertoire</p>
-                </div>
-            </div>
-            
-            <div class="instrument-card">
-                <img src="{{ "/images/DSC_9487.jpg" | relURL }}" alt="Vihuela">
-                <div class="instrument-info">
-                    <h3>Vihuela</h3>
-                    <p>Spanish plucked string instrument</p>
-                </div>
-            </div>
+            {{ end }}
         </div>
     </div>
 </section>
