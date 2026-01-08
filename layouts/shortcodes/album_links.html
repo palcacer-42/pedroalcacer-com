@@ -2,12 +2,17 @@
 {{ $album := index .Site.Data.albums $id }}
 {{ if $album }}
 <div class="album-card">
-  <div class="album-card__meta">
-    <h3 class="album-card__title">{{ $album.title }}</h3>
-    {{ with $album.year }}<span class="album-card__year">{{ . }}</span>{{ end }}
-  </div>
+  {{ with $album.cover }}
+    <div class="album-card__cover"><img src="{{ . }}" alt="{{ $album.title }} cover"></div>
+  {{ end }}
 
-  <ul class="album-links">
+  <div>
+    <div class="album-card__meta">
+      <h3 class="album-card__title">{{ $album.title }}</h3>
+      {{ with $album.year }}<span class="album-card__year">{{ . }}</span>{{ end }}
+    </div>
+
+    <ul class="album-links">
     {{ range $k, $v := $album.links }}
       <li class="album-link-item">
         <a class="album-link-button" href="{{ $v }}" target="_blank" rel="noopener">
@@ -28,7 +33,8 @@
         </a>
       </li>
     {{ end }}
-  </ul>
+    </ul>
+  </div>
 </div>
 {{ else }}
 <p>Album "{{ $id }}" not found.</p>
