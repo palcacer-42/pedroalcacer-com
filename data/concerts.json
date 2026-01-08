@@ -1,0 +1,457 @@
+[
+  {
+    "date": "27/03/2022",
+    "city": "Berlin, Alemania",
+    "venue": "Theater Aufbau Kreuzberg",
+    "ensemble": "Musica Sequenza & Kainkollektiv",
+    "program": "Kassia"
+  },
+  {
+    "date": "20/03/2022",
+    "city": "Berlin, Alemania",
+    "venue": "Ev. Kirche Am Lietzensee",
+    "ensemble": "Titans Rising Friends",
+    "program": "Caritas abundant in omnia"
+  },
+  {
+    "date": "06/03/2022",
+    "city": "Leipzig, Alemania",
+    "venue": "Kulturnhalle",
+    "ensemble": "Anima Shirvani",
+    "program": "West-Östlicher Divan"
+  },
+  {
+    "date": "08/02/2022",
+    "city": "Berlin, Alemania",
+    "venue": "Kammermusiksaal Friedenau",
+    "ensemble": "Natalie Pfeiffer, Alma Stolte, Anna Reisener, Lea Strecker, Semion Gurevich, Pedro Alcàcer",
+    "program": "Masterrezital Hedwig Ohse"
+  },
+  {
+    "date": "23/12/2021",
+    "city": "Berlin, Alemania",
+    "venue": "Kammermusiksaal der Philharmonie",
+    "ensemble": "Berlin Baroque",
+    "program": "Weihnachtsoratorium, J.S Bach"
+  },
+  {
+    "date": "11/12/2021",
+    "city": "Berlin, Alemania",
+    "venue": "Ev. Kirche Am Lietzensee",
+    "ensemble": "Titans Rising",
+    "program": "Bailar y Danzar"
+  },
+  {
+    "date": "17/11/2021",
+    "city": "Berlin, Alemania",
+    "venue": "Pierre Boulez Saal",
+    "ensemble": "Boulez Ensemble",
+    "program": "Guiseppe Mentuccia/ Vivaldi"
+  },
+  {
+    "date": "14/11/2021",
+    "city": "Berlin, Alemania",
+    "venue": "Pierre Boulez Saal",
+    "ensemble": "Corellis Cousinen",
+    "program": "In stile italiano"
+  },
+  {
+    "date": "07/11/2021",
+    "city": "Berlin, Alemania",
+    "venue": "Kühlhaus - Altemusikfest Fridenau",
+    "ensemble": "Crossing borders Ensemble",
+    "program": "Crossing Borders"
+  },
+  {
+    "date": "20/10/2021",
+    "city": "Berlin, Alemania",
+    "venue": "Clinkerlounge - Altemusikfest Fridenau",
+    "ensemble": "Illtupia",
+    "program": "Tanz auf dem Vulkan"
+  },
+  {
+    "date": "22/08/2021",
+    "city": "Hamburgo, Alemania",
+    "venue": "Melanchthonkirche Groß Flottbek",
+    "ensemble": "Anima Shirvani",
+    "program": "West-Östlicher Diven"
+  },
+  {
+    "date": "20/06/2021",
+    "city": "Berlin, Alemania",
+    "venue": "Kammermusiksaal Friedenau",
+    "ensemble": "Mazan Goldenfeld, Ekaterina Gorynina, Pedro Alcàcer",
+    "program": "Anima Barroca"
+  },
+  {
+    "date": "19/06/2021",
+    "city": "Berlin, Alemania",
+    "venue": "Freilichtbühne an der Zitadelle",
+    "ensemble": "Berliner Figuralchor - Berlin Baroque Leitung Gerhard Oppelt",
+    "program": "Theodora - Haendel"
+  },
+  {
+    "date": "20/11/2020",
+    "city": "Berlin, Alemania",
+    "venue": "Joseph Joachim Saal Universität der Künste",
+    "ensemble": "Master Konzert/ Deborah York",
+    "program": "Abschluss Konzert"
+  },
+  {
+    "date": "20/09/2020",
+    "city": "Berlin, Alemania",
+    "venue": "Flughafen Tempelhof",
+    "ensemble": "Impulsia-Ensamble",
+    "program": "L’Incorporazione di Popper"
+  },
+  {
+    "date": "15/08/2020",
+    "city": "Berlin, Alemania",
+    "venue": "Cosimaplatz",
+    "ensemble": "Martina Rüping, Sabine Erdmann, Pedro Alcàcer",
+    "program": "Barock Open Air Konzert"
+  },
+  {
+    "date": "29/07/2020",
+    "city": "Valle (Monzuno)",
+    "venue": "Sagrato della chiesa di San Giorgio",
+    "ensemble": "Duo Bernardi, Alcàcer",
+    "program": "Itinerari organistici, rassegna Musica in bianco e nero"
+  },
+  {
+    "date": "08/02/2020",
+    "city": "Ciudad de México, México",
+    "venue": "Bucareli, 69",
+    "ensemble": "Lobke Sprenkelling, Mónica López Lau, Melodie Michel, Pedro Alcàcer, Norma García",
+    "program": "Musica Europea de los siglos XVII & XVIII"
+  },
+  {
+    "date": "07/02/2020",
+    "city": "Ciudad de México, México",
+    "venue": "Escuela superior de música Plantel CENART",
+    "ensemble": "Lobke Sprenkelling, Mónica López Lau, Melodie Michel, Pedro Alcàcer, Norma García",
+    "program": "Concierto de Música Antigua"
+  },
+  {
+    "date": "23/11/2019",
+    "city": "Lleida",
+    "venue": "Sala Nausica de l’Ateneu",
+    "ensemble": "Solo",
+    "program": "Dos peninsulas"
+  },
+  {
+    "date": "23/11/2019",
+    "city": "Lleida, España",
+    "venue": "Sala Nausica de l’Ateneu",
+    "ensemble": "Solo",
+    "program": "Dos peninsulas"
+  },
+  {
+    "date": "17/11/2019",
+    "city": "Bologna, Italia",
+    "venue": "Oratio di San Filippo Neri",
+    "ensemble": "Baby Bofe’ Bologna Festival",
+    "program": "Il Mondo di Leonardo"
+  },
+  {
+    "date": "16/11/2019",
+    "city": "Ferrara, Italia",
+    "venue": "Museo Archeologico Nazionale",
+    "ensemble": "D’archi Barroco del Conservatorio “Frescobaldi” di Ferrara",
+    "program": "Con l’Archetto e con la Voce"
+  },
+  {
+    "date": "03/11/2019",
+    "city": "Ravena, Italia",
+    "venue": "Museo Archeologico Nazionale",
+    "ensemble": "D’archi Barroco del Conservatorio “Frescobaldi” di Ferrara",
+    "program": "Con l’Archetto e con la Voce"
+  },
+  {
+    "date": "02/11/2019",
+    "city": "Bologna, Italia",
+    "venue": "Chiesa dei SS. Cosma e Damiano",
+    "ensemble": "Bononia Antiqua",
+    "program": "Blavet, il Bautista di Parigi"
+  },
+  {
+    "date": "29/10/2019",
+    "city": "Ferrara, Italia",
+    "venue": "Casa Romei",
+    "ensemble": "Ensemble Rinascimentale del conservatorio “G. Frescobaldi” di Ferrara",
+    "program": "There was a star dancing"
+  },
+  {
+    "date": "11/09/2019",
+    "city": "Guanajuato, Mexico",
+    "venue": "Templo de la compañía",
+    "ensemble": "Solo",
+    "program": "Guitarra renacentista y guitarra barroca"
+  },
+  {
+    "date": "08/09/2019",
+    "city": "Guanajuato, Mexico",
+    "venue": "Teatro Juarez",
+    "ensemble": "Pedro Alcàcer & Capella Guanajuatensis",
+    "program": "Triosonatas de Italia a Francia"
+  },
+  {
+    "date": "06/09/2019",
+    "city": "Guanajuato, Mexico",
+    "venue": "Casa cuatro",
+    "ensemble": "Solo",
+    "program": "Dos peninsulas"
+  },
+  {
+    "date": "17/06/2019",
+    "city": "Bologna, Italia",
+    "venue": "San Colombano- Collezione Tagliavini",
+    "ensemble": "Festa della Musica",
+    "program": "Transilvania. Musica, Danza e Poesie dall’Ungheria"
+  },
+  {
+    "date": "05/06/2019",
+    "city": "Trieste, Italia",
+    "venue": "Conservatorio di musica Giuseppe Tartini",
+    "ensemble": "Harmonicus Concertus",
+    "program": "Sonate per flauto, Giuseppe Tartini"
+  },
+  {
+    "date": "26/05/2019",
+    "city": "Viena, Austria",
+    "venue": "Musik in der Praxis",
+    "ensemble": "Bologna Baroque",
+    "program": "Antonio Vivaldi: Sonaten für Violoncello"
+  },
+  {
+    "date": "16/05/2019",
+    "city": "Bologna, Italia",
+    "venue": "Chiesa di San Cosma e Damiano",
+    "ensemble": "Boris Begelman, Federico Corrado, Viola Mattioni, Pedro Alcàcer, Federico Lanzellotti",
+    "program": "Concerto per i soci BCC Felsinea"
+  },
+  {
+    "date": "12/05/2019",
+    "city": "Fano, Italia",
+    "venue": "Biblioteca Federiciana",
+    "ensemble": "Maria Chiara Mazzi, Musicologa. Pedro Alcàcer Doria, Liutista",
+    "program": "Il Libro delle Meraviglie"
+  },
+  {
+    "date": "17/03/2019",
+    "city": "Bologna, Italia",
+    "venue": "Associazione clavicembalistica Bolognese",
+    "ensemble": "Solo",
+    "program": "Musiche della collezione della biblioteca internazionale della musica di Bologna"
+  },
+  {
+    "date": "13/03/2008",
+    "city": "Barcelona, España",
+    "venue": "Auditori Casa Amèrica-Catalunya",
+    "ensemble": "Solo",
+    "program": "El Llop Ferotge"
+  },
+  {
+    "date": "02/03/2019",
+    "city": "Bremen, Alemania",
+    "venue": "Sendesaal",
+    "ensemble": "Volcania",
+    "program": "Villa Vivaldi"
+  },
+  {
+    "date": "22/02/2019",
+    "city": "Guanajuato, Mexico",
+    "venue": "Casa cuatro",
+    "ensemble": "Roberto Rivadeneyra/Violin. Pedro Alcacer/Archilaúd",
+    "program": "Música del seicento italiano"
+  },
+  {
+    "date": "20/02/2019",
+    "city": "Verona, Italia",
+    "venue": "Conservatorio Statale di Musica “E.F. dall’Abaco” di verona",
+    "ensemble": "Saggio della classe di fatto traversiere. Prof. Marcello Gatti",
+    "program": "Jean Bodin de Boismortier"
+  },
+  {
+    "date": "31/10/2018",
+    "city": "Salzburg, Austria",
+    "venue": "Salzburger Landestheater",
+    "ensemble": "Theaterorcheste",
+    "program": "Motezuma/Baldassare Galuppi"
+  },
+  {
+    "date": "23/10/2018",
+    "city": "Ferrara, Italia",
+    "venue": "Sala Estense",
+    "ensemble": "Saggio della classe di fatto traversiere. Prof. Marcello Gatti",
+    "program": "Lezione-Concerto/If music be the food of love"
+  },
+  {
+    "date": "07/10/2018",
+    "city": "Vicenza, Italia",
+    "venue": "Parrocchia di Sant’Agostino",
+    "ensemble": "Sensus",
+    "program": "Don Quixote"
+  },
+  {
+    "date": "21/09/2018",
+    "city": "Mantova, Italia",
+    "venue": "Basilica Palatina di Santa Barbara",
+    "ensemble": "SANCTAE BARBARAE CONCENTUS",
+    "program": "Concerto conclusivo della settimana di studi sul repertorio rinascimentale della cappella ducale dei Gonzaga"
+  },
+  {
+    "date": "19/07/2018",
+    "city": "Voltana, Italia",
+    "venue": "Chiesa di S. Giuseppe di Chiesanuova",
+    "ensemble": "Voz Latina",
+    "program": "Le Caravelle della Musica"
+  },
+  {
+    "date": "16/07/2018",
+    "city": "Lanciano, Italia",
+    "venue": "Chiesa del Purgatorio",
+    "ensemble": "Musica Elegancia Consort",
+    "program": "La viola da gamba, dall’Ars Nova al rinacscimento e al barrocco"
+  },
+  {
+    "date": "24/06/2018",
+    "city": "Milan, Italia",
+    "venue": "Basilica di Santo Stefano Maggiore",
+    "ensemble": "Coro & Ensemble Voz Latina. Dir. Maximiliano Baños",
+    "program": "Misa Criolla"
+  },
+  {
+    "date": "19/05/2018",
+    "city": "Bologna, Italia",
+    "venue": "San Colombano",
+    "ensemble": "Festa della Musica",
+    "program": "Musica e spettacolo nel regno di Napoli"
+  },
+  {
+    "date": "22/04/2018",
+    "city": "Bologna, Italia",
+    "venue": "Società Bolognese per la Musica antica.",
+    "ensemble": "Victor Aragón, Rosita Ippolito, Pedro Alcàcer.",
+    "program": "Nobilità a 7 corde"
+  },
+  {
+    "date": "21/03/2018",
+    "city": "Bologna, Italia",
+    "venue": "Società Bologgese per la Musica antica.",
+    "ensemble": "Bononia Antiqua",
+    "program": "Giornata Europea della Musica Antica"
+  },
+  {
+    "date": "19/03/2018",
+    "city": "Bologna, Italia",
+    "venue": "San Colombano- Collezione tagliavini",
+    "ensemble": "Festa della Musica",
+    "program": "Musica e spettacolo nel regno di Napoli"
+  },
+  {
+    "date": "03/03/2018",
+    "city": "Roma, Italia",
+    "venue": "Chiesa dei Frati Minori Conventuali",
+    "ensemble": "Allievi dei Coordinamenti di Musica Antica",
+    "program": "Reppresentatione di Anima, et di corpo. Dir. Evangelina Mascardi"
+  },
+  {
+    "date": "11/02/2018",
+    "city": "Ferrara, Italia",
+    "venue": "Palazzo Costabili",
+    "ensemble": "Aminta",
+    "program": "Canzoni chiacchiere & frottole"
+  },
+  {
+    "date": "26/08/2017",
+    "city": "Saint Hilaire, Francia",
+    "venue": "Châteur Malromé",
+    "ensemble": "Academia L’Arcadia",
+    "program": "Combattimento Tournee Musicale"
+  },
+  {
+    "date": "30/06/2017",
+    "city": "Rio do Janeiro, Brasil",
+    "venue": "SA CECÍLIA LA MEIRELES",
+    "ensemble": "San Carlino",
+    "program": "Passioni Italiane"
+  },
+  {
+    "date": "24/06/2017",
+    "city": "Milan, Italia",
+    "venue": "Vezza D’Oglio- Chiesa di San Giovanni",
+    "ensemble": "Ciro Aroni, Teo Aroni, Pedro Alcàcer, Emilio Bezzi, Maria Calvo",
+    "program": "Passioni Italiane"
+  },
+  {
+    "date": "20/06/2017",
+    "city": "Bologna, Italia",
+    "venue": "Oratorio Santa Cecilia",
+    "ensemble": "La musica interna",
+    "program": "Musica a Venezia al Tempi di Claudio Monteverdi"
+  },
+  {
+    "date": "08/06/2017",
+    "city": "Zámek, Republica Checa",
+    "venue": "Knihovna",
+    "ensemble": "Cantar Lontano Dir. Marco Mencoboni",
+    "program": "D’Amore e di Guerra"
+  },
+  {
+    "date": "06/06/2017",
+    "city": "Bologna, Italia",
+    "venue": "Museo Internazionale della musica",
+    "ensemble": "Solo",
+    "program": "Going Forward Pluck By Pluck"
+  },
+  {
+    "date": "02/06/2017",
+    "city": "Bologna, Italia",
+    "venue": "Chiesa di San Vitale  e Agrícola",
+    "ensemble": "Boris Belgelman, Elicia Silverstein, Mauro Valli, Pedro Alcàcer",
+    "program": "Barroque Treasures"
+  },
+  {
+    "date": "19/05/2017",
+    "city": "Cremona, Italia",
+    "venue": "Museo Archeologico",
+    "ensemble": "Ensemble Voz Latina.",
+    "program": "Caravelle della musica"
+  },
+  {
+    "date": "13/05/2017",
+    "city": "Rotterdam, Holanda",
+    "venue": "Paradijskerk",
+    "ensemble": "Cantar Lontano",
+    "program": "Arlecchino innamorato"
+  },
+  {
+    "date": "08/04/2017",
+    "city": "Nîmes, Francia",
+    "venue": "Grand Temple de Nîmes",
+    "ensemble": "Elyma Dir. Gabriel Garrido",
+    "program": "Monteverdi - Le sacré des sens"
+  },
+  {
+    "date": "08/04/2017",
+    "city": "Montfrin, Francia",
+    "venue": "Grand Temple de Nîmes",
+    "ensemble": "Elyma Garrido",
+    "program": "Monteverdi - Le sacré des sens"
+  },
+  {
+    "date": "07/04/2017",
+    "city": "Montfrin, Francia",
+    "venue": "Notre Dame De Malpas",
+    "ensemble": "Solistes et instrumentistes des Rencontres baroques de Monfrin/ Dir. GABRIEL GARRIDO",
+    "program": "Monteverdi - Génie et passions sacrées"
+  },
+  {
+    "date": "07/04/2017",
+    "city": "Montfrin, Francia",
+    "venue": "Notre Dame De Malpas",
+    "ensemble": "Elyma Dir. Gabriel Garrido",
+    "program": "Monteverdi - Génie et passions sacrées"
+  }
+]

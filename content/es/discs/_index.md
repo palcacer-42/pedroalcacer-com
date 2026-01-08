@@ -6,7 +6,7 @@ discs:
     artist: "Pedro Alcàcer"
     role: "Vihuela"
     image: "/images/discs/milan-el-maestro.png"
-    url: "https://srsr.li/pedro-alcacer-luis-milan-el-maestro"
+    url: "/es/discs/luis-milan/"
   - title: "Kassia"
     artist: "Burak Özdemir"
     role: "Musica Sequenza"
