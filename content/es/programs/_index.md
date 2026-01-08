@@ -1,5 +1,14 @@
 ---
 title: "Programas"
+description: "Programas — PDFs originales descargables por programa."
+---
+
+Explora nuestros programas en solista y conjunto.
+
+- [Programas solo](/es/programs/solo)
+- [Programas de conjunto](/es/programs/ensemble)
+---
+title: "Programas"
 description: "Programas de concierto con instrumentos históricos de cuerda pulsada"
 ---
 

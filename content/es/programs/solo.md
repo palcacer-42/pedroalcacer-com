@@ -1,4 +1,13 @@
 ---
+title: "Programas Solo"
+description: "Programas para instrumentos solistas."
+---
+
+Listado de programas solo y enlaces a sus PDFs descargables.
+
+- [Bologna liutistica](/es/programs/bologna-liutistica)
+- [Una storia fra le corde...](/es/programs/una-storia-fra-le-corde)
+---
 title: "Programas Solistas"
 description: "Programas de concierto para laúd, tiorba, vihuela y guitarra barroca en solitario"
 ---

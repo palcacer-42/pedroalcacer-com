@@ -1,5 +1,14 @@
 ---
 title: "Programmes"
+description: "Programmes — PDFs originaux téléchargeables par programme."
+---
+
+Parcourez nos programmes solo et ensemble.
+
+- [Programmes solo](/fr/programs/solo)
+- [Programmes d'ensemble](/fr/programs/ensemble)
+---
+title: "Programmes"
 description: "Programmes de concert avec instruments historiques à cordes pincées"
 ---
 

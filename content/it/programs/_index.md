@@ -1,5 +1,14 @@
 ---
 title: "Programmi"
+description: "Programmi — PDF originali scaricabili per programma."
+---
+
+Esplora i nostri programmi solisti e d'ensemble.
+
+- [Programmi solo](/it/programs/solo)
+- [Programmi d'ensemble](/it/programs/ensemble)
+---
+title: "Programmi"
 description: "Programmi di concerto con strumenti storici a pizzico"
 ---
 

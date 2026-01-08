@@ -1,5 +1,15 @@
 ---
 title: "Programas de Conjunto"
+description: "Programas para conjuntos con instrumentos históricos."
+---
+
+Listado de programas de conjunto y enlaces a sus PDFs descargables.
+
+- [Tres territorios](/es/programs/tres-territorios)
+- [Dos peninsulas](/es/programs/dos-peninsulas)
+- [Tanyer de gala](/es/programs/tanyer-de-gala)
+---
+title: "Programas de Conjunto"
 description: "Programas de música de cámara con instrumentos históricos"
 ---
 
