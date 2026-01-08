@@ -39,6 +39,7 @@ These guidelines ensure the project remains maintainable, authentic, and accessi
 - ✅ **Free Hosting** - GitHub Pages (no cost)
 - ✅ **Easy to Edit** - Simple markdown files for content
 - ✅ **Custom Domain** - Use your existing pedroalcacer.com domain
+- ✅ **Media Section** - Video previews for performances with YouTube/Vimeo embeds
 
 ## Project Structure
 
@@ -161,6 +162,31 @@ Reference in Markdown:
 ```markdown
 ![Description]({{ "images/photo.jpg" | relURL }})
 ```
+
+### Media Section
+
+The media section displays video previews for performances. Videos are embedded from YouTube and Vimeo.
+
+**Structure:**
+- Content defined in `content/*/media/_index.md` frontmatter under `media` array
+- Each item has `title`, `artist`, and optional `video_url`
+- Layout in `layouts/section/media.html` renders a responsive grid
+- CSS styles in `public/css/style.css` for `.media-grid`, `.media-item`, etc.
+
+**Adding Videos:**
+1. Add to the `media` array in each language's `_index.md`
+2. Include `video_url` for YouTube/Vimeo links
+3. Items without `video_url` show "Video coming soon" placeholder
+
+Example:
+```yaml
+media:
+  - title: "Piece Title"
+    artist: "Artist Name"
+    video_url: "https://www.youtube.com/watch?v=VIDEO_ID"
+```
+
+The layout automatically detects YouTube/Vimeo and embeds appropriately.
 
 ## Configuration
 
