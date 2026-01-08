@@ -660,7 +660,8 @@ img {
     padding: 4px;
     box-sizing: content-box;
 }
-.album-link-button .icon path { display: block; }
+.album-link-button .icon * { display: block; }
+.album-link-button:hover .icon * { filter: brightness(0) invert(1); }
 .album-link-button .icon svg, .album-link-button .icon path { display: block; }
 .album-link-button .album-link-label {
     font-size: 0.95rem;
