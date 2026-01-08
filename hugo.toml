@@ -5,27 +5,33 @@ theme = "pedroalcacer"
 
 # Multi-language configuration
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 
 [languages]
   [languages.en]
     languageName = "English"
     weight = 1
+    contentDir = "content/en"
   [languages.es]
     languageName = "Español"
     weight = 2
+    contentDir = "content/es"
   [languages.ca]
     languageName = "Català"
     weight = 3
+    contentDir = "content/ca"
   [languages.de]
     languageName = "Deutsch"
     weight = 4
+    contentDir = "content/de"
   [languages.fr]
     languageName = "Français"
     weight = 5
+    contentDir = "content/fr"
   [languages.it]
     languageName = "Italiano"
     weight = 6
+    contentDir = "content/it"
 
 # Menu configuration
 [menu]
