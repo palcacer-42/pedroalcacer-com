@@ -40,6 +40,7 @@ These guidelines ensure the project remains maintainable, authentic, and accessi
 - ✅ **Easy to Edit** - Simple markdown files for content
 - ✅ **Custom Domain** - Use your existing pedroalcacer.com domain
 - ✅ **Media Section** - Video previews for performances with YouTube/Vimeo embeds
+- ✅ **Instruments Section** - Showcase of early music instruments with builder details
 
 ## Project Structure
 
