@@ -1,32 +1,27 @@
 ---
 title: "Instruments"
-description: "The early music instruments Pedro Alcàcer specializes in"
+description: "Les instruments de musique ancienne que Pedro Alcàcer maîtrise"
+instruments:
+  - title: "Guitare Baroque"
+    builder: "Gabriel Aguilera, Tuscania 2019"
+    image: "/images/instruments/baroque-guitar.jpg"
+  - title: "Théorbe"
+    builder: "Gabriel Aguilera, Amsterdam 2018"
+    image: "/images/instruments/theorbo.jpg"
+  - title: "Archiluth"
+    builder: "Robert Lundberg, Portland 1982"
+    image: "/images/instruments/archlute.jpg"
+  - title: "Luth de la Renaissance"
+    builder: "Francisco Hervás, Granada 1997"
+    image: "/images/instruments/renaissance-lute.jpg"
+  - title: "Vihuela"
+    builder: "Mathias Durvie, Etange la ville, 1983"
+    image: "/images/instruments/vihuela.jpg"
+  - title: "Guitare de la Renaissance"
+    builder: "Ivo Mangherini, Bremen, 2006"
+    image: "/images/instruments/renaissance-guitar.jpg"
 ---
 
-## Baroque and Renaissance Instruments
+Chaque instrument a sa propre façon de parler et offre différentes possibilités de réalisation, et bien sûr son propre répertoire selon le style de son époque.
 
-Pedro Alcàcer specializes in the performance and teaching of early plucked string instruments, with expertise in:
-
-- **Lute** - Renaissance and Baroque repertoire
-- **Theorbo** - Baroque continuo accompaniment
-- **Vihuela** - Spanish Renaissance plucked instrument
-- **Arciliuto** - Baroque variant combining lute and theorbo characteristics
-- **Liuto Rinascimentale** - Renaissance lute
-
-### Instruments Featured
-
-Guitarra Renacentista
-
-Guitarra Barroca
-
-Tiorba
-
-Arciliuto
-
-Liuto Rinascimentale
-
-Vihuela
-
-## Performance Practice
-
-All instruments are performed according to historical performance practice principles, with attention to original tunings, ornamentations, and interpretation styles.
+Ces instruments peuvent couvrir la plupart de la musique entre 1500 et 1750.
