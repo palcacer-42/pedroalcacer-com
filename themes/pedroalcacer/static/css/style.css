@@ -2,11 +2,30 @@
 :root {
     --primary-color: #1a1a1a;
     --accent-color: #8b7355;
-    --text-color: #333;
+    --text-color: #111; /* stronger contrast for body text */
     --bg-color: #fff;
-    --light-bg: #f9f9f9;
+    --light-bg: #ffffff; /* keep panels crisp white */
     --border-color: #e0e0e0;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Manual dark toggle via [data-theme="dark"] */
+[data-theme="dark"] {
+    --primary-color: #0f1720;
+    --accent-color: #c9a66b;
+    --text-color: #e6e6e6;
+    --bg-color: #0b0b0d;
+    --light-bg: #0b0b0d;
+    --border-color: rgba(255,255,255,0.06);
+    --shadow: 0 6px 30px rgba(0,0,0,0.6);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
 }
 
 /* General Styles */
@@ -219,7 +238,7 @@ img {
 }
 
 .hero-content {
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 420ms cubic-bezier(.2,.9,.2,1);
 }
 
 .hero-content h1 {
@@ -1028,12 +1047,26 @@ img {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(18px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Accessible focus styles */
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color) 30%, transparent);
 }
 
 /* Responsive */

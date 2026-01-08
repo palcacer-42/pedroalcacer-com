@@ -1,0 +1,43 @@
+{{ define "main" }}
+<section class="hero-section">
+    <div class="hero-image">
+        <img src="{{ "/hero.jpg" | relURL }}" alt="Pedro Alcàcer">
+    </div>
+</section>
+
+<section class="quote-section">
+    <div class="container">
+        <blockquote class="testimonial">
+            <p>{{ i18n "quote_text" }}</p>
+            <footer>
+                <strong>{{ i18n "quote_author" }}</strong><br>
+                {{ i18n "quote_role" }}
+            </footer>
+        </blockquote>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2><a href="{{ "discs/luis-milan/" | relLangURL }}">{{ i18n "hero_title" }}</a></h2>
+    </div>
+</section>
+
+<section class="bandcamp-section">
+    <div class="container">
+        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=236862947/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://palcacer.bandcamp.com/album/luis-mil-n-primer-libro-intitulado-el-maestro">Luis Milán - Primer libro intitulado &quot;El Maestro&quot; by Pedro Alcacer - Vihuela</a></iframe>
+    </div>
+</section>
+
+<section class="newsletter-section">
+    <div class="container">
+        <h3>{{ i18n "newsletter_heading" }}</h3>
+        <form class="newsletter-form" action="https://formspree.io/f/mbdlnanv" method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="hidden" name="_subject" value="New newsletter subscription">
+            <input type="hidden" name="_next" value="{{ .Site.BaseURL }}">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+{{ end }}
