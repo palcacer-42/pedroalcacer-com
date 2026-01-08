@@ -22,4 +22,4 @@ Pedro Alcàcer offers specialized instruction and workshops on:
 
 Collaborative performances featuring various early music ensembles and chamber configurations.
 
-For more information about scheduling a masterclass or performance, please contact via the [Contact]({{< relref "/contact" >}}) page.
+For more information about scheduling a masterclass or performance, please contact via the Contact page.

@@ -15,17 +15,17 @@ Pedro Alcàcer specializes in the performance and teaching of early plucked stri
 
 ### Instruments Featured
 
-[Guitarra Renacentista]({{< relref "/instruments/guitarra-renacentista" >}})
+Guitarra Renacentista
 
-[Guitarra Barroca]({{< relref "/instruments/guitarra-barroca" >}})
+Guitarra Barroca
 
-[Tiorba]({{< relref "/instruments/tiorba" >}})
+Tiorba
 
-[Arciliuto]({{< relref "/instruments/arciliuto" >}})
+Arciliuto
 
-[Liuto Rinascimentale]({{< relref "/instruments/liuto-rinascimentale" >}})
+Liuto Rinascimentale
 
-[Vihuela]({{< relref "/instruments/vihuela" >}})
+Vihuela
 
 ## Performance Practice
 
