@@ -15,12 +15,19 @@
             {{ range .Params.media }}
             <div class="media-item">
                 {{ if .video_url }}
-                <iframe 
-                    src="https://www.youtube.com/embed/{{ index (split .video_url "v=") 1 }}" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+                    {{ $url := .video_url }}
+                    {{ if or (strings.Contains $url "youtube.com") (strings.Contains $url "youtu.be") }}
+                        {{ $id := replaceRE ".*(?:v=|be/)([^&?/]+).*" "$1" $url }}
+                        <iframe 
+                            src="https://www.youtube.com/embed/{{ $id }}" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    {{ else if strings.Contains $url "vimeo.com" }}
+                        {{ $id := replaceRE ".*(?:video/|vimeo.com/)([^&?/]+).*" "$1" $url }}
+                        <iframe src="https://player.vimeo.com/video/{{ $id }}" frameborder="0" allowfullscreen></iframe>
+                    {{ end }}
                 {{ end }}
                 <div class="media-info">
                     <h3>{{ .title }}</h3>

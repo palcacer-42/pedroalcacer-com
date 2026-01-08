@@ -8,11 +8,12 @@
       <h3>{{ .title }}</h3>
       <p>{{ .artist }}</p>
       {{ if .video_url }}
-        {{ if strings.Contains .video_url "youtube.com" }}
-          {{ $id := (strings.TrimPrefix .video_url "https://www.youtube.com/watch?v=") }}
+        {{ $url := .video_url }}
+        {{ if or (strings.Contains $url "youtube.com") (strings.Contains $url "youtu.be") }}
+          {{ $id := replaceRE ".*(?:v=|be/)([^&?/]+).*" "$1" $url }}
           <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $id }}" frameborder="0" allowfullscreen></iframe>
-        {{ else if strings.Contains .video_url "vimeo.com" }}
-          {{ $id := (strings.TrimPrefix .video_url "https://player.vimeo.com/video/") }}
+        {{ else if strings.Contains $url "vimeo.com" }}
+          {{ $id := replaceRE ".*(?:video/|vimeo.com/)([^&?/]+).*" "$1" $url }}
           <iframe src="https://player.vimeo.com/video/{{ $id }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
         {{ end }}
       {{ else }}
