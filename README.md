@@ -8,6 +8,28 @@ This site replaces your previous Wix site with a free, fast, and maintainable al
 
 **Languages Supported:** English, Spanish (Español), Catalan (Català), German (Deutsch), French (Français), Italian (Italiano)
 
+## Project Guidelines for AI-Assisted Development
+
+These core principles must be followed when working with AI assistance on this project:
+
+1. **Source of Truth**: All content must be based on the original Wix website and HTTrack backup files. These are the authoritative sources for all text, information, images, and structure.
+
+2. **No AI-Generated Content**: All text and information must be original from the Wix site. Do not use AI to fill in missing content, create placeholder text, or generate new descriptions. If content is missing, it must be sourced from the original site or left blank.
+
+3. **Simplicity First**: The structure and implementation strategies must be as simple and understandable as possible. This allows the project owner to:
+   - Follow the project logic independently
+   - Make modifications without extensive technical knowledge
+   - Understand decisions made during development
+   - Maintain the site in the future
+
+4. **Document All Decisions**: Every important structural or architectural decision must be documented in this README file. This includes:
+   - Why certain approaches were chosen
+   - How different sections are organized
+   - What alternatives were considered
+   - How to modify or extend functionality
+
+These guidelines ensure the project remains maintainable, authentic, and accessible for future work.
+
 ## Features
 
 - ✅ **Multi-language support** - 6 languages with automatic navigation
@@ -149,6 +171,12 @@ Main settings in `hugo.toml`:
 - **defaultContentLanguage** - Default language (en)
 - **[languages]** - Language definitions
 - **[menu.main]** - Navigation menu items
+
+## Navigation & responsiveness
+
+- The header uses a simple, dependency-free hamburger toggle on screens ≤1024px. The checkbox with `#nav-toggle` drives the show/hide state for the `.nav-block` that contains both the main menu and the language selector.
+- Menu items wrap as whole items; no words should break mid-link. On mobile, the menu and language links stack vertically to maximize above-the-fold space.
+- Cache busting for CSS is handled via the `?v=YYYYMMDD` query on `css/style.css` in the base layout. Update this version string if you need to force browsers to fetch new styles after changes.
 
 ## Building for Production
 
@@ -329,6 +357,14 @@ Theme: MIT License
 4. Start adding your content!
 
 ## Development Log
+
+### January 8, 2026
+
+*   **Programs Section Completed:** Fully developed the Programs section across all 6 languages (English, Spanish, Catalan, German, French, Italian) with comprehensive content including:
+    *   Solo Programs: Detailed descriptions for 5 concert programs (Bologna liutística, Tres territorios, Dos peninsulas, Una storia fra le corde, Tanyer de gala)
+    *   Ensemble Programs: Complete ensemble member listings for 6 groups (Anima Shirvani, Caravelle della musica, Viaggio musicale nell'Emilia del 600', Volcania, Arlecchino innamorato, Les musiques du Roi Soleil)
+    *   Separate pages for solo and ensemble programs with navigation
+    *   All content based on original Wix site data, following project guidelines
 
 ### January 7, 2026
 

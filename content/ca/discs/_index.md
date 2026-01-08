@@ -1,27 +1,41 @@
 ---
 title: "Recordings"
 description: "Discography and recordings featuring Pedro Alcàcer"
+discs:
+  - title: 'Luis Milán - Primer libro Intitulado "El Maestro"'
+    artist: "Pedro Alcàcer"
+    role: "Vihuela"
+    image: "/images/discs/milan-el-maestro.png"
+    url: "https://srsr.li/pedro-alcacer-luis-milan-el-maestro"
+  - title: "Kassia"
+    artist: "Burak Özdemir"
+    role: "Musica Sequenza"
+    image: "/images/discs/kassia.jpg"
+    url: "https://open.spotify.com/intl-es/album/62mA8hyz6qWNJxhKvLchNX?si=5mfiLPihRtmGcgvEofUSaQ"
+  - title: "Villa Vivaldi"
+    artist: "Ensemble Volcania"
+    image: "/images/discs/villa-vivaldi.png"
+    url: "https://open.spotify.com/intl-es/album/69eWxyHuCkq3g9ON9ZuN5f?si=2G3zeSBwRo6QPHkESm1rRw"
+  - title: "Heinrich Schütz - Dafne"
+    artist: "Capella ducale - Musica fiata"
+    role: "Rolald Wilson"
+    image: "/images/discs/schutz-dafne.png"
+    url: "https://open.spotify.com/album/3Hu43oT5x7c9sLOdTyFe7N?si=00ut_3hiQpGLABahFLh_uA"
+  - title: "Carlo Filago - Sacri concerti a voce sola con la partitura per l'organo"
+    artist: "Ensemble les Nations"
+    image: "/images/discs/filago-sacri-concerti.png"
+    url: "https://open.spotify.com/intl-es/album/3YBHZ0Ilr2K66tnuweQuId?si=hvs_aiQIQb2vypyr1gZWOQ"
+  - title: "Vivaldi - Sonate per Violoncello e continuo"
+    artist: "Bologna Baroque"
+    image: "/images/discs/vivaldi-sonate.png"
+    url: "https://open.spotify.com/intl-es/album/2uZnONe772XkJrcaSuFYqT?si=8-Tc1yiDQwmgCFZ_7bc34A"
+  - title: "A. Giannettini - L'uomo in bivio"
+    artist: "Cantar Lontano"
+    role: "Marco Mencoboni"
+    image: "/images/discs/giannettini-l-uomo-in-bivio.png"
+    url: "https://open.spotify.com/album/2x66kHPtZAP3H1HDcACplU"
+  - title: "Nicola Porpora - 6 cello Sonatas"
+    artist: "Adriano Maria Fazio - Cello"
+    image: "/images/discs/porpora-6-cello-sonatas.png"
+    url: "https://open.spotify.com/album/5wHAtd2J4CTaK1c6HVn9kV?si=6ll567kZRmmiV3abetCkXw"
 ---
-
-## Discography
-
-### As Soloist
-
-**Luis Milán - Primer libro Intitulado "El Maestro"**
-- Vihuela: Pedro Alcàcer
-
-### Ensemble Recordings
-
-**Kassia** - Burak Özdemir & Musica Sequenza
-
-**Villa Vivaldi** - Ensemble Volcania
-
-**Heinrich Schütz - Dafne** - Capella ducale & Musica fiata (Roland Wilson)
-
-**Carlo Filago - Sacri concerti a voce sola con la partitura per l'organo** - Ensemble les Nations
-
-**Vivaldi - Sonate per Violoncello e continuo** - Bologna Baroque
-
-**Nicola Porpora - 6 Cello Sonatas** - Adriano Maria Fazio (Cello)
-
-**A. Giannettini - L'uomo in bivio** - Cantar Lontano (Marco Mencoboni)

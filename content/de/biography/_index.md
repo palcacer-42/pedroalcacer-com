@@ -3,18 +3,10 @@ title: "Biography"
 description: "Learn about Pedro Alcàcer's background and career"
 ---
 
-## Early Life and Education
+Geboren 1982 in Mexiko-Stadt, begann der Künstler seine musikalische Ausbildung schon in jungen Jahren unter dem Einfluss seines Vaters, des katalanischen Jazzmusikers Francesc Alcàcer, und wuchs in einer kreativen Familie auf. Er studierte Jazzgitarre bei Francisco Lelo de la Rea und lernte anschließend klassische Gitarre und Komposition bei Héctor Ramos. Sein Studium der klassischen Gitarre schloss er an der renommierten "Escuela Nacional de Música-UNAM" ab und setzte seine Ausbildung bei bekannten Lehrern wie Isabelle Villei, Eloy Cruz und Antonio Corona fort, wobei er sich auf das Repertoire der Renaissance und des Barock spezialisierte.
 
-Born in 1982 in Mexico City, Pedro Alcàcer began his musical education at an early age under the influence of his father, the Catalan jazz musician Francesc Alcàcer, and was born into a creative family. He studied jazz guitar with Francisco Lelo de la Rea and immediately began learning classical guitar and composition with Hector Ramos. He completed his studies in classical guitar at the renowned "Escuela Nacional de Música-UNAM" and continued his studies with renowned teachers such as Isabelle Villei, Eloy Cruz, and Antonio Corona, specializing in Renaissance and Baroque repertoire.
+2006 zog er nach Barcelona, Spanien, wo er am Konservatorium von Girona bei dem renommierten Lehrer Xavier Diaz-Latorre den Berufstitel für Zupfinstrumente der Renaissance und des Barock erhielt. Anschließend setzte er sein Studium an der Hochschule für Künste in Bremen fort, wo er Laute bei Joachim Held und Lee Santana studierte und sein Diplom erwarb.
 
-## European Training
+Als leidenschaftlicher Musiker setzte er seine instrumentale Weiterbildung mit Evangelina Mascardi in Italien fort, während er intensiv als Solist und Continuo-Spieler arbeitete. Er hat mit bedeutenden Dirigenten wie Gabriel Garrido, Alessandro di Marchi, Marco Mencoboni, Paolo Faldi, Riccardo Doni, Horacio Franco, Cristoph Hammer, Carlos Aranzay, Gerhard Oppel, Burak Özdemir und anderen gearbeitet und bei renommierten Festivals und Foren in Italien, Deutschland, Spanien, Frankreich, der Tschechischen Republik, Belgien, den Niederlanden, Brasilien und Mexiko aufgetreten.
 
-In 2006, he moved to Barcelona, Spain, where he obtained the "Berufstitel" for Renaissance and Baroque plucked instruments at the Conservatory of Girona under the renowned teacher Xavier Diaz-Latorre. He then continued his studies at the University of the Arts in Bremen, where he studied lute with Joachim Held and Lee Santana and earned his degree.
-
-## Professional Career
-
-As a passionate musician, he continued his instrumental improvement with Evangelina Mascardi in Italy while working intensively as a soloist and continuo player. He has worked with important conductors such as Gabriel Garrido, Alessandro di Marchi, Marco Mencoboni, Paolo Faldi, Riccardo Doni, Horacio Franco, Christoph Hammer, Carlos Aranzay, Gerhard Oppel, Burak Özdemir, and others. He has performed at prestigious festivals and forums in Italy, Germany, Spain, France, Czech Republic, Belgium, Netherlands, Brazil, and Mexico.
-
-## Current Activities
-
-He currently lives in Berlin and collaborates with various ensembles dedicated to early music in Europe. The artist is known for his profound experience and artistic sensitivity, which he has acquired through collaborations with outstanding musicians and teachers from all over the world. His international experience and high qualifications make him an outstanding artist in his field.
+Derzeit lebt er in Berlin und arbeitet mit verschiedenen Ensembles der Alten Musik in Europa. Der Künstler ist bekannt für seine umfassende Erfahrung und künstlerische Sensibilität, die er durch die Zusammenarbeit mit herausragenden Musikern und Lehrern weltweit erworben hat. Seine internationale Erfahrung und hohen Qualifikationen machen ihn zu einem außergewöhnlichen Künstler auf seinem Gebiet.

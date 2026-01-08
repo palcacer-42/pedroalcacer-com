@@ -1,13 +1,17 @@
 ---
-title: "Programs"
+title: "Programes"
+description: "Programes de concert amb instruments històrics de corda polsada"
 ---
 
-## Masterclasses and Workshops
+## Programes de Concert
 
-Pedro Alcàcer offers specialized instruction and workshops on:
+Pedro Alcàcer interpreta un repertori divers que abasta des del Renaixement fins al Barroc en instruments històrics de corda polsada. Els seus programes exploren les riques tradicions musicals d'Europa a través de seleccions acuradament dissenyades que mostren el caràcter únic de cada instrument.
 
-- Early music performance practice
-- Renaissance and Baroque lute technique
+### Recitals Solistes
+Programes íntims amb llaüt, tiorba, vihuela i guitarra barroca, presentant les obres mestres dels períodes Renaixentista i Barroc.
+
+### Música de Cambra
+Interpretacions en col·laboració amb distingits conjunts de música antiga, donant vida al repertori de música de cambra dels segles XVI i XVII.
 - Historical performance interpretation
 - Period instruments and tuning systems
 - Continuo accompaniment

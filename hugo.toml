@@ -12,57 +12,200 @@ defaultContentLanguageInSubdir = true
     languageName = "English"
     weight = 1
     contentDir = "content/en"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.en.menu.main]]
+        name = "Recordings"
+        url = "/discs/"
+        weight = 2
+      [[languages.en.menu.main]]
+        name = "Biography"
+        url = "/biography/"
+        weight = 3
+      [[languages.en.menu.main]]
+        name = "Instruments"
+        url = "/instruments/"
+        weight = 4
+      [[languages.en.menu.main]]
+        name = "Audio and video"
+        url = "/media/"
+        weight = 5
+      [[languages.en.menu.main]]
+        name = "Programs"
+        url = "/programs/"
+        weight = 6
+      [[languages.en.menu.main]]
+        name = "Contact"
+        url = "/contact/"
+        weight = 7
   [languages.es]
     languageName = "Español"
     weight = 2
     contentDir = "content/es"
+    [languages.es.menu]
+      [[languages.es.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.es.menu.main]]
+        name = "Discos"
+        url = "/discs/"
+        weight = 2
+      [[languages.es.menu.main]]
+        name = "Biografía"
+        url = "/biography/"
+        weight = 3
+      [[languages.es.menu.main]]
+        name = "Instrumentos"
+        url = "/instruments/"
+        weight = 4
+      [[languages.es.menu.main]]
+        name = "Audio y video"
+        url = "/media/"
+        weight = 5
+      [[languages.es.menu.main]]
+        name = "Programas"
+        url = "/programs/"
+        weight = 6
+      [[languages.es.menu.main]]
+        name = "Contacto"
+        url = "/contact/"
+        weight = 7
   [languages.ca]
     languageName = "Català"
     weight = 3
     contentDir = "content/ca"
+    [languages.ca.menu]
+      [[languages.ca.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.ca.menu.main]]
+        name = "Discs"
+        url = "/discs/"
+        weight = 2
+      [[languages.ca.menu.main]]
+        name = "Biografia"
+        url = "/biography/"
+        weight = 3
+      [[languages.ca.menu.main]]
+        name = "Instruments"
+        url = "/instruments/"
+        weight = 4
+      [[languages.ca.menu.main]]
+        name = "Àudio i vídeo"
+        url = "/media/"
+        weight = 5
+      [[languages.ca.menu.main]]
+        name = "Programs"
+        url = "/programs/"
+        weight = 6
+      [[languages.ca.menu.main]]
+        name = "Contacte"
+        url = "/contact/"
+        weight = 7
   [languages.de]
     languageName = "Deutsch"
     weight = 4
     contentDir = "content/de"
+    [languages.de.menu]
+      [[languages.de.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.de.menu.main]]
+        name = "Aufnahmen"
+        url = "/discs/"
+        weight = 2
+      [[languages.de.menu.main]]
+        name = "Biografie"
+        url = "/biography/"
+        weight = 3
+      [[languages.de.menu.main]]
+        name = "Instrumente"
+        url = "/instruments/"
+        weight = 4
+      [[languages.de.menu.main]]
+        name = "Audio und Video"
+        url = "/media/"
+        weight = 5
+      [[languages.de.menu.main]]
+        name = "Programme"
+        url = "/programs/"
+        weight = 6
+      [[languages.de.menu.main]]
+        name = "Kontakt"
+        url = "/contact/"
+        weight = 7
   [languages.fr]
     languageName = "Français"
     weight = 5
     contentDir = "content/fr"
+    [languages.fr.menu]
+      [[languages.fr.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.fr.menu.main]]
+        name = "CDs"
+        url = "/discs/"
+        weight = 2
+      [[languages.fr.menu.main]]
+        name = "Biographie"
+        url = "/biography/"
+        weight = 3
+      [[languages.fr.menu.main]]
+        name = "Instruments"
+        url = "/instruments/"
+        weight = 4
+      [[languages.fr.menu.main]]
+        name = "Audio et vidéo"
+        url = "/media/"
+        weight = 5
+      [[languages.fr.menu.main]]
+        name = "Programmes"
+        url = "/programs/"
+        weight = 6
+      [[languages.fr.menu.main]]
+        name = "Contact"
+        url = "/contact/"
+        weight = 7
   [languages.it]
     languageName = "Italiano"
     weight = 6
     contentDir = "content/it"
-
-# Menu configuration
-[menu]
-  [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "Biography"
-    url = "/biography/"
-    weight = 2
-  [[menu.main]]
-    name = "Instruments"
-    url = "/instruments/"
-    weight = 3
-  [[menu.main]]
-    name = "Discography"
-    url = "/discs/"
-    weight = 4
-  [[menu.main]]
-    name = "Media"
-    url = "/media/"
-    weight = 5
-  [[menu.main]]
-    name = "Programs"
-    url = "/programs/"
-    weight = 6
-  [[menu.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = 7
+    [languages.it.menu]
+      [[languages.it.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.it.menu.main]]
+        name = "Registrazioni"
+        url = "/discs/"
+        weight = 2
+      [[languages.it.menu.main]]
+        name = "Biografia"
+        url = "/biography/"
+        weight = 3
+      [[languages.it.menu.main]]
+        name = "Strumenti"
+        url = "/instruments/"
+        weight = 4
+      [[languages.it.menu.main]]
+        name = "Audio e video"
+        url = "/media/"
+        weight = 5
+      [[languages.it.menu.main]]
+        name = "Proposte"
+        url = "/programs/"
+        weight = 6
+      [[languages.it.menu.main]]
+        name = "Contatto"
+        url = "/contact/"
+        weight = 7
 
 # Ignore REF_NOT_FOUND errors for missing pages in other languages
 ignoreErrors = ["error-missing-page-ref"]

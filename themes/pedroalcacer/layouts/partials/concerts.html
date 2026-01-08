@@ -1,26 +1,26 @@
-<div class="overflow-x-auto">
-  <table class="min-w-full bg-white border border-gray-200">
+<div class="concerts-table-wrapper">
+  <table class="concerts-table">
     <thead>
-      <tr class="bg-gray-100">
-        <th class="px-6 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Date</th>
-        <th class="px-6 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">City</th>
-        <th class="px-6 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Venue</th>
-        <th class="px-6 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Ensemble</th>
-        <th class="px-6 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Program</th>
+      <tr>
+        <th>Date</th>
+        <th>City</th>
+        <th>Venue</th>
+        <th>Ensemble</th>
+        <th>Program</th>
       </tr>
     </thead>
-    <tbody class="bg-white">
+    <tbody>
       {{ $csvFile := resources.Get "data/concerts.csv" }}
       {{ if $csvFile }}
         {{ $csvData := $csvFile | transform.Unmarshal (dict "delimiter" ";") }}
         {{ range $i, $row := after 1 $csvData }}
           {{ if gt (len $row) 1 }}
       <tr>
-        <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 0 }}</td>
-        <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 1 }}</td>
-        <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 2 }}</td>
-        <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 3 }}</td>
-        <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200">{{ index $row 4 }}</td>
+        <td>{{ index $row 0 }}</td>
+        <td>{{ index $row 1 }}</td>
+        <td>{{ index $row 2 }}</td>
+        <td>{{ index $row 3 }}</td>
+        <td>{{ index $row 4 }}</td>
       </tr>
           {{ end }}
         {{ end }}

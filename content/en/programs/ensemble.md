@@ -1,42 +1,74 @@
 ---
 title: "Ensemble Programs"
+description: "Chamber music programs featuring historical instruments"
 ---
 
-### Anima Shirvani
-* Tural Ismayilov - Renaissanceposaune 
-* Deniz Mahir Kartal - Kaval, Duduk (Balaban)
-* Sebastian Flaig - Percussion 
-* Pedro Alcàcer Doria - Theorbe
+Pedro Alcàcer performs with several distinguished early music ensembles, bringing the rich repertoire of Renaissance and Baroque chamber music to life through collaborations with exceptional musicians.
 
-### Caravelle della musica
-* Maximiliano Baños - Canto e direzione
-* Luciana Elizondo - Viola da gamba e canto
-* Leonardo Moreno - Percussione e Voce
-* Pedro Alcàcer - Vihuela de mano e Chitarra barocca
+## Anima Shirvani
+An innovative ensemble exploring the musical connections between Renaissance Europe and Eastern traditions.
 
-### Viaggio musicale nell'Emilia del 600'
-* LUCA GIARDINI - Violino e Maestro di Concerto
-* GIACOMO TESINI - Violino
-* MAURO VALLI - Violoncello
-* PEDRO ALCÀCER DORIA - Tiorba e chitarra barocca
-* MATTEO MESSORI - Cembalo
+**Ensemble Members:**
+- Tural Ismayilov - Renaissance Trombone
+- Deniz Mahir Kartal - Kaval, Duduk (Balaban)
+- Sebastian Flaig - Percussion
+- Pedro Alcàcer Doria - Theorbo
 
-### Volcania
-* Elisabeth Champollion - Blockflöte und Leitung 
-* Franciska Anna Hajdu - Violine 
-* Henriette Otto - Violine 
-* Yuko Hara - Viola 
-* Jule Hinrichsen - Violoncello 
-* Rüdiger Kurz - Kontrabass 
-* Pedro Alcàcer Doria - Gitarre 
-* Luise Enzian - Harfe
+---
 
-### Arlecchino innamorato
-* Valentina Mastrangelo - Soprano
-* Giampaolo Fagotto - Tenore (Arlecchino)
-* Pedro Alcàcer Doria - Tiorba e Chitarra barocca
-* Marco Mencoboni - Clavicembalo e Direzione musicale
+## Caravelle della musica
+A voyage through Spanish and Italian Renaissance music, directed by Maximiliano Baños.
 
-### Les musiques du Roi Soleil
-* Juan Manuel Quintana & Victor Aragón - Violas da gamba
-* Pedro Alcàcer Doria - Tiorba
+**Ensemble Members:**
+- Maximiliano Baños - Voice and Direction
+- Luciana Elizondo - Viola da gamba and Voice
+- Leonardo Moreno - Percussion and Voice
+- Pedro Alcàcer - Vihuela de mano and Baroque Guitar
+
+---
+
+## Viaggio musicale nell'Emilia del 600'
+A musical journey through 17th-century Emilia, featuring instrumental works from this culturally rich region of Italy.
+
+**Ensemble Members:**
+- Luca Giardini - Violin and Concert Master
+- Giacomo Tesini - Violin
+- Mauro Valli - Violoncello
+- Pedro Alcàcer Doria - Theorbo and Baroque Guitar
+- Matteo Messori - Harpsichord
+
+---
+
+## Volcania
+An ensemble featuring period instruments under the direction of Elisabeth Champollion.
+
+**Ensemble Members:**
+- Elisabeth Champollion - Recorder and Direction
+- Franciska Anna Hajdu - Violin
+- Henriette Otto - Violin
+- Yuko Hara - Viola
+- Jule Hinrichsen - Violoncello
+- Rüdiger Kurz - Double Bass
+- Pedro Alcàcer Doria - Guitar
+- Luise Enzian - Harp
+
+---
+
+## Arlecchino innamorato
+A theatrical musical program bringing to life the commedia dell'arte character of Harlequin in love.
+
+**Ensemble Members:**
+- Valentina Mastrangelo - Soprano
+- Giampaolo Fagotto - Tenor (Arlecchino)
+- Pedro Alcàcer Doria - Theorbo and Baroque Guitar
+- Marco Mencoboni - Harpsichord and Musical Direction
+
+---
+
+## Les musiques du Roi Soleil
+Music from the court of Louis XIV, the Sun King, featuring the intimate sound of viols and theorbo.
+
+**Ensemble Members:**
+- Juan Manuel Quintana - Viola da gamba
+- Victor Aragón - Viola da gamba
+- Pedro Alcàcer Doria - Theorbo

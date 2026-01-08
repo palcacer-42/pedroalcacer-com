@@ -33,5 +33,3 @@ music in Europe. The artist is known for his profound experience and artistic
 sensitivity, which he has acquired through collaborations with outstanding musicians
 and teachers from all over the world. His international experience and high
 qualifications make him an outstanding artist in his field.
-
-{{ partial "concerts.html" . }}

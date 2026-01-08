@@ -1,13 +1,17 @@
 ---
-title: "Programs"
+title: "Programme"
+description: "Konzertprogramme mit historischen Zupfinstrumenten"
 ---
 
-## Masterclasses and Workshops
+## Konzertprogramme
 
-Pedro Alcàcer offers specialized instruction and workshops on:
+Pedro Alcàcer interpretiert ein vielfältiges Repertoire, das von der Renaissance bis zum Barock auf historischen Zupfinstrumenten reicht. Seine Programme erkunden die reichen musikalischen Traditionen Europas durch sorgfältig kuratierte Auswahlen.
 
-- Early music performance practice
-- Renaissance and Baroque lute technique
+### Solorezitals
+Intime Programme mit Laute, Theorbe, Vihuela und Barockgitarre, die die Meisterwerke der Renaissance und des Barock präsentieren.
+
+### Kammermusik
+Kollaborative Aufführungen mit renommierten Ensembles für Alte Musik, die das Kammermusik-Repertoire des 16. und 17. Jahrhunderts zum Leben erwecken.
 - Historical performance interpretation
 - Period instruments and tuning systems
 - Continuo accompaniment

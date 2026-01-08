@@ -1,17 +1,30 @@
 {{ define "main" }}
-<section class="page-content">
+<section class="bio-section">
     <div class="container">
-        <div class="biography-hero">
-            <img src="{{ "/images/biography-hero.jpg" | relURL }}" alt="Pedro Alcàcer" class="biography-image">
-            <div class="biography-content">
-                <h1>{{ .Title }}</h1>
-                <div class="post-body">
+        <div class="bio-card">
+            <div class="bio-photo">
+                <img src="{{ "/images/biography-hero.jpg" | relURL }}" alt="Pedro Alcàcer">
+            </div>
+            <div class="bio-body">
+                <p class="eyebrow">{{ i18n "biography" | default "Biography" }}</p>
+                <h1 class="bio-title">{{ .Title }}</h1>
+                <div class="bio-text post-body">
                     {{ .Content }}
                 </div>
             </div>
         </div>
-        
-        {{ partial "concerts.html" . }}
+    </div>
+</section>
+
+<section class="concerts-section">
+    <div class="container">
+        <div class="concerts-header">
+            <h2 class="concerts-title">{{ i18n "concerts" | default "Concerts" }}</h2>
+            {{ with .Description }}<p class="concerts-subtitle">{{ . }}</p>{{ end }}
+        </div>
+        <div class="concerts-card">
+            {{ partial "concerts.html" . }}
+        </div>
     </div>
 </section>
 {{ end }}

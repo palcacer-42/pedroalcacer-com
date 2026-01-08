@@ -8,10 +8,10 @@
 <section class="quote-section">
     <div class="container">
         <blockquote class="testimonial">
-            <p>"Pedro Alcácer is an engaging and lively musician, - full of ideas and with very interesting potential."</p>
+            <p>{{ i18n "quote_text" }}</p>
             <footer>
-                <strong>Hopkinson Smith,</strong><br>
-                Professor of Lute, Schola Cantorum Baselensis
+                <strong>{{ i18n "quote_author" }}</strong><br>
+                {{ i18n "quote_role" }}
             </footer>
         </blockquote>
     </div>
@@ -19,13 +19,13 @@
 
 <section class="cta-section">
     <div class="container">
-        <h2><a href="https://album.link/s/1B2TgPuNXzNFRmfzthtYer" target="_blank">Listen to El Maestro in all Streaming Platforms</a></h2>
+        <h2><a href="https://album.link/s/1B2TgPuNXzNFRmfzthtYer" target="_blank">{{ i18n "hero_title" }}</a></h2>
     </div>
 </section>
 
 <section class="newsletter-section">
     <div class="container">
-        <h3>Subscribe to the Newsletter:</h3>
+        <h3>{{ i18n "newsletter_heading" }}</h3>
         <form class="newsletter-form" action="https://formspree.io/f/mbdlnanv" method="POST">
             <input type="email" name="email" placeholder="Enter your email" required>
             <input type="hidden" name="_subject" value="New newsletter subscription">

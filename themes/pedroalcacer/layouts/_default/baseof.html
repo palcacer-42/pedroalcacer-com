@@ -4,31 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} - Pedro Alcàcer</title>
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/style.css?v=20260108" | relURL }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
+        <div class="container nav-container">
             <div class="nav-brand">
                 <a href="{{ "/" | relLangURL }}">Pedro Alcàcer</a>
             </div>
-            <ul class="nav-menu">
-                {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL | relLangURL }}" class="nav-link">{{ .Name }}</a></li>
-                {{ end }}
-            </ul>
-            
-            <!-- Language Selector -->
-            <div class="language-selector">
-                {{ range .Site.Languages }}
-                    {{ if eq .Lang $.Page.Lang }}
-                        <span class="lang-current">{{ .LanguageName }}</span>
-                    {{ else }}
-                        <a href="{{ $.Page.RelPermalink | replaceRE (printf "^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}" class="lang-link">{{ .LanguageName }}</a>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+                <span></span>
+            </label>
+
+            <div class="nav-block">
+                <ul class="nav-menu">
+                    {{ range .Site.Menus.main }}
+                    <li><a href="{{ .URL | relLangURL }}" class="nav-link">{{ .Name }}</a></li>
                     {{ end }}
-                {{ end }}
+                </ul>
+                
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    {{ range .Site.Languages }}
+                        {{ if eq .Lang $.Page.Lang }}
+                            <span class="lang-current">{{ .LanguageName }}</span>
+                        {{ else }}
+                            <a href="{{ $.Page.RelPermalink | replaceRE (printf "^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}" class="lang-link">{{ .LanguageName }}</a>
+                        {{ end }}
+                    {{ end }}
+                </div>
             </div>
         </div>
     </nav>

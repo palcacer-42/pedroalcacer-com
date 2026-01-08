@@ -2,29 +2,35 @@
 <section class="page-hero">
     <img src="{{ "/images/discs-hero.jpg" | relURL }}" alt="{{ .Title }}" class="hero-image">
 </section>
-<div class="container">
-    <h1 class="title">{{ .Title }}</h1>
-    <div class="columns is-multiline">
-        {{ range .Params.discs }}
-        <div class="column is-one-third">
-            <div class="card">
-                <div class="card-image">
-                    <figure class="image is-4by3">
-                        <a href="{{ .url }}" target="_blank">
-                            <img src="{{ .image | relURL }}" alt="{{ .title }}">
-                        </a>
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <p class="title is-4"><a href="{{ .url }}" target="_blank">{{ .title }}</a></p>
-                    <p class="subtitle is-6">{{ .artist }}</p>
-                    <div class="content">
-                        {{ .role | markdownify }}
-                    </div>
-                </div>
-            </div>
+
+<section class="recordings-section">
+    <div class="container">
+        <div class="recordings-header">
+            <h1 class="recordings-title">{{ .Title }}</h1>
+            {{ with .Description }}<p class="recordings-subtitle">{{ . }}</p>{{ end }}
         </div>
-        {{ end }}
+
+        <div class="discs-grid">
+            {{ range .Params.discs }}
+            <article class="disc-card">
+                {{ if .url }}
+                <a class="disc-card__link" href="{{ .url }}" target="_blank" rel="noopener">
+                {{ end }}
+                    <div class="disc-cover">
+                        <img src="{{ .image | relURL }}" alt="{{ .title }}">
+                    </div>
+                    <div class="disc-meta">
+                        <p class="disc-title">{{ .title }}</p>
+                        {{ with .artist }}<p class="disc-artist">{{ . }}</p>{{ end }}
+                        {{ with .role }}<p class="disc-role">{{ . }}</p>{{ end }}
+                    </div>
+                    {{ if .url }}<span class="disc-cta" aria-hidden="true">→</span>{{ end }}
+                {{ if .url }}
+                </a>
+                {{ end }}
+            </article>
+            {{ end }}
+        </div>
     </div>
-</div>
+</section>
 {{ end }}

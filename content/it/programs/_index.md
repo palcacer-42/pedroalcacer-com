@@ -1,13 +1,17 @@
 ---
-title: "Programs"
+title: "Programmi"
+description: "Programmi di concerto con strumenti storici a pizzico"
 ---
 
-## Masterclasses and Workshops
+## Programmi di Concerto
 
-Pedro Alcàcer offers specialized instruction and workshops on:
+Pedro Alcàcer esegue un repertorio diversificato che spazia dal Rinascimento al Barocco su strumenti storici a pizzico. I suoi programmi esplorano le ricche tradizioni musicali europee.
 
-- Early music performance practice
-- Renaissance and Baroque lute technique
+### Recital Solistici
+Programmi intimi con liuto, tiorba, vihuela e chitarra barocca, presentando i capolavori dei periodi Rinascimentale e Barocco.
+
+### Musica da Camera
+Esecuzioni in collaborazione con distinti ensemble di musica antica, portando in vita il repertorio cameristico dei secoli XVI e XVII.
 - Historical performance interpretation
 - Period instruments and tuning systems
 - Continuo accompaniment
