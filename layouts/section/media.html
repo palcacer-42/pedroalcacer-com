@@ -12,9 +12,11 @@
         {{ if or (strings.Contains $url "youtube.com") (strings.Contains $url "youtu.be") }}
           {{ $id := replaceRE ".*(?:v=|be/)([^&?/]+).*" "$1" $url }}
           <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $id }}" frameborder="0" allowfullscreen></iframe>
+          <p class="video-link"><a href="{{ $url }}" target="_blank" rel="noopener">Watch on YouTube</a></p>
         {{ else if strings.Contains $url "vimeo.com" }}
           {{ $id := replaceRE ".*(?:video/|vimeo.com/)([^&?/]+).*" "$1" $url }}
           <iframe src="https://player.vimeo.com/video/{{ $id }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+          <p class="video-link"><a href="{{ $url }}" target="_blank" rel="noopener">Watch on Vimeo</a></p>
         {{ end }}
       {{ else }}
         <div class="video-placeholder">Video coming soon</div>

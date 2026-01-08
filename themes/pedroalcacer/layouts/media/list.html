@@ -24,9 +24,11 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
+                        <p class="video-link"><a href="{{ $url }}" target="_blank" rel="noopener">Watch on YouTube</a></p>
                     {{ else if strings.Contains $url "vimeo.com" }}
                         {{ $id := replaceRE ".*(?:video/|vimeo.com/)([^&?/]+).*" "$1" $url }}
                         <iframe src="https://player.vimeo.com/video/{{ $id }}" frameborder="0" allowfullscreen></iframe>
+                        <p class="video-link"><a href="{{ $url }}" target="_blank" rel="noopener">Watch on Vimeo</a></p>
                     {{ end }}
                 {{ end }}
                 <div class="media-info">
