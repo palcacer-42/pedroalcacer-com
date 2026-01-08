@@ -1,5 +1,15 @@
 ---
 title: "Ensemble Programs"
+description: "Programs for ensembles featuring historical instruments."
+---
+
+This page lists ensemble programs and links to their downloadable PDFs.
+
+- [Tres territorios](/en/programs/tres-territorios)
+- [Dos peninsulas](/en/programs/dos-peninsulas)
+- [Tanyer de gala](/en/programs/tanyer-de-gala)
+---
+title: "Ensemble Programs"
 description: "Chamber music programs featuring historical instruments"
 ---
 

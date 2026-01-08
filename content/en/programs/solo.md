@@ -1,5 +1,14 @@
 ---
 title: "Solo Programs"
+description: "Programmes for solo instruments."
+---
+
+This page lists solo programs and links to their downloadable PDFs.
+
+- [Bologna liutistica](/en/programs/bologna-liutistica)
+- [Una storia fra le corde...](/en/programs/una-storia-fra-le-corde)
+---
+title: "Solo Programs"
 description: "Concert programs for solo lute, theorbo, vihuela, and baroque guitar"
 ---
 

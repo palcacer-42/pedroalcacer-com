@@ -1,5 +1,14 @@
 ---
 title: "Programs"
+description: "Solo and ensemble programs — downloadable original PDFs available per program."
+---
+
+Welcome to the Programs section. Browse our solo and ensemble programs below.
+
+- [Solo programs](/en/programs/solo)
+- [Ensemble programs](/en/programs/ensemble)
+---
+title: "Programs"
 description: "Concert programs featuring historical plucked string instruments"
 ---
 
