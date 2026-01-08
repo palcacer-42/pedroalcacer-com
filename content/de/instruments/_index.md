@@ -2,7 +2,7 @@
 title: "Instrumente"
 description: "Die Instrumente der Alten Musik, auf denen Pedro Alcàcer sich spezialisiert"
 instruments:
-  - title: "Renaissancetarre"
+  - title: "Renaissancegitarre"
     builder: "Gabriel Aguilera, Tuscania 2019"
     image: "/images/instruments/renaissance-guitar.jpg"
   - title: "Barockgitarre"
