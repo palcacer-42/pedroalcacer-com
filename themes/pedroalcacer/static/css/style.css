@@ -655,7 +655,12 @@ img {
     height: 18px;
     flex-shrink: 0;
     display: inline-block;
+    background: rgba(18,23,29,0.04);
+    border-radius: 50%;
+    padding: 4px;
+    box-sizing: content-box;
 }
+.album-link-button .icon path { display: block; }
 .album-link-button .icon svg, .album-link-button .icon path { display: block; }
 .album-link-button .album-link-label {
     font-size: 0.95rem;
