@@ -1,17 +1,41 @@
 ---
 title: "Audio and Video"
 description: "Audio and video recordings of Pedro Alcàcer's performances"
+media:
+  - title: "Luys Milán - Fantasía 13"
+    artist: "Pedro Alcàcer/Vihuela de mano"
+  - title: "Luys Milán - Pavana 1"
+    artist: "Pedro Alcàcer/Vihuela de mano"
+  - title: "Anima Shirvani, West-östlicher Divan"
+    artist: "Tural Ismayilov, Deniz Mahir Kartal, Sebastian Flaig, Pedro Alcàcer Doria"
+  - title: "Fantasie et allemande, premier suite du troisiéme livre Marin Marais"
+    artist: "Victor Aragon & Pedro Alcacer Doria"
+  - title: "John Playford - Stingo / Juice of Barley & Nicola Matteis - Diverse bizzarrie"
+    artist: "Ensemble Illtupia"
+  - title: "Titans Rising Appetizer: Ring and sing gala"
+    artist: "Sarah Fuhs & Pedro Alcàcer Doria"
+  - title: "Mille Regetz Josquin / Narvaez"
+    artist: "Pedro Alcàcer"
+  - title: "Titans Rising: Nun singet und seid froh!"
+    artist: "Sarah fuhs, Irina Kisselova, Roland Wilson, Lea Rahel Bader, Pedro Alcacer Doria, Sabine Erdmann"
+  - title: "Louis of Milan - Fantasies I to V"
+    artist: "Pedro Alcàcer"
+    video_url: "https://www.youtube.com/watch?v=bN_WYs-85KQ"
+  - title: "Fantasy, Benedictus and Sonnet - Enrriquez de Valderrábano"
+    artist: "Pedro Alcàcer Doria Vihuela"
+  - title: "Luis Milan"
+    artist: "Pedro Alcàcer Vihuela"
+    video_url: "https://player.vimeo.com/video/82270527"
+  - title: "Dario Castello - Sonata I"
+    artist: "Lux Terrae Consort Barocco"
+    video_url: "https://www.youtube.com/watch?v=XqmhQQYKJDQ"
+  - title: "Francesco da Milano"
+    artist: "Pedro Alcacer"
+    video_url: "https://www.youtube.com/watch?v=PALGjWW_iSE"
+  - title: "Biagio Marini, Sonata terza variata per violino e basso continuo"
+    artist: "Ingrid Neyza Cop & Pedro Alcacer Doria"
+    video_url: "https://www.youtube.com/watch?v=xp7knYdYy20"
+  - title: "Arcangelo Corelli - Sonata"
+    artist: "Fabrizio Longo & Pedro Alcàcer"
+    video_url: "https://www.youtube.com/watch?v=gHRPqAyCmXU"
 ---
-
-## Performance Recordings
-
-Watch and listen to performances and recordings of Pedro Alcàcer with various early music ensembles and collaborators.
-
-### Featured Performances
-
-- Baroque and Renaissance lute music
-- Solo performances on period instruments
-- Chamber music with early music ensembles
-- Continuo accompaniment in vocal and instrumental works
-
-For complete recordings and discography, see the [Recordings]({{< relref "/discs" >}}) page.

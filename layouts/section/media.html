@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="media-section">
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Description }}</p>
+  <div class="media-grid">
+    {{ range .Params.media }}
+    <div class="media-item">
+      <h3>{{ .title }}</h3>
+      <p>{{ .artist }}</p>
+      {{ if .video_url }}
+        {{ if strings.Contains .video_url "youtube.com" }}
+          {{ $id := (strings.TrimPrefix .video_url "https://www.youtube.com/watch?v=") }}
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $id }}" frameborder="0" allowfullscreen></iframe>
+        {{ else if strings.Contains .video_url "vimeo.com" }}
+          {{ $id := (strings.TrimPrefix .video_url "https://player.vimeo.com/video/") }}
+          <iframe src="https://player.vimeo.com/video/{{ $id }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        {{ end }}
+      {{ else }}
+        <div class="video-placeholder">Video coming soon</div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
