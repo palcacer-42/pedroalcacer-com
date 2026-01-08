@@ -14,7 +14,22 @@
         <div class="media-grid">
             {{ range .Params.media }}
             <div class="media-item">
-                {{ if .video_url }}
+                {{ $prov := .provider }}
+                {{ $vid := .video_id }}
+                {{ if and $prov $vid }}
+                    {{ if eq $prov "youtube" }}
+                        <iframe 
+                            src="https://www.youtube.com/embed/{{ $vid }}" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <p class="video-link"><a href="https://www.youtube.com/watch?v={{ $vid }}" target="_blank" rel="noopener">Watch on YouTube</a></p>
+                    {{ else if eq $prov "vimeo" }}
+                        <iframe src="https://player.vimeo.com/video/{{ $vid }}" frameborder="0" allowfullscreen></iframe>
+                        <p class="video-link"><a href="https://vimeo.com/{{ $vid }}" target="_blank" rel="noopener">Watch on Vimeo</a></p>
+                    {{ end }}
+                {{ else if .video_url }}
                     {{ $url := .video_url }}
                     {{ if or (strings.Contains $url "youtube.com") (strings.Contains $url "youtu.be") }}
                         {{ $id := replaceRE ".*(?:v=|be/)([^&?/]+).*" "$1" $url }}
