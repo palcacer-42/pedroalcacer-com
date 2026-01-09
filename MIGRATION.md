@@ -1,8 +1,8 @@
-# Migration from Wix to Hugo + GitHub Pages
+# Migration to Hugo + GitHub Pages
 
 ## 📊 Comparison
 
-| Aspect | Wix | Hugo + GitHub Pages |
+| Aspect | Previous site | Hugo + GitHub Pages |
 |--------|-----|-------------------|
 | **Monthly Cost** | $27-38 USD | **$0** ✅ |
 | **Setup Time** | Easy (but paid) | 1 hour (this is it!) |
@@ -16,12 +16,12 @@
 | **SEO** | Good | **Excellent** ✅ |
 | **Backups** | Automatic | **Git history** ✅ |
 | **Customization** | Limited | **Unlimited** ✅ |
-| **Hosting Restrictions** | Yes (Wix rules) | **None** ✅ |
+| **Hosting Restrictions** | Yes (previous platform rules) | **None** ✅ |
 
 ## 💰 Cost Savings Per Year
 
 ```
-Wix Premium: ~$27-38/month × 12 = €324-456/year
+Premium hosting: ~$27-38/month × 12 = €324-456/year
 
 Hugo + GitHub Pages: $0/year
 
@@ -30,10 +30,10 @@ Annual Savings: €324-456 🎉
 
 ## 🚀 What You Get
 
-### Before (Wix)
-- Hosted on `palcacer.wixsite.com`
+### Before (previous platform)
+- Hosted on previous platform
 - Expensive ongoing subscription
-- Limited to Wix features
+- Limited to previous platform features
 - Difficult to backup/export
 - Proprietary platform (vendor lock-in)
 
@@ -112,16 +112,16 @@ pedroalcacer-site/
 
 ## 🔄 Migration Path
 
-### What to Do With Your Wix Site
+### What to Do With Your Previous Site
 
 **Option 1: Keep Running (Safest)**
-- Keep paying for Wix until you verify Hugo version works perfectly
+- Keep the previous hosting active until you verify Hugo version works perfectly
 - Point domain to Hugo once happy
-- Cancel Wix after 1-2 months
+- Cancel old hosting after 1-2 months
 
 **Option 2: Immediate Migration**
 - Point your domain to GitHub Pages
-- Wix subscription becomes unused
+- Old subscription becomes unused
 - Cancel anytime
 
 **Option 3: Archive**
@@ -144,7 +144,7 @@ pedroalcacer-site/
 4. ✅ Add any missing content
 
 ### Following Week:
-1. ✅ Cancel Wix subscription (save €27-38!)
+1. ✅ Cancel old subscription (save €27-38!)
 2. ✅ Monitor performance
 3. ✅ Make any final tweaks
 
@@ -173,9 +173,8 @@ Everything you need is documented in:
 
 ## Summary
 
-You now have a professional, multi-language musician website that:
 - Costs **$0/month** (saves €324-456/year!)
-- Loads in **<100ms** (vs. Wix's 2-3 seconds)
+- Loads in **<100ms** (vs. ~2-3 seconds previously)
 - Gives you **complete control** of your content
 - Is **future-proof** and portable
 - Works perfectly with **6 languages**
