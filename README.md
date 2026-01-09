@@ -4,7 +4,7 @@ A multi-language Hugo-based static site for Pedro Alcàcer's musician portfolio,
 
 ## Overview
 
-This site replaces your previous Wix site with a free, fast, and maintainable alternative built with Hugo static site generator.
+This site replaces your previous site with a free, fast, and maintainable alternative built with Hugo static site generator.
 
 **Languages Supported:** English, Spanish (Español), Catalan (Català), German (Deutsch), French (Français), Italian (Italiano)
 
@@ -12,9 +12,9 @@ This site replaces your previous Wix site with a free, fast, and maintainable al
 
 These core principles must be followed when working with AI assistance on this project:
 
-1. **Source of Truth**: All content must be based on the original Wix website and HTTrack backup files. These are the authoritative sources for all text, information, images, and structure.
+1. **Source of Truth**: All content must be based on the original site and HTTrack backup files. These are the authoritative sources for all text, information, images, and structure.
 
-2. **No AI-Generated Content**: All text and information must be original from the Wix site. Do not use AI to fill in missing content, create placeholder text, or generate new descriptions. If content is missing, it must be sourced from the original site or left blank.
+2. **No AI-Generated Content**: All text and information must be sourced from the original site. Do not use AI to fill in missing content, create placeholder text, or generate new descriptions. If content is missing, it must be sourced from the original site or left blank.
 
 3. **Simplicity First**: The structure and implementation strategies must be as simple and understandable as possible. This allows the project owner to:
    - Follow the project logic independently
@@ -391,7 +391,7 @@ Theme: MIT License
     *   Solo Programs: Detailed descriptions for 5 concert programs (Bologna liutística, Tres territorios, Dos peninsulas, Una storia fra le corde, Tanyer de gala)
     *   Ensemble Programs: Complete ensemble member listings for 6 groups (Anima Shirvani, Caravelle della musica, Viaggio musicale nell'Emilia del 600', Volcania, Arlecchino innamorato, Les musiques du Roi Soleil)
     *   Separate pages for solo and ensemble programs with navigation
-    *   All content based on original Wix site data, following project guidelines
+    *   All content based on original site data, following project guidelines
 
 ### January 7, 2026
 
