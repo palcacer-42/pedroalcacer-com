@@ -1,7 +1,10 @@
 {{ define "main" }}
 <section class="hero-section">
     <div class="hero-image">
-        <img src="{{ "/hero.jpg" | relURL }}" alt="Pedro Alcàcer">
+        <picture>
+            <source srcset="{{ "/hero.webp" | relURL }}" type="image/webp">
+            <img src="{{ "/hero.jpg" | relURL }}" alt="Pedro Alcàcer">
+        </picture>
     </div>
 </section>
 

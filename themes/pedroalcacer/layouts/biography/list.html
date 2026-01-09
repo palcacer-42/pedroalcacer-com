@@ -3,7 +3,10 @@
     <div class="container">
         <div class="bio-card">
             <div class="bio-photo">
-                <img src="{{ "/images/biography-hero.jpg" | relURL }}" alt="Pedro Alcàcer">
+                <picture>
+                    <source srcset="{{ "/images/biography-hero.webp" | relURL }}" type="image/webp">
+                    <img src="{{ "/images/biography-hero.jpg" | relURL }}" alt="Pedro Alcàcer">
+                </picture>
             </div>
             <div class="bio-body">
                 <p class="eyebrow">{{ i18n "biography" | default "Biography" }}</p>

@@ -1,6 +1,11 @@
 {{ define "main" }}
 <section class="page-hero">
-    <img src="{{ "/images/media-hero.jpg" | relURL }}" alt="{{ .Title }}" class="hero-image">
+    <div class="hero-image">
+        <picture>
+            <source srcset="{{ "/images/media-hero.webp" | relURL }}" type="image/webp">
+            <img src="{{ "/images/media-hero.jpg" | relURL }}" alt="{{ .Title }}" class="hero-image">
+        </picture>
+    </div>
 </section>
 <section class="page-content">
     <div class="container">
