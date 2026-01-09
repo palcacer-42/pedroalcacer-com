@@ -1,0 +1,18 @@
+{{/* Shortcode: render events from data/concerts.json */}}
+{{ $events := site.Data.concerts }}
+{{ if not $events }}
+  <p>No concerts found.</p>
+{{ else }}
+  <ul class="concerts-list">
+  {{ range $i, $e := $events }}
+    <li class="concert-item">
+      {{ $dt := $e.start }}
+      <time datetime="{{ $dt }}">{{ $dt }}</time> —
+      <strong>{{ $e.title }}</strong>
+      {{ with $e.location }}<span class="concert-location"> — {{ . }}</span>{{ end }}
+      {{ with $e.link }}<a href="{{ . }}" class="concert-link">Details</a>{{ end }}
+      {{ with $e.description }}<div class="concert-desc">{{ . }}</div>{{ end }}
+    </li>
+  {{ end }}
+  </ul>
+{{ end }}
