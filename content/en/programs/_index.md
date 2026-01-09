@@ -1,27 +1,3 @@
----
-title: "Programs"
-description: "Solo and ensemble programs — downloadable original PDFs available per program."
----
-Welcome to the Programs section. Browse our solo and ensemble programs below.
-
-- [Solo programs](/en/programs/solo)
-- [Ensemble programs](/en/programs/ensemble)
-
-## Concert Programs
-
-Pedro Alcàcer performs a diverse repertoire spanning from the Renaissance to the Baroque period on historical plucked string instruments. His programs explore the rich musical traditions of Europe through carefully curated selections that showcase the unique character of each instrument.
-
-### Solo
-
-[Solo programs →](solo/)
-
-### Ensemble
-
-[Ensemble programs →](ensemble/)
----
-title: "Programs"
-description: "Concert programs featuring historical plucked string instruments"
----
 
 ## Concert Programs
 
@@ -37,6 +13,5 @@ Collaborative performances with distinguished early music ensembles, bringing to
 
 [View Ensemble Programs →](ensemble/)
 
----
 
 For booking information and program details, please visit the [Contact](../contact/) page.

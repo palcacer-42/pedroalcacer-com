@@ -2,10 +2,6 @@
 title: "Programas de Conjunto"
 description: "Programas para conjuntos con instrumentos históricos."
 ---
----
-title: "Programas de Conjunto"
-description: "Programas para conjuntos con instrumentos históricos."
----
 
 Página dedicada a proyectos de conjunto y colaboraciones.
 

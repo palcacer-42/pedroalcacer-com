@@ -1,14 +1,5 @@
 ---
 title: "Programes"
-description: "Programes — PDFs originals descarregables per programa."
----
-
-Explora els nostres programes de solista i conjunt.
-
-- [Programes solo](/ca/programs/solo)
-- [Programes de conjunt](/ca/programs/ensemble)
----
-title: "Programes"
 description: "Programes de concert amb instruments històrics de corda polsada"
 ---
 

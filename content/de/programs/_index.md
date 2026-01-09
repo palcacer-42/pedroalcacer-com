@@ -1,14 +1,5 @@
 ---
 title: "Programme"
-description: "Programme — Original-PDFs zum Herunterladen pro Programm."
----
-
-Durchsuchen Sie unsere Solo- und Ensembleprogramme.
-
-- [Solo-Programme](/de/programs/solo)
-- [Ensemble-Programme](/de/programs/ensemble)
----
-title: "Programme"
 description: "Konzertprogramme mit historischen Zupfinstrumenten"
 ---
 
