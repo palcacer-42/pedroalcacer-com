@@ -2,12 +2,15 @@
 title: "Solo Programs"
 description: "Programmes for solo instruments."
 ---
-
-This page lists solo programs and links to their downloadable PDFs.
+This page lists solo programs and links to their pages and downloadable PDFs.
 
 - [Bologna liutistica](/en/programs/bologna-liutistica)
+- [Tres territorios](/en/programs/tres-territorios)
+- [Dos peninsulas](/en/programs/dos-peninsulas)
 - [Una storia fra le corde...](/en/programs/una-storia-fra-le-corde)
----
+- [Tanyer de gala](/en/programs/tanyer-de-gala)
+
+The repertoire for the lute family is vast and wonderful. More than two centuries of music in print give us the opportunity to build excellent concert programs for a diverse and enthusiastic audience.
 title: "Solo Programs"
 description: "Concert programs for solo lute, theorbo, vihuela, and baroque guitar"
 ---

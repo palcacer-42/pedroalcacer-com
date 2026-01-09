@@ -2,13 +2,16 @@
 title: "Ensemble Programs"
 description: "Programs for ensembles featuring historical instruments."
 ---
+This page describes project and ensemble collaborations.
 
-This page lists ensemble programs and links to their downloadable PDFs.
+- Anima Shirvani
+- Caravelle della musica
+- Viaggio musicale nell'Emilia del 600'
+- Volcania
+- Arlecchino innamorato
+- Les musiques du Roi Soleil
 
-- [Tres territorios](/en/programs/tres-territorios)
-- [Dos peninsulas](/en/programs/dos-peninsulas)
-- [Tanyer de gala](/en/programs/tanyer-de-gala)
----
+Pedro Alcàcer performs with several distinguished early music ensembles, bringing the rich repertoire of Renaissance and Baroque chamber music to life through collaborations with exceptional musicians.
 title: "Ensemble Programs"
 description: "Chamber music programs featuring historical instruments"
 ---
