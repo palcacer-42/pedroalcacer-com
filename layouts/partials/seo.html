@@ -1,0 +1,32 @@
+{{/* SEO partial: meta description, canonical, Open Graph, Twitter Card, hreflang */}}
+{{ $siteTitle := .Site.Title }}
+{{ $title := .Title }}
+{{ if not $title }}{{ $title = $siteTitle }}{{ end }}
+
+<title>{{ $title }} - {{ $siteTitle }}</title>
+
+{{ $metaDesc := cond (isset .Params "description") .Params.description (cond (ne .Summary "") .Summary .Site.Params.description) }}
+{{ if $metaDesc }}
+<meta name="description" content="{{ $metaDesc | plainify | htmlEscape }}">
+{{ end }}
+
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Open Graph */}}
+<meta property="og:title" content="{{ $title }}">
+{{ if $metaDesc }}<meta property="og:description" content="{{ $metaDesc | plainify | htmlEscape }}">{{ end }}
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ with .Params.featured_image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+
+{{/* Twitter Card */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+{{ if $metaDesc }}<meta name="twitter:description" content="{{ $metaDesc | plainify | htmlEscape }}">{{ end }}
+
+{{/* Hreflang / translations: emit current + translations */}}
+<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+{{ range .Translations }}
+  <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+{{ end }}
+<link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}">

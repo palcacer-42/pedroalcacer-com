@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ partial "seo.html" . }}
+    <script>
+        (function(){
+            try{
+                // Force light by default to restore white background.
+                document.documentElement.setAttribute('data-theme','light');
+                // Remove any previously stored preference so system dark won't reapply.
+                try { localStorage.removeItem('theme'); } catch(e){}
+            }catch(e){}
+        })();
+    </script>
+    <link rel="stylesheet" href="{{ "css/style.css?v=20260109" | relURL }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <a href="{{ "/" | relLangURL }}">Pedro Alcàcer</a>
+            </div>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+                <span></span>
+            </label>
+
+            <div class="nav-block">
+                <ul class="nav-menu">
+                    {{ range .Site.Menus.main }}
+                    <li><a href="{{ .URL | relLangURL }}" class="nav-link">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+                
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    {{ range .Site.Languages }}
+                        {{ if eq .Lang $.Page.Lang }}
+                            <span class="lang-current">{{ .LanguageName }}</span>
+                        {{ else }}
+                            <a href="{{ $.Page.RelPermalink | replaceRE (printf "^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}" class="lang-link">{{ .LanguageName }}</a>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/alcacerliutista/" target="_blank" rel="noopener">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/palcacer" target="_blank" rel="noopener">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com/palcacerliutista/" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://de.linkedin.com/in/pedro-alcacer-00895133" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <p>&copy; 2026 Pedro Alcàcer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ "js/theme-toggle.js" | relURL }}" defer></script>
+</body>
+</html>
