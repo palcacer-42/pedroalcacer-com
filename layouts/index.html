@@ -8,6 +8,10 @@
     </div>
 </section>
 
+
+
+
+
 <section class="quote-section">
     <div class="container">
         <blockquote class="testimonial">
@@ -28,9 +32,88 @@
 
 <section class="bandcamp-section">
     <div class="container">
-        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=236862947/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://palcacer.bandcamp.com/album/luis-mil-n-primer-libro-intitulado-el-maestro">Luis Milán - Primer libro intitulado &quot;El Maestro&quot; by Pedro Alcacer - Vihuela</a></iframe>
+                <div class="bc-and-calendar">
+                    <div class="bc-player">
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=236862947/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://palcacer.bandcamp.com/album/luis-mil-n-primer-libro-intitulado-el-maestro">Luis Milán - Primer libro intitulado &quot;El Maestro&quot; by Pedro Alcacer - Vihuela</a></iframe>
+                    </div>
+
+                    <div class="bc-calendar">
+                        <h3 class="calendar-title">Next concerts</h3>
+                        {{ $events := .Site.Data.calendar_events }}
+                        {{ if $events }}
+                            {{ $list := index $events 0 }}
+                            {{ if gt (len $events) 0 }}
+                                <ul class="gc-list">
+                                    {{ range $events }}
+                                        <li class="gc-item">
+                                            {{ $s := .start_iso }}
+                                            {{ $t := time $s }}
+                                            <span class="gc-title">{{ .title }}</span>
+                                            <div class="gc-meta">
+                                                <span class="gc-date">{{ dateFormat "Mon, 02 Jan 2006 15:04" $t }}</span>
+                                                {{ if .location }}<span class="gc-location"> — {{ .location }}</span>{{ end }}
+                                            </div>
+                                        </li>
+                                    {{ end }}
+                                </ul>
+                            {{ else }}
+                                <div class="gc-empty">No upcoming concerts.</div>
+                            {{ end }}
+                        {{ else }}
+                                <!-- If no build-time data, include a client widget that can call a serverless endpoint or Google API -->
+                                {{ $cal := .Site.Params.googleCalendar }}
+                                {{ if $cal }}
+                                  <div id="google-calendar-widget" data-calendar-id="{{ $cal.calendarId }}" data-api-key="{{ $cal.apiKey }}" {{ if $cal.endpoint }}data-endpoint="{{ $cal.endpoint }}"{{ end }}></div>
+                                  <script src="{{ "/js/google-calendar-widget.js" | relURL }}" defer></script>
+                                {{ else }}
+                                  <div class="gc-loading">Calendar not configured.</div>
+                                {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
     </div>
 </section>
+
+<style>
+    .bc-and-calendar{display:flex;gap:20px;align-items:flex-start;justify-content:center;max-width:900px;margin:0 auto}
+    .bc-player{flex:0 0 360px}
+    .bc-calendar{flex:1;max-width:420px}
+    .calendar-title{font-size:1.05rem;margin:0 0 8px;color:#073a59}
+    .calendar-embed iframe{width:100%;height:300px;border:0}
+    .calendar-widget{font-family:Inter,system-ui, -apple-system, "Helvetica Neue", Arial}
+    .gc-list{list-style:none;padding:0;margin:6px 0}
+    .gc-item{padding:8px 10px;border-radius:8px;border:1px solid rgba(0,0,0,0.04);margin-bottom:8px;background:#fff}
+    .gc-title{display:block;font-weight:700;color:#073a59}
+    .gc-date{color:#34586b;margin-left:8px;font-weight:600}
+    .gc-location{color:#6b6b6b;margin-left:6px}
+    .gc-loading,.gc-empty,.gc-error{color:#6b6b6b}
+
+    /* Details (expandable notes) */
+    .gc-item details{background:transparent;border:0;padding:0}
+    .gc-item summary{cursor:pointer;list-style:none;outline:none}
+    .gc-details{margin-top:8px;font-size:0.95rem;color:#333}
+    .gc-details .gc-more{margin-top:8px}
+    .gc-details a{color:#0b4a7a;font-weight:700;text-decoration:none}
+    /* Modal styles */
+    .gc-modal-overlay{position:fixed;inset:0;background:rgba(3,8,12,0.55);display:flex;align-items:center;justify-content:center;z-index:9999}
+    .gc-modal-dialog{background:#fff;border-radius:8px;max-width:720px;width:calc(100% - 40px);padding:18px 18px 16px;box-shadow:0 14px 40px rgba(3,8,12,0.4);position:relative}
+    .gc-modal-close{position:absolute;right:12px;top:10px;border:0;background:transparent;font-size:18px;cursor:pointer}
+    .gc-modal-title{margin:0 0 6px;font-size:1.05rem;color:#073a59}
+    .gc-modal-meta{color:#6b6b6b;font-size:0.95rem;margin-bottom:12px}
+    .gc-modal-content{color:#222;line-height:1.5}
+    .gc-modal-actions{margin-top:12px}
+    .gc-modal-link{display:inline-block;padding:8px 12px;background:#0b4a7a;color:#fff;border-radius:8px;text-decoration:none}
+    .gc-title-link{color:#073a59;font-weight:700;text-decoration:none}
+    .gc-title-text{font-weight:700;color:#073a59}
+    .gc-expander{display:inline-block;margin:0 8px;color:#34586b}
+
+    @media(max-width:880px){
+        .bc-and-calendar{flex-direction:column;align-items:stretch;padding:0 10px}
+        .bc-player{order:1;flex:0 0 auto;margin-bottom:12px}
+        .bc-calendar{order:2;margin-bottom:6px}
+        .calendar-embed iframe{height:280px}
+    }
+</style>
 
 <section class="newsletter-section">
     <div class="container">

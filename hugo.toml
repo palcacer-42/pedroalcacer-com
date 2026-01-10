@@ -219,3 +219,11 @@ ignoreErrors = ["error-missing-page-ref"]
 # Output formats
 # [outputs]
 #   home = ["HTML", "JSON"]
+
+[params]
+  [params.googleCalendar]
+    # Public calendar ID provided by the user
+    calendarId = "hgp3omm8735qu0ame6nj5e7boc@group.calendar.google.com"
+    # Google API key for client-side Calendar API access.
+    # It's recommended to restrict this key by HTTP referrer in Google Cloud Console.
+    apiKey = "AIzaSyDaMzqXp70IMb9pSTxZTTF-38gIwnk9ue4"
