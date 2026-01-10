@@ -91,7 +91,14 @@
     return;
   }
   if(!apiKey){
-    showMessage('API key not set. Add a Google API key to site params.', 'gc-error');
+    // No API key available — render the public Google Calendar embed iframe as a fallback.
+    // This requires the calendar to be public (no API usage).
+    const wrap = document.createElement('div');
+    wrap.className = 'calendar-embed';
+    const embedUrl = `https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calendarId)}&ctz=Europe%2FBerlin`;
+    wrap.innerHTML = `<iframe src="${embedUrl}" style="border:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>`;
+    el.innerHTML = '';
+    el.appendChild(wrap);
     return;
   }
 
