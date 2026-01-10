@@ -1,29 +1,27 @@
----
 title: "Programmes"
 description: "Programmes de concert avec instruments historiques à cordes pincées"
+
+
 ---
+title: "Programmes"
+description: "Programmes — PDFs originaux téléchargeables par programme."
+---
+
+# Programmes
+
+Découvrez nos programmes solo et ensemble.
+
+- [Programmes solo](/fr/programs/solo)
+- [Programmes d'ensemble](/fr/programs/ensemble)
 
 ## Programmes de Concert
 
-Pedro Alcàcer interprète un répertoire diversifié allant de la Renaissance au Baroque sur des instruments historiques à cordes pincées. Ses programmes explorent les riches traditions musicales européennes.
+Pedro Alcàcer interprète un répertoire diversifié allant de la Renaissance au Baroque sur des instruments historiques à cordes pincées. Ses programmes explorent les riches traditions musicales européennes à travers des sélections soigneusement conçues qui mettent en valeur le caractère unique de chaque instrument.
 
-### Récitals Solos
-Programmes intimes avec luth, théorbe, vihuela et guitare baroque, présentant les chefs-d'œuvre des périodes Renaissance et Baroque.
+### Solo · Ensemble
 
-### Musique de Chambre
-Performances en collaboration avec d'éminents ensembles de musique ancienne, donnant vie au répertoire de musique de chambre des XVIe et XVIIe siècles.
-- Historical performance interpretation
-- Period instruments and tuning systems
-- Continuo accompaniment
+[Voir Programmes Solo →](solo/)
 
-### Solo Programs
+[Voir Programmes d'Ensemble →](ensemble/)
 
-- Renaissance repertoire for lute and vihuela
-- Baroque lute and theorbo works
-- Works by Luis Milán, Silvius Leopold Weiss, and other masters
-
-### Ensemble Programs
-
-Collaborative performances featuring various early music ensembles and chamber configurations.
-
-For more information about scheduling a masterclass or performance, please contact via the Contact page.
+Pour toute information sur les réservations et les détails des programmes, veuillez consulter la page de [Contact](../contact/).
