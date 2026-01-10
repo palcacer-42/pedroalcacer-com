@@ -47,8 +47,32 @@
         // prevent title link clicks from toggling the details
         const link = li.querySelector('.gc-title-link');
         if(link){
-          link.addEventListener('click', function(e){ e.stopPropagation(); });
-          link.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' ') e.stopPropagation(); });
+          // First click: expand the <details>. Second click (when open): follow the link.
+          link.addEventListener('click', function(e){
+            const details = this.closest('details');
+            if(details && !details.open){
+              e.preventDefault();
+              e.stopPropagation();
+              details.open = true;
+              // move focus back to the summary so keyboard users remain oriented
+              const summary = details.querySelector('summary');
+              if(summary) summary.focus();
+            }
+            // if already open, allow the default (link opens in new tab)
+          });
+          link.addEventListener('keydown', function(e){
+            if(e.key === 'Enter' || e.key === ' '){
+              const details = this.closest('details');
+              if(details && !details.open){
+                e.preventDefault();
+                e.stopPropagation();
+                details.open = true;
+                const summary = details.querySelector('summary');
+                if(summary) summary.focus();
+              }
+              // otherwise let the keypress follow the link (target _blank)
+            }
+          });
         }
         // (no interception) title link opens in new tab
       });
@@ -111,8 +135,29 @@
       ul.appendChild(li);
       const link = li.querySelector('.gc-title-link');
       if(link){
-        link.addEventListener('click', function(e){ e.stopPropagation(); });
-        link.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' ') e.stopPropagation(); });
+        // First click: expand the <details>. Second click (when open): follow the link.
+        link.addEventListener('click', function(e){
+          const details = this.closest('details');
+          if(details && !details.open){
+            e.preventDefault();
+            e.stopPropagation();
+            details.open = true;
+            const summary = details.querySelector('summary');
+            if(summary) summary.focus();
+          }
+        });
+        link.addEventListener('keydown', function(e){
+          if(e.key === 'Enter' || e.key === ' '){
+            const details = this.closest('details');
+            if(details && !details.open){
+              e.preventDefault();
+              e.stopPropagation();
+              details.open = true;
+              const summary = details.querySelector('summary');
+              if(summary) summary.focus();
+            }
+          }
+        });
       }
       // (no interception) title link opens in new tab
     });
