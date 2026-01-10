@@ -87,7 +87,18 @@
 - Multilingual content is organized by language subdirectories under `content/` (see [hugo.toml](hugo.toml)).
 - Use `draft: true` in front matter for pages you don't want published yet.
 - Keep translations parallel across language directories for easier cross-linking.
-- Edit templates in `layouts/` before touching `themes/pedroalcacer/` unless you want to change the theme globally.
+  - Edit templates in `layouts/` before touching `themes/pedroalcacer/` unless you want to change the theme globally.
+
+**Prevent accidental static page overrides and safe deploys**
+
+- Files placed in `static/` are copied verbatim to the site root and will override any pages Hugo would otherwise generate. Never place full HTML pages in `static/` (only assets such as images, downloads, or small redirects).
+- If you need a permanent HTML landing page, prefer generating it via Hugo content/templates so it is tracked in `content/` and rebuilt by CI.
+- CI best-practices to avoid accidental overwrites:
+  - Keep a single deploy workflow under `.github/workflows/deploy.yml` and review changes to workflows in PRs.
+  - Pin the Hugo version in CI to match your local testing (set `hugo-version` in the workflow).
+  - Keep `actions/upload-pages-artifact@v4` and `actions/deploy-pages@v4` in the deploy workflow and update them periodically.
+  - Add a lightweight pre-deploy validation step in CI that checks generated output contains expected markers (for example, check `public/en/programs/index.html` for the CSS class `program-item`). If the check fails, abort the deployment and investigate.
+- Quick verification after deployment: use `curl -H "Cache-Control: no-cache" -I https://pedroalcacer.com/en/programs/` to bypass CDN cache when verifying a publish.
 
 **Where to look next (useful files)**
 - Main config: [hugo.toml](hugo.toml)

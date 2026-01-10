@@ -34,6 +34,18 @@ jobs:
       - name: Build
         run: hugo --minify
 
+      - name: Validate generated programs page
+        # Set SKIP_PROGRAMS_CHECK=true to bypass this validation (use only with caution)
+        run: |
+          if [ "${SKIP_PROGRAMS_CHECK}" = "true" ]; then echo "Skipping programs validation"; exit 0; fi
+          if [ ! -f ./public/en/programs/index.html ]; then echo "Missing public/en/programs/index.html" >&2; exit 1; fi
+          # Ensure at least one program item was generated (prevents static override with empty lists)
+          if ! grep -q 'program-item' ./public/en/programs/index.html; then
+            echo "Programs list appears empty or was overridden; aborting deploy." >&2
+            echo "Check for static/programs/index.html or template changes." >&2
+            exit 1
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
