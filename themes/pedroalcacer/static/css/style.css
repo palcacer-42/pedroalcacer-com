@@ -1076,7 +1076,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     }
 
     .nav-container {
-        align-items: stretch;
+        /* layout brand and toggle on a single row, allow the menu to wrap below when opened */
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
         gap: 6px;
     }
 
