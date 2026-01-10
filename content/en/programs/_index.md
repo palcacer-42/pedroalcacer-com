@@ -15,3 +15,5 @@ Collaborative performances with distinguished early music ensembles, bringing to
 
 
 For booking information and program details, please visit the [Contact](../contact/) page.
+
+<!-- Trigger rebuild: 2026-01-10 -->
