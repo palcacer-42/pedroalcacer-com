@@ -38,6 +38,8 @@ These guidelines ensure the project remains maintainable, authentic, and accessi
 - ✅ **Responsive Design** - Mobile-friendly out of the box
 - ✅ **Free Hosting** - GitHub Pages (no cost)
 - ✅ **Easy to Edit** - Simple markdown files for content
+
+<!-- Force deploy trigger: 2026-01-10 -->
 - ✅ **Custom Domain** - Use your existing pedroalcacer.com domain
 - ✅ **Media Section** - Video previews for performances with YouTube/Vimeo embeds
 - ✅ **Instruments Section** - Showcase of early music instruments with builder details
