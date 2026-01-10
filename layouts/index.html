@@ -61,13 +61,13 @@
                             {{ end }}
                         {{ else }}
                                 <!-- If no build-time data, include a client widget that can call a serverless endpoint or Google API -->
-                                {{ $cal := .Site.Params.googleCalendar }}
-                                {{ if $cal }}
-                                  <div id="google-calendar-widget" data-calendar-id="{{ $cal.calendarId }}" data-api-key="{{ $cal.apiKey }}" {{ if $cal.endpoint }}data-endpoint="{{ $cal.endpoint }}"{{ end }}></div>
-                                  <script src="{{ "/js/google-calendar-widget.js" | relURL }}" defer></script>
-                                {{ else }}
-                                  <div class="gc-loading">Calendar not configured.</div>
-                                {{ end }}
+                                                                {{ $cal := .Site.Params.googleCalendar }}
+                                                                {{ if $cal }}
+                                                                    <div id="google-calendar-widget" data-calendar-id="{{ $cal.calendarId }}" data-api-key="{{ default $cal.apiKey (getenv "GOOGLE_CALENDAR_API_KEY") }}" {{ if $cal.endpoint }}data-endpoint="{{ $cal.endpoint }}"{{ end }}></div>
+                                                                    <script src="{{ "/js/google-calendar-widget.js" | relURL }}" defer></script>
+                                                                {{ else }}
+                                                                    <div class="gc-loading">Calendar not configured.</div>
+                                                                {{ end }}
                         {{ end }}
                     </div>
                 </div>
