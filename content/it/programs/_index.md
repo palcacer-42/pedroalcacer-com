@@ -1,14 +1,9 @@
-title: "Programmi"
-description: "Programmi di concerto con strumenti storici a pizzico"
-
-
 ---
 title: "Programmi"
-description: "Programmi — PDF originali scaricabili per ogni programma."
+description: "Programmi di concerto con strumenti storici a pizzico. Concerti e proposte per Berlino, l'Europa, l'Italia, la Spagna e il Messico."
 ---
 
 # Programmi
-
 Scopri i nostri programmi solisti e d'ensemble.
 
 - [Programmi solisti](/it/programs/solo)

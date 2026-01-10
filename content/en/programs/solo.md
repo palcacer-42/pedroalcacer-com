@@ -1,3 +1,7 @@
+---
+title: "Solo Programmes"
+description: "Solo programmes for vihuela, theorbo and baroque lute by Pedro Alcàcer — available for concerts in Berlin, across Europe, Mexico, Italy, Spain and France."
+---
 
 ## Una storia fra le corde...
 **Vihuela and Theorbo**

@@ -43,19 +43,21 @@
                         {{ if $events }}
                             {{ $list := index $events 0 }}
                             {{ if gt (len $events) 0 }}
-                                <ul class="gc-list">
-                                    {{ range $events }}
-                                        <li class="gc-item">
-                                            {{ $s := .start_iso }}
-                                            {{ $t := time $s }}
-                                            <span class="gc-title">{{ .title }}</span>
-                                            <div class="gc-meta">
-                                                <span class="gc-date">{{ dateFormat "Mon, 02 Jan 2006 15:04" $t }}</span>
-                                                {{ if .location }}<span class="gc-location"> — {{ .location }}</span>{{ end }}
-                                            </div>
-                                        </li>
-                                    {{ end }}
-                                </ul>
+                                <div class="gc-list-container" tabindex="0" aria-label="Upcoming concerts">
+                                    <ul class="gc-list">
+                                        {{ range $events }}
+                                            <li class="gc-item">
+                                                {{ $s := .start_iso }}
+                                                {{ $t := time $s }}
+                                                <span class="gc-title">{{ .title }}</span>
+                                                <div class="gc-meta">
+                                                    <span class="gc-date">{{ dateFormat "Mon, 02 Jan 2006 15:04" $t }}</span>
+                                                    {{ if .location }}<span class="gc-location"> — {{ .location }}</span>{{ end }}
+                                                </div>
+                                            </li>
+                                        {{ end }}
+                                    </ul>
+                                </div>
                             {{ else }}
                                 <div class="gc-empty">No upcoming concerts.</div>
                             {{ end }}
@@ -63,7 +65,7 @@
                                 <!-- If no build-time data, include a client widget that can call a serverless endpoint or Google API -->
                                                                 {{ $cal := .Site.Params.googleCalendar }}
                                                                 {{ if $cal }}
-                                                                    <div id="google-calendar-widget" data-calendar-id="{{ $cal.calendarId }}" data-api-key="{{ default $cal.apiKey (getenv "GOOGLE_CALENDAR_API_KEY") }}" {{ if $cal.endpoint }}data-endpoint="{{ $cal.endpoint }}"{{ end }}></div>
+                                    <div id="google-calendar-widget" data-calendar-id="{{ $cal.calendarId }}" data-api-key="{{ $cal.apiKey }}" {{ if $cal.endpoint }}data-endpoint="{{ $cal.endpoint }}"{{ end }}></div>
                                                                     <script src="{{ "/js/google-calendar-widget.js" | relURL }}" defer></script>
                                                                 {{ else }}
                                                                     <div class="gc-loading">Calendar not configured.</div>
@@ -82,10 +84,27 @@
     .calendar-embed iframe{width:100%;height:300px;border:0}
     .calendar-widget{font-family:Inter,system-ui, -apple-system, "Helvetica Neue", Arial}
     .gc-list{list-style:none;padding:0;margin:6px 0}
-    .gc-item{padding:8px 10px;border-radius:8px;border:1px solid rgba(0,0,0,0.04);margin-bottom:8px;background:#fff}
-    .gc-title{display:block;font-weight:700;color:#073a59}
-    .gc-date{color:#34586b;margin-left:8px;font-weight:600}
-    .gc-location{color:#6b6b6b;margin-left:6px}
+    .gc-list-container{--gc-item-height:64px;max-height:calc(var(--gc-item-height) * 6);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-right:6px;padding-left:2px}
+    /* Visible thin scrollbar: WebKit and Firefox */
+    .gc-list-container{scrollbar-width:thin;scrollbar-color:rgba(11,74,122,0.25) transparent}
+    .gc-list-container::-webkit-scrollbar{width:8px}
+    .gc-list-container::-webkit-scrollbar-track{background:transparent}
+    .gc-list-container::-webkit-scrollbar-thumb{background:rgba(11,74,122,0.22);border-radius:8px;border:2px solid transparent;background-clip:padding-box}
+    .gc-list-container:hover::-webkit-scrollbar-thumb{background:rgba(11,74,122,0.36)}
+    /* Also apply scrolling when the client widget renders a plain .gc-list inside the widget container */
+    #google-calendar-widget > .gc-list{--gc-item-height:64px;max-height:calc(var(--gc-item-height) * 6);overflow-y:auto;-webkit-overflow-scrolling:touch;padding-right:6px}
+    #google-calendar-widget > .gc-list{scrollbar-width:thin;scrollbar-color:rgba(11,74,122,0.25) transparent}
+    #google-calendar-widget > .gc-list::-webkit-scrollbar{width:8px}
+    #google-calendar-widget > .gc-list::-webkit-scrollbar-track{background:transparent}
+    #google-calendar-widget > .gc-list::-webkit-scrollbar-thumb{background:rgba(11,74,122,0.22);border-radius:8px;border:2px solid transparent;background-clip:padding-box}
+    #google-calendar-widget > .gc-list:hover::-webkit-scrollbar-thumb{background:rgba(11,74,122,0.36)}
+    .gc-list{list-style:none;padding:0;margin:6px 0}
+    .gc-item{padding:10px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);margin-bottom:10px;background:#fff;box-shadow:0 1px 0 rgba(11,74,122,0.03)}
+    .gc-item{min-height:var(--gc-item-height);display:flex;flex-direction:column;justify-content:center}
+    .gc-item summary{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .gc-title{display:block;font-weight:700;color:#073a59;font-size:0.98rem}
+    .gc-date{color:#34586b;margin-left:8px;font-weight:600;white-space:nowrap}
+    .gc-location{color:#6b6b6b;margin-left:6px;flex-shrink:1;overflow:hidden;text-overflow:ellipsis}
     .gc-loading,.gc-empty,.gc-error{color:#6b6b6b}
 
     /* Details (expandable notes) */
@@ -112,6 +131,7 @@
         .bc-player{order:1;flex:0 0 auto;margin-bottom:12px}
         .bc-calendar{order:2;margin-bottom:6px}
         .calendar-embed iframe{height:280px}
+            .gc-list-container{--gc-item-height:72px;max-height:calc(var(--gc-item-height) * 6)}
     }
 </style>
 

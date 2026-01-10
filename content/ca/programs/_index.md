@@ -1,10 +1,6 @@
-title: "Programes"
-description: "Programes de concert amb instruments històrics de corda polsada"
-
-
 ---
 title: "Programes"
-description: "Programes — PDFs originals descarregables per programa."
+description: "Programes de concert amb instruments històrics de corda polsada. Concerts i projectes a Berlín, Europa, Itàlia, Espanya i Amèrica Llatina."
 ---
 
 # Programes

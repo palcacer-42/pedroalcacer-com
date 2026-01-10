@@ -103,7 +103,7 @@
   }
 
   const now = new Date().toISOString();
-  const maxResults = 8;
+  const maxResults = 25;
   const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events?key=${encodeURIComponent(apiKey)}&timeMin=${encodeURIComponent(now)}&singleEvents=true&orderBy=startTime&maxResults=${maxResults}`;
 
   fetch(url).then(resp=>{

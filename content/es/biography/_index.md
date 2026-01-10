@@ -1,5 +1,6 @@
+---
 title: "Biografía"
-description: "Conoce los orígenes y la trayectoria de Pedro Alcàcer"
+description: "Conoce los orígenes y la trayectoria de Pedro Alcàcer — conciertos y proyectos en Ciudad de México, Berlín, Italia, España y Europa."
 ---
 
 Nacido en 1982 en la Ciudad de México, el artista comenzó su educación musical desde muy joven bajo la influencia de su padre, el músico de jazz catalán Francesc Alcàcer, y creció en una familia creativa. Estudió guitarra de jazz con Francisco Lelo de la Rea y enseguida empezó a aprender guitarra clásica y composición con Héctor Ramos. Completó sus estudios de guitarra clásica en la prestigiosa "Escuela Nacional de Música-UNAM" y continuó formándose con profesores reconocidos como Isabelle Villei, Eloy Cruz y Antonio Corona, especializándose en el repertorio del Renacimiento y del Barroco.

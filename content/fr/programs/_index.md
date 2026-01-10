@@ -1,14 +1,9 @@
-title: "Programmes"
-description: "Programmes de concert avec instruments historiques à cordes pincées"
-
-
 ---
 title: "Programmes"
-description: "Programmes — PDFs originaux téléchargeables par programme."
+description: "Programmes de concert avec instruments historiques à cordes pincées. Concerts et projets à Berlin, en Europe, en Italie, en Espagne et au Mexique."
 ---
 
 # Programmes
-
 Découvrez nos programmes solo et ensemble.
 
 - [Programmes solo](/fr/programs/solo)

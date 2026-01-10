@@ -227,3 +227,6 @@ ignoreErrors = ["error-missing-page-ref"]
     # Google API key for client-side Calendar API access.
     # It's recommended to restrict this key by HTTP referrer in Google Cloud Console.
     apiKey = "AIzaSyDaMzqXp70IMb9pSTxZTTF-38gIwnk9ue4"
+
+  # Default site description used for meta description fallbacks
+  description = "Pedro Alcàcer — Lutenist specialising in Renaissance and Baroque repertoire. Concerts, recordings and programs." 

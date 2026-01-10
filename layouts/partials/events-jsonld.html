@@ -1,0 +1,49 @@
+{{/*
+  JSON-LD for concerts/events using data/concerts.json
+  Emits upcoming events (up to 10) as schema.org Event objects.
+  Date format in data: DD/MM/YYYY
+*/}}
+{{ $events := site.Data.concerts }}
+{{ if not $events }}{{/* no data */}}{{ return }}{{ end }}
+{{ $now := now }}
+{{ $items := slice }}
+{{ range $i, $e := $events }}
+  {{ if not (isset $e "date") }}{{ continue }}{{ end }}
+  {{ $rawDate := printf "%v" (index $e "date") }}
+  {{ if eq $rawDate "" }}{{ continue }}{{ end }}
+  {{ $parts := split $rawDate "/" }}
+  {{ if lt (len $parts) 3 }}{{ continue }}{{ end }}
+  {{ $day := index $parts 0 }}
+  {{ $month := index $parts 1 }}
+  {{ $year := index $parts 2 }}
+  {{/* Build ISO date YYYY-MM-DD */}}
+  {{ $monthP := cond (eq (len $month) 1) (print "0" $month) $month }}
+  {{ $dayP := cond (eq (len $day) 1) (print "0" $day) $day }}
+  {{ $iso := print $year "-" $monthP "-" $dayP }}
+  {{ $nowIso := $now.Format "2006-01-02" }}
+  {{ if lt $iso $nowIso }}{{ continue }}{{ end }}
+  {{ $city := cond (isset $e "city") $e.city "" }}
+  {{ $venue := cond (isset $e "venue") $e.venue "" }}
+  {{ $program := cond (isset $e "program") $e.program "" }}
+  {{ $ensemble := cond (isset $e "ensemble") $e.ensemble "" }}
+  {{ $country := "" }}
+  {{ with split $city "," }}
+    {{ if gt (len .) 1 }}
+      {{ $country = (index . (sub (len .) 1) | trim) }}
+    {{ end }}
+  {{ end }}
+  {{ $item := dict
+    "@type" "Event"
+    "name" (print $program " — " $ensemble)
+    "startDate" $iso
+    "location" (dict "@type" "Place" "name" $venue "address" (dict "addressLocality" $city "addressCountry" $country))
+  }}
+  {{ $items = $items | append $item }}
+{{ end }}
+{{ if eq (len $items) 0 }}{{ return }}{{ end }}
+{{/* sort by startDate */}}
+{{ $sorted := sort $items "startDate" }}
+{{ $limited := first 10 $sorted }}
+<script type="application/ld+json">
+{{ jsonify (dict "@context" "https://schema.org" "@graph" $limited) }}
+</script>

@@ -1,6 +1,7 @@
+---
 title: "Programme"
-description: "Konzertprogramme mit historischen Zupfinstrumenten"
-
+description: "Konzertprogramme mit historischen Zupfinstrumenten. Programme verfügbar in Berlin, Europa, Italien, Spanien und Mexiko."
+---
 
 Entdecken Sie unsere Solo- und Ensembleprogramme.
 

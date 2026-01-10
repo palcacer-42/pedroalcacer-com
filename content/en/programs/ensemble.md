@@ -1,3 +1,7 @@
+---
+title: "Ensemble Programmes"
+description: "Ensemble programmes and concert projects by Pedro Alcàcer — baroque and renaissance repertoire for Europe, Berlin, Italy, Spain and Latin America."
+---
 
 ## Arlecchino innamorato
 A theatrical musical program bringing to life the commedia dell'arte character of Harlequin in love.
