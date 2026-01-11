@@ -2,8 +2,8 @@
 <section class="hero-section">
     <div class="hero-image">
         <picture>
-            <source srcset="{{ " /hero.webp" | relURL }}" type="image/webp">
-            <img src="{{ " /hero.jpg" | relURL }}" alt="Pedro Alcàcer">
+            <source srcset="{{ "/hero.webp" | relURL }}" type="image/webp">
+            <img src="{{ "/hero.jpg" | relURL }}" alt="Pedro Alcàcer">
         </picture>
     </div>
 </section>
@@ -25,7 +25,7 @@
                     seamless><a
                         href="https://palcacer.bandcamp.com/album/luis-mil-n-primer-libro-intitulado-el-maestro">Luis
                         Milán - Primer libro intitulado &quot;El Maestro&quot; by Pedro Alcacer - Vihuela</a></iframe>
-                <h2 class="bc-caption"><a href="{{ " discs/luis-milan/" | relLangURL }}">{{ i18n "hero_title" }}</a>
+                <h2 class="bc-caption"><a href="{{ "discs/luis-milan/" | relLangURL }}">{{ i18n "hero_title" }}</a>
                 </h2>
             </div>
 
@@ -67,7 +67,7 @@
                 <div id="google-calendar-widget" data-calendar-id="{{ $cal.calendarId }}"
                     data-api-key="{{ $cal.apiKey }}" {{ if $cal.endpoint }}data-endpoint="{{ $cal.endpoint }}" {{ end
                     }}></div>
-                <script src="{{ " /js/google-calendar-widget.js" | relURL }}" defer></script>
+                <script src="{{ "/js/google-calendar-widget.js" | relURL }}" defer></script>
                 {{ else }}
                 <div class="gc-loading">Calendar not configured.</div>
                 {{ end }}
