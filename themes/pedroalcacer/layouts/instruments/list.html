@@ -5,14 +5,16 @@
         <div class="post-body">
             {{ .Content }}
         </div>
-        
+
         <div class="instruments-grid">
             {{ range .Params.instruments }}
             <div class="instrument-card">
-                <img src="{{ .image | relURL }}" alt="{{ .title }}">
+                <div class="instrument-image">
+                    <img src="{{ .image | relURL }}" alt="{{ .title }}" loading="lazy">
+                </div>
                 <div class="instrument-info">
-                    <h3>{{ .title }}</h3>
-                    <p>{{ .builder }}</p>
+                    <h3 class="instrument-title">{{ .title }}</h3>
+                    <p class="instrument-builder">{{ .builder }}</p>
                 </div>
             </div>
             {{ end }}

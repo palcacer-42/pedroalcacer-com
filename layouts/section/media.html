@@ -3,47 +3,56 @@
   <div class="container">
     <h1>{{ .Title }}</h1>
     {{ if .Description }}
-      <p class="post-body">{{ .Description }}</p>
+    <p class="post-body">{{ .Description }}</p>
     {{ end }}
 
     <div class="media-grid">
       {{ range .Params.media }}
-      <div class="media-item">
+      <div class="media-card">
         {{ $prov := .provider }}
         {{ $vid := .video_id }}
-        {{ if and $prov $vid }}
+        <div class="media-video-container">
+          {{ if and $prov $vid }}
           {{ if eq $prov "youtube" }}
-            <div class="video-wrap">
-              <iframe src="https://www.youtube-nocookie.com/embed/{{ $vid }}" frameborder="0" loading="lazy" title="Video: {{ .title }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p class="video-link"><a href="https://www.youtube.com/watch?v={{ $vid }}" target="_blank" rel="noopener">Watch on YouTube</a></p>
+          <iframe src="https://www.youtube-nocookie.com/embed/{{ $vid }}" frameborder="0" loading="lazy"
+            title="Video: {{ .title }}"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
           {{ else if eq $prov "vimeo" }}
-            <div class="video-wrap">
-              <iframe src="https://player.vimeo.com/video/{{ $vid }}" frameborder="0" loading="lazy" title="Video: {{ .title }}" allowfullscreen></iframe>
-            </div>
-            <p class="video-link"><a href="https://vimeo.com/{{ $vid }}" target="_blank" rel="noopener">Watch on Vimeo</a></p>
+          <iframe src="https://player.vimeo.com/video/{{ $vid }}" frameborder="0" loading="lazy"
+            title="Video: {{ .title }}" allowfullscreen></iframe>
           {{ end }}
-        {{ else if .video_url }}
+          {{ else if .video_url }}
           {{ $url := .video_url }}
           {{ if or (strings.Contains $url "youtube.com") (strings.Contains $url "youtu.be") }}
-            {{ $id := replaceRE ".*(?:v=|be/)([^&?/]+).*" "$1" $url }}
-            <div class="video-wrap">
-              <iframe src="https://www.youtube-nocookie.com/embed/{{ $id }}" frameborder="0" loading="lazy" title="Video: {{ .title }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p class="video-link"><a href="{{ $url }}" target="_blank" rel="noopener">Watch on YouTube</a></p>
+          {{ $id := replaceRE ".*(?:v=|be/)([^&?/]+).*" "$1" $url }}
+          <iframe src="https://www.youtube-nocookie.com/embed/{{ $id }}" frameborder="0" loading="lazy"
+            title="Video: {{ .title }}"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
           {{ else if strings.Contains $url "vimeo.com" }}
-            {{ $id := replaceRE ".*(?:video/|vimeo.com/)([^&?/]+).*" "$1" $url }}
-            <div class="video-wrap">
-              <iframe src="https://player.vimeo.com/video/{{ $id }}" frameborder="0" loading="lazy" title="Video: {{ .title }}" allowfullscreen></iframe>
-            </div>
-            <p class="video-link"><a href="{{ $url }}" target="_blank" rel="noopener">Watch on Vimeo</a></p>
+          {{ $id := replaceRE ".*(?:video/|vimeo.com/)([^&?/]+).*" "$1" $url }}
+          <iframe src="https://player.vimeo.com/video/{{ $id }}" frameborder="0" loading="lazy"
+            title="Video: {{ .title }}" allowfullscreen></iframe>
           {{ end }}
-        {{ else }}
+          {{ else }}
           <div class="video-placeholder">Video coming soon</div>
-        {{ end }}
+          {{ end }}
+        </div>
+
         <div class="media-info">
-          <h3>{{ .title }}</h3>
-          <p>{{ .artist }}</p>
+          <h3 class="media-title">{{ .title }}</h3>
+          <p class="media-artist">{{ .artist }}</p>
+
+          {{ if and $prov $vid }}
+          {{ if eq $prov "youtube" }}
+          <a href="https://www.youtube.com/watch?v={{ $vid }}" target="_blank" rel="noopener"
+            class="media-link-small"><i class="fab fa-youtube"></i> Watch on YouTube</a>
+          {{ else if eq $prov "vimeo" }}
+          <a href="https://vimeo.com/{{ $vid }}" target="_blank" rel="noopener" class="media-link-small"><i
+              class="fab fa-vimeo-v"></i> Watch on Vimeo</a>
+          {{ end }}
+          {{ end }}
         </div>
       </div>
       {{ end }}
