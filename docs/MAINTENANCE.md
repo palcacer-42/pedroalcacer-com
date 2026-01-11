@@ -33,7 +33,7 @@ hugo
 git checkout -b feat/short-description
 ```
 
-  - Make small, focused commits and push to origin for PRs.
+- Make small, focused commits and push to origin for PRs.
 
 - Pull requests & review:
   - Open a PR for template/major content changes. Include preview links.

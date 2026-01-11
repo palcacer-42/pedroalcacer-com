@@ -12,29 +12,16 @@
 
 
 
-<section class="quote-section">
-    <div class="container">
-        <blockquote class="testimonial">
-            <p>{{ i18n "quote_text" }}</p>
-            <footer>
-                <strong>{{ i18n "quote_author" }}</strong><br>
-                {{ i18n "quote_role" }}
-            </footer>
-        </blockquote>
-    </div>
-</section>
+<!-- Quote removed from top; rendered as a normal bottom section below -->
 
-<section class="cta-section">
-    <div class="container">
-        <h2><a href="{{ "discs/luis-milan/" | relLangURL }}">{{ i18n "hero_title" }}</a></h2>
-    </div>
-</section>
+<!-- CTA removed: streaming link is now the caption under the Bandcamp player -->
 
 <section class="bandcamp-section">
     <div class="container">
                 <div class="bc-and-calendar">
                     <div class="bc-player">
-                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=236862947/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://palcacer.bandcamp.com/album/luis-mil-n-primer-libro-intitulado-el-maestro">Luis Milán - Primer libro intitulado &quot;El Maestro&quot; by Pedro Alcacer - Vihuela</a></iframe>
+                        <iframe class="bc-iframe" style="border: 0;" src="https://bandcamp.com/EmbeddedPlayer/album=236862947/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://palcacer.bandcamp.com/album/luis-mil-n-primer-libro-intitulado-el-maestro">Luis Milán - Primer libro intitulado &quot;El Maestro&quot; by Pedro Alcacer - Vihuela</a></iframe>
+                        <div class="bc-caption">{{ i18n "hero_title" }}</div>
                     </div>
 
                     <div class="bc-calendar">
@@ -49,11 +36,18 @@
                                             <li class="gc-item">
                                                 {{ $s := .start_iso }}
                                                 {{ $t := time $s }}
-                                                <span class="gc-title">{{ .title }}</span>
-                                                <div class="gc-meta">
-                                                    <span class="gc-date">{{ dateFormat "Mon, 02 Jan 2006 15:04" $t }}</span>
-                                                    {{ if .location }}<span class="gc-location"> — {{ .location }}</span>{{ end }}
-                                                </div>
+                                                <details>
+                                                  <summary>
+                                                    <div class="gc-summary-left">
+                                                      <span class="gc-title-text">{{ .title }}</span>
+                                                      {{ if .location }}<span class="gc-location">{{ .location }}</span>{{ end }}
+                                                    </div>
+                                                    <div class="gc-summary-date">
+                                                      <span class="gc-date-line1">{{ dateFormat "Mon, 02 Jan 2006" $t }}</span>
+                                                      <span class="gc-date-line2">{{ dateFormat "15:04" $t }}</span>
+                                                    </div>
+                                                  </summary>
+                                                </details>
                                             </li>
                                         {{ end }}
                                     </ul>
@@ -77,10 +71,12 @@
 </section>
 
 <style>
-    .bc-and-calendar{display:flex;gap:20px;align-items:flex-start;justify-content:center;max-width:900px;margin:0 auto}
-    .bc-player{flex:0 0 360px}
-    .bc-calendar{flex:1;max-width:420px}
-    .calendar-title{font-size:1.05rem;margin:0 0 8px;color:#073a59}
+    .bc-and-calendar{display:flex;gap:16px;align-items:flex-start;justify-content:space-between;max-width:900px;margin:0 auto;padding:18px 0}
+    .bc-player{flex:0 0 360px;margin:0}
+    .bc-iframe{width:360px;height:420px}
+    .bc-caption{margin-top:8px;text-align:center;color:#34586b;font-weight:600;font-size:0.92rem}
+    .bc-calendar{flex:1;max-width:460px;padding-left:8px}
+    .calendar-title{font-size:1.02rem;margin:0 0 6px;color:#073a59}
     .calendar-embed iframe{width:100%;height:300px;border:0}
     .calendar-widget{font-family:Inter,system-ui, -apple-system, "Helvetica Neue", Arial}
     .gc-list{list-style:none;padding:0;margin:6px 0}
@@ -102,9 +98,12 @@
     .gc-item{padding:10px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);margin-bottom:10px;background:#fff;box-shadow:0 1px 0 rgba(11,74,122,0.03)}
     .gc-item{min-height:var(--gc-item-height);display:flex;flex-direction:column;justify-content:center}
     .gc-item summary{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .gc-summary-left{display:flex;flex-direction:column;align-items:flex-start;flex:1;min-width:0}
+    .gc-summary-date{flex:0 0 84px;text-align:right;color:#34586b}
+    .gc-date-line1{display:block;font-weight:600;color:#34586b}
+    .gc-date-line2{display:block;font-weight:700;color:#073a59}
     .gc-title{display:block;font-weight:700;color:#073a59;font-size:0.98rem}
-    .gc-date{color:#34586b;margin-left:8px;font-weight:600;white-space:nowrap}
-    .gc-location{color:#6b6b6b;margin-left:6px;flex-shrink:1;overflow:hidden;text-overflow:ellipsis}
+    .gc-location{color:#6b6b6b;margin-top:6px;display:block;overflow:hidden;text-overflow:ellipsis}
     .gc-loading,.gc-empty,.gc-error{color:#6b6b6b}
 
     /* Details (expandable notes) */
@@ -128,11 +127,18 @@
 
     @media(max-width:880px){
         .bc-and-calendar{flex-direction:column;align-items:stretch;padding:0 10px}
-        .bc-player{order:1;flex:0 0 auto;margin-bottom:12px}
-        .bc-calendar{order:2;margin-bottom:6px}
-        .calendar-embed iframe{height:280px}
+        .bc-player{order:1;flex:0 0 auto;margin-bottom:10px}
+        .bc-iframe{width:100%;height:380px}
+        .bc-calendar{order:2;margin-bottom:8px}
+        .calendar-embed iframe{height:260px}
             .gc-list-container{--gc-item-height:72px;max-height:calc(var(--gc-item-height) * 6)}
     }
+
+    /* Quote styles (rendered as normal bottom section) */
+    .quote-section{margin:20px 0}
+    .quote-section .testimonial{max-width:760px;margin:10px auto;padding:12px 14px;border-left:3px solid rgba(11,74,122,0.14);background:transparent;color:#173b4a;border-radius:6px}
+    .quote-section .testimonial footer{color:#34586b;margin-top:6px;font-weight:600}
+    .newsletter-section{padding:14px 0}
 </style>
 
 <section class="newsletter-section">
@@ -144,6 +150,19 @@
             <input type="hidden" name="_next" value="{{ .Site.BaseURL }}">
             <button type="submit">Subscribe</button>
         </form>
+    </div>
+</section>
+
+<!-- Normal bottom quote section -->
+<section class="quote-section" aria-label="Testimonial">
+    <div class="container">
+        <blockquote class="testimonial">
+            <p>{{ i18n "quote_text" }}</p>
+            <footer>
+                <strong>{{ i18n "quote_author" }}</strong><br>
+                {{ i18n "quote_role" }}
+            </footer>
+        </blockquote>
     </div>
 </section>
 {{ end }}

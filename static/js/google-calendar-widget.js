@@ -26,8 +26,9 @@
         const li = document.createElement('li');
         li.className = 'gc-item';
         const title = ev.title || 'Event';
-        const locHtml = ev.location ? `<span class="gc-location"> — ${escapeHtml(ev.location)}</span>` : '';
-        const dateStr = d ? new Intl.DateTimeFormat(undefined, {weekday:'short', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}).format(d) : '';
+        const locHtml = ev.location ? `<span class="gc-location">${escapeHtml(ev.location)}</span>` : '';
+        const dateLine1 = d ? new Intl.DateTimeFormat(undefined, {weekday:'short', month:'short', day:'numeric'}).format(d) : '';
+        const dateLine2 = d ? new Intl.DateTimeFormat(undefined, {hour:'2-digit', minute:'2-digit'}).format(d) : '';
         // If event description contains a URL, prefer it as link
         const url = ev.url || (ev.description && findFirstUrl(ev.description));
         const titleContent = escapeHtml(title);
@@ -36,9 +37,8 @@
         const detailsHtml = `
           <details>
             <summary>
-              ${titleLinkHtml}
-              <span class="gc-expander" aria-hidden="true">▸</span>
-              <span class="gc-date">${escapeHtml(dateStr)}</span>${locHtml}
+              <div class="gc-summary-left">${titleLinkHtml}<span class="gc-expander" aria-hidden="true">▸</span>${locHtml}</div>
+              <div class="gc-summary-date"><span class="gc-date-line1">${escapeHtml(dateLine1)}</span><span class="gc-date-line2">${escapeHtml(dateLine2)}</span></div>
             </summary>
             <div class="gc-details">${desc}${url && !ev.url ? `<div class="gc-more"><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">More info</a></div>` : ''}</div>
           </details>`;
@@ -124,8 +124,9 @@
       const li = document.createElement('li');
       li.className = 'gc-item';
       const title = ev.summary || 'Event';
-      const locHtml = ev.location ? `<span class="gc-location"> — ${escapeHtml(ev.location)}</span>` : '';
-      const dateStr = d ? new Intl.DateTimeFormat(undefined, {weekday:'short', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}).format(d) : '';
+      const locHtml = ev.location ? `<span class="gc-location">${escapeHtml(ev.location)}</span>` : '';
+      const dateLine1 = d ? new Intl.DateTimeFormat(undefined, {weekday:'short', month:'short', day:'numeric'}).format(d) : '';
+      const dateLine2 = d ? new Intl.DateTimeFormat(undefined, {hour:'2-digit', minute:'2-digit'}).format(d) : '';
       const url = ev.htmlLink || ev.htmlLink || ev.url || '';
       const titleContent = escapeHtml(title);
       const titleLinkHtml = url ? `<a class="gc-title-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${titleContent}</a>` : `<span class="gc-title-text">${titleContent}</span>`;
@@ -133,9 +134,8 @@
       li.innerHTML = `
         <details>
           <summary>
-            ${titleLinkHtml}
-            <span class="gc-expander" aria-hidden="true">▸</span>
-            <span class="gc-date">${escapeHtml(dateStr)}</span>${locHtml}
+            <div class="gc-summary-left">${titleLinkHtml}<span class="gc-expander" aria-hidden="true">▸</span>${locHtml}</div>
+            <div class="gc-summary-date"><span class="gc-date-line1">${escapeHtml(dateLine1)}</span><span class="gc-date-line2">${escapeHtml(dateLine2)}</span></div>
           </summary>
           <div class="gc-details">${desc}${url && !ev.url ? `<div class="gc-more"><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">More info</a></div>` : ''}</div>
         </details>`;
