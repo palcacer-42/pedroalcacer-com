@@ -11,6 +11,17 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
+            <!-- Language Selector -->
+            <div class="language-selector">
+                {{ range .Site.Languages }}
+                {{ if eq .Lang $.Page.Lang }}
+                <span class="lang-current">{{ .Lang }}</span>
+                {{ else }}
+                <a href="{{ $.Page.RelPermalink | replaceRE (printf "^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}"
+                    class="lang-link">{{ .Lang }}</a>
+                {{ end }}
+                {{ end }}
+            </div>
             <div class="nav-brand">
                 <a href="{{ "/" | relLangURL }}">Pedro Alcàcer</a>
             </div>
@@ -26,17 +37,6 @@
                     <li><a href="{{ .URL | relLangURL }}" class="nav-link">{{ .Name }}</a></li>
                     {{ end }}
                 </ul>
-                
-                <!-- Language Selector -->
-                <div class="language-selector">
-                    {{ range .Site.Languages }}
-                        {{ if eq .Lang $.Page.Lang }}
-                            <span class="lang-current">{{ .LanguageName }}</span>
-                        {{ else }}
-                            <a href="{{ $.Page.RelPermalink | replaceRE (printf "^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}" class="lang-link">{{ .LanguageName }}</a>
-                        {{ end }}
-                    {{ end }}
-                </div>
             </div>
         </div>
     </nav>
