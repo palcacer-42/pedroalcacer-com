@@ -1462,10 +1462,16 @@ textarea:focus-visible {
     }
 
     @media (max-width: 768px) {
+
+        /* restored to row layout for space saving */
         .navbar .container {
-            flex-direction: column;
-            gap: 15px;
-            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .nav-toggle-label {
+            margin-left: 0;
         }
 
         .nav-menu {
@@ -1763,6 +1769,7 @@ textarea:focus-visible {
     margin: 0;
     line-height: 1.5;
 }
+
 /* Media Grid Redesign */
 .media-grid {
     display: grid;
@@ -1775,21 +1782,22 @@ textarea:focus-visible {
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 1px solid rgba(0,0,0,0.04);
+    border: 1px solid rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
 }
 
 .media-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .media-video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
     background: #000;
