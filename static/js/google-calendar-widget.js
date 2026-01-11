@@ -1,34 +1,34 @@
-(function(){
+(function () {
   const el = document.getElementById('google-calendar-widget');
-  if(!el) return;
+  if (!el) return;
   const calendarId = el.dataset.calendarId;
   const apiKey = el.dataset.apiKey;
   const endpoint = el.dataset.endpoint;
 
-  function showMessage(msg, cls='gc-loading'){
+  function showMessage(msg, cls = 'gc-loading') {
     el.innerHTML = `<div class="${cls}">${msg}</div>`;
   }
 
   // If a serverless endpoint is provided, use it (no API keys needed client-side)
-  if(endpoint){
-    fetch(endpoint).then(resp=>{
-      if(!resp.ok) throw new Error('Network response not ok');
+  if (endpoint) {
+    fetch(endpoint).then(resp => {
+      if (!resp.ok) throw new Error('Network response not ok');
       return resp.json();
-    }).then(data=>{
-      if(!data || data.length===0){
+    }).then(data => {
+      if (!data || data.length === 0) {
         showMessage('No upcoming concerts.', 'gc-empty');
         return;
       }
       const ul = document.createElement('ul');
       ul.className = 'gc-list';
-      data.forEach(ev=>{
+      data.forEach(ev => {
         const d = ev.start ? new Date(ev.start) : null;
         const li = document.createElement('li');
         li.className = 'gc-item';
         const title = ev.title || 'Event';
         const locHtml = ev.location ? `<span class="gc-location">${escapeHtml(ev.location)}</span>` : '';
-        const dateLine1 = d ? new Intl.DateTimeFormat(undefined, {weekday:'short', month:'short', day:'numeric'}).format(d) : '';
-        const dateLine2 = d ? new Intl.DateTimeFormat(undefined, {hour:'2-digit', minute:'2-digit'}).format(d) : '';
+        const dateLine1 = d ? new Intl.DateTimeFormat(undefined, { weekday: 'short', month: 'short', day: 'numeric' }).format(d) : '';
+        const dateLine2 = d ? new Intl.DateTimeFormat(undefined, { hour: '2-digit', minute: '2-digit' }).format(d) : '';
         // If event description contains a URL, prefer it as link
         const url = ev.url || (ev.description && findFirstUrl(ev.description));
         const titleContent = escapeHtml(title);
@@ -46,29 +46,29 @@
         ul.appendChild(li);
         // prevent title link clicks from toggling the details
         const link = li.querySelector('.gc-title-link');
-        if(link){
+        if (link) {
           // First click: expand the <details>. Second click (when open): follow the link.
-          link.addEventListener('click', function(e){
+          link.addEventListener('click', function (e) {
             const details = this.closest('details');
-            if(details && !details.open){
+            if (details && !details.open) {
               e.preventDefault();
               e.stopPropagation();
               details.open = true;
               // move focus back to the summary so keyboard users remain oriented
               const summary = details.querySelector('summary');
-              if(summary) summary.focus();
+              if (summary) summary.focus();
             }
             // if already open, allow the default (link opens in new tab)
           });
-          link.addEventListener('keydown', function(e){
-            if(e.key === 'Enter' || e.key === ' '){
+          link.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
               const details = this.closest('details');
-              if(details && !details.open){
+              if (details && !details.open) {
                 e.preventDefault();
                 e.stopPropagation();
                 details.open = true;
                 const summary = details.querySelector('summary');
-                if(summary) summary.focus();
+                if (summary) summary.focus();
               }
               // otherwise let the keypress follow the link (target _blank)
             }
@@ -77,8 +77,13 @@
         // (no interception) title link opens in new tab
       });
       el.innerHTML = '';
-      el.appendChild(ul);
-    }).catch(err=>{
+      const container = document.createElement('div');
+      container.className = 'gc-list-container';
+      container.tabIndex = 0;
+      container.setAttribute('aria-label', 'Upcoming concerts');
+      container.appendChild(ul);
+      el.appendChild(container);
+    }).catch(err => {
       console.error('Calendar endpoint error', err);
       showMessage('Could not load calendar.', 'gc-error');
     });
@@ -86,11 +91,11 @@
   }
 
   // Fallback to Google API if apiKey is present
-  if(!calendarId){
+  if (!calendarId) {
     showMessage('Calendar not configured. Add the calendar ID to site params.', 'gc-error');
     return;
   }
-  if(!apiKey){
+  if (!apiKey) {
     // No API key available — render the public Google Calendar embed iframe as a fallback.
     // This requires the calendar to be public (no API usage).
     const wrap = document.createElement('div');
@@ -103,30 +108,30 @@
   }
 
   const now = new Date().toISOString();
-  const maxResults = 25;
+  const maxResults = 50;
   const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events?key=${encodeURIComponent(apiKey)}&timeMin=${encodeURIComponent(now)}&singleEvents=true&orderBy=startTime&maxResults=${maxResults}`;
 
-  fetch(url).then(resp=>{
-    if(!resp.ok){
-      return resp.text().then(t=>{ throw new Error(`HTTP ${resp.status}: ${t}`); });
+  fetch(url).then(resp => {
+    if (!resp.ok) {
+      return resp.text().then(t => { throw new Error(`HTTP ${resp.status}: ${t}`); });
     }
     return resp.json();
-  }).then(data=>{
-    if(!data.items || data.items.length===0){
+  }).then(data => {
+    if (!data.items || data.items.length === 0) {
       showMessage('No upcoming concerts found.', 'gc-empty');
       return;
     }
     const ul = document.createElement('ul');
     ul.className = 'gc-list';
-    data.items.forEach(ev=>{
+    data.items.forEach(ev => {
       const start = ev.start && (ev.start.dateTime || ev.start.date);
       const d = start ? new Date(start) : null;
       const li = document.createElement('li');
       li.className = 'gc-item';
       const title = ev.summary || 'Event';
       const locHtml = ev.location ? `<span class="gc-location">${escapeHtml(ev.location)}</span>` : '';
-      const dateLine1 = d ? new Intl.DateTimeFormat(undefined, {weekday:'short', month:'short', day:'numeric'}).format(d) : '';
-      const dateLine2 = d ? new Intl.DateTimeFormat(undefined, {hour:'2-digit', minute:'2-digit'}).format(d) : '';
+      const dateLine1 = d ? new Intl.DateTimeFormat(undefined, { weekday: 'short', month: 'short', day: 'numeric' }).format(d) : '';
+      const dateLine2 = d ? new Intl.DateTimeFormat(undefined, { hour: '2-digit', minute: '2-digit' }).format(d) : '';
       const url = ev.htmlLink || ev.htmlLink || ev.url || '';
       const titleContent = escapeHtml(title);
       const titleLinkHtml = url ? `<a class="gc-title-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${titleContent}</a>` : `<span class="gc-title-text">${titleContent}</span>`;
@@ -141,27 +146,27 @@
         </details>`;
       ul.appendChild(li);
       const link = li.querySelector('.gc-title-link');
-      if(link){
+      if (link) {
         // First click: expand the <details>. Second click (when open): follow the link.
-        link.addEventListener('click', function(e){
+        link.addEventListener('click', function (e) {
           const details = this.closest('details');
-          if(details && !details.open){
+          if (details && !details.open) {
             e.preventDefault();
             e.stopPropagation();
             details.open = true;
             const summary = details.querySelector('summary');
-            if(summary) summary.focus();
+            if (summary) summary.focus();
           }
         });
-        link.addEventListener('keydown', function(e){
-          if(e.key === 'Enter' || e.key === ' '){
+        link.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
             const details = this.closest('details');
-            if(details && !details.open){
+            if (details && !details.open) {
               e.preventDefault();
               e.stopPropagation();
               details.open = true;
               const summary = details.querySelector('summary');
-              if(summary) summary.focus();
+              if (summary) summary.focus();
             }
           }
         });
@@ -169,41 +174,46 @@
       // (no interception) title link opens in new tab
     });
     el.innerHTML = '';
-    el.appendChild(ul);
-  }).catch(err=>{
+    const container = document.createElement('div');
+    container.className = 'gc-list-container';
+    container.tabIndex = 0;
+    container.setAttribute('aria-label', 'Upcoming concerts');
+    container.appendChild(ul);
+    el.appendChild(container);
+  }).catch(err => {
     console.error('Google Calendar fetch error', err);
     showMessage('Could not load calendar — check API key and calendar visibility.', 'gc-error');
   });
 
-  function escapeHtml(s){
-    return String(s).replace(/[&<>"']/g, function(c){
-      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[c];
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": "&#39;" }[c];
     });
   }
 
-  function findFirstUrl(text){
-    if(!text) return null;
+  function findFirstUrl(text) {
+    if (!text) return null;
     // Try to find an http(s) URL or a www. URL. Trim trailing punctuation.
     const re = /(https?:\/\/[^\s<>"')]+)|(www\.[^\s<>"')]+)/i;
     const m = text.match(re);
-    if(!m) return null;
+    if (!m) return null;
     let url = m[0];
     // If it starts with www., add protocol
-    if(/^www\./i.test(url)) url = 'https://' + url;
+    if (/^www\./i.test(url)) url = 'https://' + url;
     // Trim trailing punctuation characters
-    url = url.replace(/[\.\,;:\)\]\!\?]+$/,'');
+    url = url.replace(/[\.\,;:\)\]\!\?]+$/, '');
     return url;
   }
 
   // Modal helpers
   let _modal = null;
-  function showModal(ev){
+  function showModal(ev) {
     closeModal();
     const title = escapeHtml(ev.title || 'Event');
     const date = ev.start ? new Date(ev.start) : null;
-    const dateStr = date ? new Intl.DateTimeFormat(undefined, {weekday:'short', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}).format(date) : '';
+    const dateStr = date ? new Intl.DateTimeFormat(undefined, { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(date) : '';
     const location = ev.location ? escapeHtml(ev.location) : '';
-    const desc = ev.description ? escapeHtml(ev.description).replace(/\n/g,'<br>') : '';
+    const desc = ev.description ? escapeHtml(ev.description).replace(/\n/g, '<br>') : '';
     const url = ev.url || (ev.description && findFirstUrl(ev.description)) || '';
 
     const overlay = document.createElement('div');
@@ -214,7 +224,7 @@
 
     const closeBtn = document.createElement('button');
     closeBtn.className = 'gc-modal-close';
-    closeBtn.setAttribute('aria-label','Close');
+    closeBtn.setAttribute('aria-label', 'Close');
     closeBtn.innerHTML = '✕';
     closeBtn.addEventListener('click', closeModal);
 
@@ -232,7 +242,7 @@
 
     const actions = document.createElement('div');
     actions.className = 'gc-modal-actions';
-    if(url){
+    if (url) {
       const a = document.createElement('a');
       a.href = url;
       a.target = '_blank';
@@ -255,14 +265,14 @@
     // accessibility
     overlay.tabIndex = -1;
     overlay.focus();
-    function onKey(e){ if(e.key === 'Escape') closeModal(); }
+    function onKey(e) { if (e.key === 'Escape') closeModal(); }
     overlay._keyHandler = onKey;
     document.addEventListener('keydown', onKey);
-    overlay.addEventListener('click', function(e){ if(e.target === overlay) closeModal(); });
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
   }
 
-  function closeModal(){
-    if(!_modal) return;
+  function closeModal() {
+    if (!_modal) return;
     document.removeEventListener('keydown', _modal._keyHandler);
     _modal.remove();
     _modal = null;
