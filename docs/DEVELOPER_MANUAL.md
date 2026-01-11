@@ -56,6 +56,57 @@
 - Prefer Hugo image processing (`.Resources.Get` + `Resize`/`Fit`) in page bundles for responsive images.
 - See [docs/instrument-image-optimization.md](docs/instrument-image-optimization.md) for workflows and examples.
 
+**Adding a disc / recording entry**
+
+Follow these steps to add a recording (disc) entry shown in the `Recordings` section:
+
+1. Edit the language-specific discs index file: `content/<lang>/discs/_index.md` (for example `content/en/discs/_index.md`).
+2. Add a new YAML entry under the `discs:` list. Match formatting of existing entries. Required fields:
+  - `title`: Album title
+  - `artist`: Main credited artist or ensemble
+  - `image`: Path to cover image (use local `/images/discs/<name>.png` when possible)
+  - `url`: External link (Spotify/label) or internal URL to the disc page
+  - `role` (optional): role or conductor/guest info (e.g., `role: "Gabriel Garrido"`)
+
+  Example entry:
+
+  ```yaml
+  - title: "Vanitas vanitatum: Transience in 17th Century Italian Music"
+   artist: "Rencontres Baroques de Montfrin"
+   role: "Gabriel Garrido"
+   image: "/images/discs/vanitas-vanitatum.png"
+   url: "https://open.spotify.com/album/5DZq7XJlrCNJl89apkSlUN"
+  ```
+
+3. Add the cover image to the repository under `static/images/discs/`. Keep filenames short and hyphenated. Example command to download a Spotify cover:
+
+```bash
+mkdir -p static/images/discs
+curl -fL -o static/images/discs/vanitas-vanitatum.png "https://i.scdn.co/image/ab67616d00001e02048f16471930cbb148ce4d02"
+```
+
+4. Update the `image` field in the entry to point to the local path (e.g., `/images/discs/vanitas-vanitatum.png`).
+
+5. Preview locally:
+
+```bash
+hugo server -D
+# open http://localhost:1313 and navigate to the Recordings/Discs page
+```
+
+6. Commit and push the changes:
+
+```bash
+git add content/<lang>/discs/_index.md static/images/discs/vanitas-vanitatum.png
+git commit -m "Add <Album Title> to discs for <lang>"
+git push
+```
+
+Notes:
+- Prefer adding the image to `static/images/discs/` for consistent handling by templates. If you instead use a page bundle, adjust templates that read `image` accordingly.
+- Keep translations in sync across languages by repeating the same entry (translated title) under each `content/<lang>/discs/_index.md` as needed.
+- If you need me to fetch metadata (title, artist, cover URL) automatically, I can script that, but be mindful of remote scraping policies.
+
 **Adding a new page (typical workflow)**
 1. Create file in correct language folder, e.g., `content/en/programs/my-program.md`.
 2. Add front matter (use `archetypes/default.md` as template).
