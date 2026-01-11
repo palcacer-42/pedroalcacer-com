@@ -132,7 +132,7 @@
       const locHtml = ev.location ? `<span class="gc-location">${escapeHtml(ev.location)}</span>` : '';
       const dateLine1 = d ? new Intl.DateTimeFormat(undefined, { weekday: 'short', month: 'short', day: 'numeric' }).format(d) : '';
       const dateLine2 = d ? new Intl.DateTimeFormat(undefined, { hour: '2-digit', minute: '2-digit' }).format(d) : '';
-      const url = ev.htmlLink || ev.htmlLink || ev.url || '';
+      const url = ev.htmlLink || ev.url || '';
       const titleContent = escapeHtml(title);
       const titleLinkHtml = url ? `<a class="gc-title-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${titleContent}</a>` : `<span class="gc-title-text">${titleContent}</span>`;
       const desc = ev.description ? escapeHtml(ev.description).replace(/\n/g, '<br>') : '';

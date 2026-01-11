@@ -65,6 +65,25 @@ pedroalcacer-site/
 └── public/              # Generated website (build output)
 ```
 
+## Layout Override Strategy
+
+This project uses Hugo's layout override system with layouts in two locations:
+
+- **`/themes/pedroalcacer/layouts/`** - Default theme layouts (12 files)
+  - Base templates (`baseof.html`, `index.html`)
+  - Section-specific layouts (`biography/`, `contact/`, `discs/`, etc.)
+  - Partials and shortcodes
+
+- **`/layouts/`** - Custom layout overrides (8 files)
+  - Override theme layouts when you need custom behavior
+  - Hugo automatically uses these instead of theme layouts with the same path
+  - Examples: custom homepage, specific section modifications
+
+**When to use each:**
+- Modify `/themes/pedroalcacer/layouts/` for general theme improvements
+- Add to `/layouts/` when you want to override without modifying the theme
+- This allows theme updates while preserving custom modifications
+
 ## Getting Started Locally
 
 ### Prerequisites
