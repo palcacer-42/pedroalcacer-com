@@ -15,7 +15,7 @@ import sys
 import urllib.request
 import subprocess
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 OUT_CSV = ROOT / 'temp_migration' / 'concerts.csv'
 
 
