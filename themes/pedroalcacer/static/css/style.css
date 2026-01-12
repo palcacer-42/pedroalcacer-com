@@ -1854,3 +1854,82 @@ textarea:focus-visible {
         grid-template-columns: 1fr;
     }
 }
+/* Concerts Archive (Scrollable Window) */
+.concerts-archive-container {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
+    font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+    font-size: 0.9rem;
+}
+
+.concerts-header {
+    display: grid;
+    grid-template-columns: 100px 140px 1fr 1fr 1fr;
+    gap: 15px;
+    background: #f4f4f4;
+    padding: 12px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+    color: var(--primary-color);
+}
+
+.concerts-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.concert-item {
+    border-bottom: 1px solid #eee;
+}
+
+.concert-item:last-child {
+    border-bottom: none;
+}
+
+.concert-row {
+    display: grid;
+    grid-template-columns: 100px 140px 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 10px 15px;
+    align-items: start;
+}
+
+.concert-row:hover {
+    background-color: #fcfcfc;
+}
+
+/* Column styles */
+.col-date { font-weight: 600; color: #555; }
+.col-city { color: #333; }
+.col-venue { color: #555; font-style: italic; }
+.col-program { font-weight: 600; color: var(--accent-color); }
+.col-ensemble { color: #444; }
+
+/* Responsive Scrollable Table */
+@media (max-width: 800px) {
+    .concerts-header { display: none; }
+    
+    .concert-row {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 15px;
+    }
+    
+    .col-date { order: 1; font-size: 0.85rem; color: #888; margin-bottom: 2px; }
+    .col-program { order: 2; font-size: 1.05rem; margin-bottom: 2px; }
+    .col-city { order: 3; font-weight: 600; }
+    .col-venue { order: 4; }
+    .col-ensemble { order: 5; font-size: 0.9rem; margin-top: 4px; color: #666; }
+    
+    .col-city::before { content: "📍 "; }
+    .col-ensemble::before { content: "👥 "; }
+}

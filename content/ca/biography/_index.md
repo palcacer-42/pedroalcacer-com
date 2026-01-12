@@ -10,3 +10,7 @@ L'any 2006 es va traslladar a Barcelona, Espanya, on va obtenir el títol profes
 Com a músic apassionat, va continuar el seu perfeccionament instrumental amb Evangelina Mascardi a Itàlia, alhora que treballava intensament com a solista i continuista. Ha col·laborat amb directors destacats com Gabriel Garrido, Alessandro di Marchi, Marco Mencoboni, Paolo Faldi, Riccardo Doni, Horacio Franco, Cristoph Hammer, Carlos Aranzay, Gerhard Oppel, Burak Özdemir i altres, i ha actuat en prestigiosos festivals i fòrums a Itàlia, Alemanya, Espanya, França, República Txeca, Bèlgica, Països Baixos, Brasil i Mèxic.
 
 Actualment viu a Berlín i col·labora amb diverses realitats de la música antiga a Europa. L'artista és conegut per la seva profunda experiència i sensibilitat artística, adquirides gràcies a la col·laboració amb músics i professors excepcionals d'arreu del món. La seva experiència internacional i les seves altes qualificacions el converteixen en un artista destacat en el seu camp.
+
+## Arxiu de Concerts
+
+{{< concerts >}}

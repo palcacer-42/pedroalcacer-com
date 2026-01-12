@@ -1,18 +1,28 @@
 {{/* Shortcode: render events from data/concerts.json */}}
 {{ $events := site.Data.concerts }}
 {{ if not $events }}
-  <p>No concerts found.</p>
+<p>No concerts found.</p>
 {{ else }}
+<div class="concerts-archive-container">
+  <div class="concerts-header">
+    <span class="col-date">Date</span>
+    <span class="col-city">City</span>
+    <span class="col-venue">Venue</span>
+    <span class="col-program">Program</span>
+    <span class="col-ensemble">Ensemble</span>
+  </div>
   <ul class="concerts-list">
-  {{ range $i, $e := $events }}
+    {{ range $i, $e := $events }}
     <li class="concert-item">
-      {{ $dt := $e.start }}
-      <time datetime="{{ $dt }}">{{ $dt }}</time> —
-      <strong>{{ $e.title }}</strong>
-      {{ with $e.location }}<span class="concert-location"> — {{ . }}</span>{{ end }}
-      {{ with $e.link }}<a href="{{ . }}" class="concert-link">Details</a>{{ end }}
-      {{ with $e.description }}<div class="concert-desc">{{ . }}</div>{{ end }}
+      <div class="concert-row">
+        <span class="col-date">{{ $e.date }}</span>
+        <span class="col-city">{{ $e.city }}</span>
+        <span class="col-venue">{{ $e.venue }}</span>
+        <span class="col-program">{{ $e.program }}</span>
+        <span class="col-ensemble">{{ $e.ensemble }}</span>
+      </div>
     </li>
-  {{ end }}
+    {{ end }}
   </ul>
+</div>
 {{ end }}

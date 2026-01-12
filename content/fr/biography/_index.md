@@ -10,3 +10,7 @@ En 2006, il s'installe à Barcelone, en Espagne, où il obtient le diplôme prof
 Musicien passionné, il a poursuivi son perfectionnement instrumental avec Evangelina Mascardi en Italie, tout en travaillant intensément comme soliste et continuiste. Il a collaboré avec des chefs renommés tels que Gabriel Garrido, Alessandro di Marchi, Marco Mencoboni, Paolo Faldi, Riccardo Doni, Horacio Franco, Cristoph Hammer, Carlos Aranzay, Gerhard Oppel, Burak Özdemir et d'autres, et s'est produit dans des festivals et forums prestigieux en Italie, en Allemagne, en Espagne, en France, en République tchèque, en Belgique, aux Pays-Bas, au Brésil et au Mexique.
 
 Il vit actuellement à Berlin et travaille avec différentes structures de musique ancienne en Europe. L'artiste est reconnu pour sa profonde expérience et sa sensibilité artistique, acquises grâce à la collaboration avec des musiciens et des professeurs d'exception du monde entier. Son expérience internationale et ses hautes qualifications font de lui un artiste remarquable dans son domaine.
+
+## Archives des Concerts
+
+{{< concerts >}}

@@ -9,4 +9,8 @@ Geboren 1982 in Mexiko-Stadt, begann der Künstler seine musikalische Ausbildung
 
 Als leidenschaftlicher Musiker setzte er seine instrumentale Weiterbildung mit Evangelina Mascardi in Italien fort, während er intensiv als Solist und Continuo-Spieler arbeitete. Er hat mit bedeutenden Dirigenten wie Gabriel Garrido, Alessandro di Marchi, Marco Mencoboni, Paolo Faldi, Riccardo Doni, Horacio Franco, Cristoph Hammer, Carlos Aranzay, Gerhard Oppel, Burak Özdemir und anderen gearbeitet und bei renommierten Festivals und Foren in Italien, Deutschland, Spanien, Frankreich, der Tschechischen Republik, Belgien, den Niederlanden, Brasilien und Mexiko aufgetreten.
 
-Derzeit lebt er in Berlin und arbeitet mit verschiedenen Ensembles der Alten Musik in Europa. Der Künstler ist bekannt für seine umfassende Erfahrung und künstlerische Sensibilität, die er durch die Zusammenarbeit mit herausragenden Musikern und Lehrern weltweit erworben hat. Seine internationale Erfahrung und hohen Qualifikationen machen ihn zu einem außergewöhnlichen Künstler auf seinem Gebiet.
+DerzeitEr lebt derzeit in Berlin und arbeitet in ganz Europa mit verschiedenen Ensembles für alte Musik zusammen. Der Künstler ist bekannt für seine fundierte Erfahrung und künstlerische Sensibilität, die er durch die Zusammenarbeit mit herausragenden Musikern und Lehrern aus aller Welt erworben hat. Seine internationale Erfahrung und hohe Qualifikation machen ihn zu einem herausragenden Künstler auf seinem Gebiet.
+
+## Konzertarchiv
+
+{{< concerts >}}
