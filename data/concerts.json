@@ -1,12 +1,5 @@
 [
   {
-    "date": "06.2007",
-    "city": "Barcelona, España",
-    "venue": "Noumon",
-    "ensemble": "La Fura dels Baus",
-    "program": "L’Orfeo"
-  },
-  {
     "date": "27.3.2022",
     "city": "Berlin, Alemania",
     "venue": "Theater Aufbau Kreuzberg",
@@ -978,6 +971,13 @@
     "venue": "Gerhard-Marcks-Haus",
     "ensemble": "Pedro un Mitgefahrene",
     "program": "Von Deutschland nach Italien aber diesmal echt!"
+  },
+  {
+    "date": "27.6.2007",
+    "city": "Barcelona, España",
+    "venue": "Noumon",
+    "ensemble": "La Fura dels Baus",
+    "program": "L’Orfeo"
   },
   {
     "date": "04.06.2007",
