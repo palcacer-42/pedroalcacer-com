@@ -14,8 +14,9 @@
         <div class="media-video-container">
           {{ if and $prov $vid }}
           {{ if eq $prov "youtube" }}
-          <iframe src="https://www.youtube-nocookie.com/embed/{{ $vid }}" frameborder="0" loading="lazy"
-            title="Video: {{ .title }}"
+          {{ $startParam := "" }}{{ if .start }}{{ $startParam = printf "?start=%s" .start }}{{ end }}
+          <iframe src="https://www.youtube-nocookie.com/embed/{{ $vid }}{{ $startParam }}" frameborder="0"
+            loading="lazy" title="Video: {{ .title }}"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
           {{ else if eq $prov "vimeo" }}

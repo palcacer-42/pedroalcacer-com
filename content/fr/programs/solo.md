@@ -7,3 +7,4 @@ Liste des programmes solo et liens vers leurs PDFs téléchargeables.
 
 - [Bologna liutistica](/fr/programs/bologna-liutistica)
 - [Una storia fra le corde...](/fr/programs/una-storia-fra-le-corde)
+- [Le Manuscrit de Dantzig](/fr/programs/danzig-manuskript)

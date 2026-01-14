@@ -24,3 +24,17 @@ A festive program celebrating the courtly and popular traditions of Spain throug
 - Courtly dances and variations
 - Popular melodies and arrangements
 - Virtuosic displays
+
+---
+
+## The Danzig Manuscript
+**Renaissance Lute**
+
+A European Echo of the Renaissance — This program is dedicated to one of the most fascinating sources for the Renaissance lute: the Danzig Manuscript, held at the Berlin State Library. An unknown author compiled musical treasures from Poland, France, England, Germany, the Netherlands, Italy, Hungary, and Spain.
+
+### Featured Composers
+- John Dowland, Alessandro Piccinini, Robert Johnson
+- Robert Ballard, Emmanuel Adrianssen, G. Gastoldi
+- Anonymous works from across Europe
+
+[View full program →](/en/programs/danzig-manuskript)
