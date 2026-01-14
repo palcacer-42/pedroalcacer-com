@@ -17,19 +17,17 @@
 {{ $newsContent := index $latestNews.content $currentLang }}
 {{ if $newsContent }}
 <section class="news-window-section">
-    <div class="container">
-        <div class="news-window">
-            <div class="news-header">
-                <span class="news-icon">📢</span>
-                <h3 class="news-title">NEWS</h3>
-            </div>
-            <div class="news-content">
-                {{ $newsContent | safeHTML }}
-            </div>
-            {{ if $latestNews.date }}
-            <div class="news-date">{{ dateFormat "02 Jan 2006" $latestNews.date }}</div>
-            {{ end }}
+    <div class="news-window">
+        <div class="news-header">
+            <span class="news-icon">📢</span>
+            <h3 class="news-title">NEWS</h3>
         </div>
+        <div class="news-content">
+            {{ $newsContent | safeHTML }}
+        </div>
+        {{ if $latestNews.date }}
+        <div class="news-date">{{ dateFormat "02 Jan 2006" $latestNews.date }}</div>
+        {{ end }}
     </div>
 </section>
 {{ end }}
