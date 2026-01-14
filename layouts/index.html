@@ -8,9 +8,33 @@
     </div>
 </section>
 
-
-
-
+<!-- NEWS Window -->
+{{ $newsData := .Site.Data.news }}
+{{ if $newsData }}
+{{ $latestNews := index $newsData 0 }}
+{{ if $latestNews }}
+{{ $currentLang := .Language.Lang }}
+{{ $newsContent := index $latestNews.content $currentLang }}
+{{ if $newsContent }}
+<section class="news-window-section">
+    <div class="container">
+        <div class="news-window">
+            <div class="news-header">
+                <span class="news-icon">📢</span>
+                <h3 class="news-title">NEWS</h3>
+            </div>
+            <div class="news-content">
+                {{ $newsContent | safeHTML }}
+            </div>
+            {{ if $latestNews.date }}
+            <div class="news-date">{{ dateFormat "02 Jan 2006" $latestNews.date }}</div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+{{ end }}
 
 <!-- Quote removed from top; rendered as a normal bottom section below -->
 
@@ -25,7 +49,7 @@
                     seamless><a
                         href="https://palcacer.bandcamp.com/album/luis-mil-n-primer-libro-intitulado-el-maestro">Luis
                         Milán - Primer libro intitulado &quot;El Maestro&quot; by Pedro Alcacer - Vihuela</a></iframe>
-                <h2 class="bc-caption"><a href="{{ "discs/luis-milan/" | relLangURL }}">{{ i18n "hero_title" }}</a>
+                <h2 class="bc-caption"><a href="{{ " discs/luis-milan/" | relLangURL }}">{{ i18n "hero_title" }}</a>
                 </h2>
             </div>
 
@@ -76,8 +100,6 @@
         </div>
     </div>
 </section>
-
-
 
 <section class="newsletter-section">
     <div class="container">
