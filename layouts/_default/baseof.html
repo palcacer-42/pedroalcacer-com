@@ -21,7 +21,7 @@
     <script>
         (function () {
             try {
-                var supportedLangs = [{{- range $i, $l := .Site.Languages }}{{ if $i }}, {{ end }} "{{ $l.Lang }}"{{- end }}];
+                var supportedLangs = [{{- range $i, $l := .Site.Languages }}{ { if $i } }, { { end } } "{{ $l.Lang }}"{ { - end } }];
         var fallbackLang = "{{ with index .Site.Languages 0 }}{{ .Lang }}{{ else }}en{{ end }}";
         var pathname = window.location.pathname || "/";
 
@@ -74,7 +74,7 @@
             }catch (e) { }
         }) ();
     </script>
-    <link rel="stylesheet" href="{{ "css/style.css?v=20260109" | relURL }}">
+    <link rel="stylesheet" href="{{ " css/style.css?v=20260109" | relURL }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
@@ -86,20 +86,20 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-<!-- Language Selector -->
-                <div class="language-selector">
-                    {{ range .Site.Languages }}
-                    {{ if eq .Lang $.Page.Lang }}
-                    <span class="lang-current">{{ .Lang }}</span>
-                    {{ else }}
-                    <a href="{{ $.Page.RelPermalink | replaceRE (printf "^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}"
-                        class="lang-link">{{ .Lang }}</a>
-                    {{ end }}
-                    {{ end }}
-                </div>
+            <!-- Language Selector -->
+            <div class="language-selector">
+                {{ range .Site.Languages }}
+                {{ if eq .Lang $.Page.Lang }}
+                <span class="lang-current">{{ .Lang }}</span>
+                {{ else }}
+                <a href="{{ $.Page.RelPermalink | replaceRE (printf " ^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}"
+                    class="lang-link">{{ .Lang }}</a>
+                {{ end }}
+                {{ end }}
+            </div>
 
             <div class="nav-brand">
-                <a href="{{ "/" | relLangURL }}">Pedro Alcàcer</a>
+                <a href="{{ " /" | relLangURL }}">Pedro Alcàcer</a>
             </div>
 
             <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
@@ -112,7 +112,8 @@
                     {{ range .Site.Menus.main }}
                     <li><a href="{{ .URL | relLangURL }}" class="nav-link">{{ .Name }}</a></li>
                     {{ end }}
-                </ul></div>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -143,7 +144,8 @@
             </div>
         </div>
     </footer>
-    <script src="{{ "js/theme-toggle.js" | relURL }}" defer></script>
+    <script src="{{ " js/theme-toggle.js" | relURL }}" defer></script>
+    <script src="{{ " js/lightbox.js" | relURL }}"></script>
 </body>
 
 </html>
