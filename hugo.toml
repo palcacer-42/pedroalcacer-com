@@ -45,6 +45,8 @@ defaultContentLanguageInSubdir = true
     languageName = "Español"
     weight = 2
     contentDir = "content/es"
+    [languages.es.params]
+      description = "Pedro Alcàcer — Laudista y especialista en Laúd Renacentista, Tiorba, Vihuela y Guitarra Barroca. Bajo Continuo, Música Antigua, basado en Berlín."
     [languages.es.menu]
       [[languages.es.menu.main]]
         name = "Home"
@@ -78,6 +80,8 @@ defaultContentLanguageInSubdir = true
     languageName = "Català"
     weight = 3
     contentDir = "content/ca"
+    [languages.ca.params]
+      description = "Pedro Alcàcer — Llautista i especialista en Llaüt Renaixentista, Tiorba, Vihuela i Guitarra Barroca. Baix Continu, Música Antiga, resident a Berlín."
     [languages.ca.menu]
       [[languages.ca.menu.main]]
         name = "Home"
@@ -111,6 +115,8 @@ defaultContentLanguageInSubdir = true
     languageName = "Deutsch"
     weight = 4
     contentDir = "content/de"
+    [languages.de.params]
+      description = "Pedro Alcàcer — Lautenist und Spezialist für Renaissance-Laute, Theorbe, Vihuela und Barockgitarre. Basso Continuo, Alte Musik, ansässig in Berlin."
     [languages.de.menu]
       [[languages.de.menu.main]]
         name = "Home"
@@ -144,6 +150,8 @@ defaultContentLanguageInSubdir = true
     languageName = "Français"
     weight = 5
     contentDir = "content/fr"
+    [languages.fr.params]
+      description = "Pedro Alcàcer — Luthiste et spécialiste du Luth Renaissance, du Théorbe, de la Vihuela et de la Guitare Baroque. Basse Continue, Musique Ancienne, basé à Berlin."
     [languages.fr.menu]
       [[languages.fr.menu.main]]
         name = "Home"
@@ -177,6 +185,8 @@ defaultContentLanguageInSubdir = true
     languageName = "Italiano"
     weight = 6
     contentDir = "content/it"
+    [languages.it.params]
+      description = "Pedro Alcàcer — Liutista e specialista in Liuto Rinascimentale, Tiorba, Vihuela e Chitarra Barocca. Basso Continuo, Musica Antica, con sede a Berlino."
     [languages.it.menu]
       [[languages.it.menu.main]]
         name = "Home"
@@ -229,4 +239,7 @@ ignoreErrors = ["error-missing-page-ref"]
     apiKey = "AIzaSyDaMzqXp70IMb9pSTxZTTF-38gIwnk9ue4"
 
   # Default site description used for meta description fallbacks
-  description = "Pedro Alcàcer — Lutenist specialising in Renaissance and Baroque repertoire. Concerts, recordings and programs." 
+  description = "Pedro Alcàcer — Lutenist based in Berlin. Specialising in Renaissance Lute, Theorbo, Vihuela, Baroque Guitar, Basso Continuo, and Early Music."
+  
+  # SEO Keywords
+  keywords = "Renaissance Lute, Theorbo, Vihuela, Baroque Guitar, Early Music, Basso Continuo, Pedro Alcàcer, Berlin, Historical Performance, John Dowland, Kapsberger, Chamber Music" 

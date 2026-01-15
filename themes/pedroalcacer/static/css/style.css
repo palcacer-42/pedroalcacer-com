@@ -189,7 +189,7 @@ img {
     transition: color 0.3s;
     position: relative;
     white-space: nowrap;
-    font-size: clamp(0.82rem, 0.9vw, 0.92rem);
+    font-size: clamp(1rem, 1.1vw, 1.2rem);
     padding: 2px 2px;
     flex-shrink: 0;
 }
@@ -217,7 +217,7 @@ img {
 .language-selector {
     display: flex;
     gap: 4px;
-    font-size: 0.65rem;
+    font-size: 0.9rem;
     white-space: nowrap;
     justify-content: center;
     align-items: center;
@@ -384,7 +384,7 @@ img {
 }
 
 .news-card p {
-    color: #666;
+    color: #333;
     margin-bottom: 15px;
 }
 
@@ -424,7 +424,7 @@ img {
 
 .post-body {
     line-height: 1.8;
-    color: #555;
+    color: #222;
 }
 
 .post-body h2 {
@@ -502,7 +502,7 @@ img {
     font-family: 'Avenir', 'Helvetica Neue', sans-serif;
     font-size: 0.95rem;
     line-height: 1.55;
-    color: #34495e;
+    color: #333;
     max-width: 65ch;
     margin: 0 0 1rem;
     padding-left: 1rem;
@@ -726,7 +726,7 @@ img {
 }
 
 .gc-location {
-    color: #666;
+    color: #333;
     font-size: 0.9rem;
 }
 
@@ -738,7 +738,7 @@ img {
 .gc-date-line1 {
     display: block;
     font-size: 0.85rem;
-    color: #666;
+    color: #333;
 }
 
 .gc-date-line2 {
@@ -903,7 +903,7 @@ img {
 .recordings-subtitle {
     max-width: 720px;
     margin: 0 auto;
-    color: #555;
+    color: #333;
     line-height: 1.6;
 }
 
@@ -967,7 +967,7 @@ img {
 }
 
 .disc-role {
-    color: #666;
+    color: #333;
     font-size: 0.95rem;
 }
 
@@ -1287,7 +1287,7 @@ img {
 }
 
 .bio-text {
-    color: #444;
+    color: #222;
     font-size: 1.05rem;
     line-height: 1.75;
 }
@@ -1318,9 +1318,18 @@ img {
 }
 
 .concerts-subtitle {
-    color: #666;
+    color: #333;
     max-width: 640px;
     margin: 8px auto 0;
+}
+
+.concerts-section-title {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
 }
 
 .concerts-card {
@@ -1331,6 +1340,7 @@ img {
     overflow-x: auto;
 }
 
+/* Concerts Table (Restored) */
 .concerts-table {
     width: 100%;
     border-collapse: collapse;
@@ -1355,6 +1365,73 @@ img {
 
 .concerts-table tbody tr:hover {
     background: #fafafa;
+}
+
+/* Scroll area styling */
+.concerts-scroll-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+.concerts-scroll-area::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.concerts-scroll-area::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.concerts-scroll-area::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* Mobile Responsive Concersts */
+@media (max-width: 900px) {
+
+    .concerts-header,
+    .concert-row {
+        grid-template-columns: 90px 1fr 1fr;
+        /* Hide Program/Ensemble on small screens? Or stack? Let's stack */
+    }
+
+    /* Logic to show fewer cols or stack them */
+    .col-program,
+    .col-ensemble {
+        display: none;
+        /* Simply hiding less critical info for now to match strict grid */
+        /* OR we redesign for stacked. Let's start with strict grid adaptation. */
+    }
+}
+
+@media (max-width: 600px) {
+    .concerts-header {
+        display: none;
+    }
+
+    .concert-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .col-date {
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+
+    .col-program,
+    .col-ensemble {
+        display: block;
+        /* Show them again in stacked view */
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .col-venue,
+    .col-city {
+        font-style: italic;
+    }
 }
 
 .quote-section {
@@ -1418,6 +1495,10 @@ img {
 
 .cta-section h2 a:hover {
     color: var(--accent-color);
+}
+
+
+
 }
 
 .newsletter-section {
@@ -1494,7 +1575,7 @@ textarea:focus-visible {
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 860px) {
     .container {
         padding: 0 15px;
     }
@@ -2398,5 +2479,186 @@ textarea:focus-visible {
         font-size: 0.9rem;
         bottom: 15px;
         padding: 8px 15px;
+    }
+}
+
+/* EPK (Electronic Press Kit) Styles */
+.epk-section {
+    background-color: #f7f9fc;
+    min-height: 80vh;
+}
+
+.epk-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.epk-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+}
+
+.epk-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.epk-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.epk-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: sticky;
+    top: 100px;
+}
+
+.epk-card {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.epk-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background: #eee;
+}
+
+.epk-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.epk-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+.epk-btn-download {
+    background: #2c3e50;
+    color: white;
+}
+
+.epk-btn-download:hover {
+    background: #1a252f;
+    transform: translateY(-2px);
+}
+
+.epk-btn-primary {
+    background: var(--accent-color);
+    color: white;
+    margin-top: 10px;
+}
+
+.epk-btn-primary:hover {
+    background: #a38763;
+}
+
+.epk-contact h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.epk-contact .email {
+    color: #555;
+    margin-bottom: 15px;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.epk-bio-block {
+    margin-bottom: 50px;
+}
+
+.epk-bio-block h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.copy-hint {
+    display: inline-block;
+    color: #888;
+    font-size: 0.85rem;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.bio-text-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin: 15px 0;
+    font-family: Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.epk-copy-btn {
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 6px 14px;
+    border-radius: 4px;
+    color: #666;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.epk-copy-btn:hover {
+    background: #f5f5f5;
+    color: #333;
+    border-color: #bbb;
+}
+
+@media (max-width: 900px) {
+    .epk-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .epk-sidebar {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .epk-card {
+        flex: 1;
+        min-width: 280px;
     }
 }

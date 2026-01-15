@@ -4,7 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - Pedro Alcàcer</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    {{ $desc := .Params.description | default .Site.Params.description }}
+    <meta name="description" content="{{ $desc }}">
+    {{ $keywords := .Params.keywords | default .Site.Params.keywords }}
+    <meta name="keywords" content="{{ $keywords }}">
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:description" content="{{ $desc }}">
+    <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="{{ .Permalink }}" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pedro Alcàcer",
+      "url": "{{ .Site.BaseURL }}",
+      "jobTitle": "Lutenist and Theorbo Player",
+      "image": "{{ "hero.jpg" | relURL }}",
+      "sameAs": [
+        "https://www.facebook.com/alcacerliutista/",
+        "https://www.youtube.com/palcacer",
+        "https://www.instagram.com/palcacerliutista/",
+        "https://de.linkedin.com/in/pedro-alcacer-00895133"
+      ],
+      "description": "{{ $desc }}"
+    }
+    </script>
     <script>
         (function () {
             try {
