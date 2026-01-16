@@ -232,12 +232,18 @@
     // We need a slight delay to ensure rendering is done? Usually synchronous in simple DOM, 
     // but good practice to let the browser paint or layout first if needed.
     // However, scrolling immediately usually works.
+    // Auto-scroll logic: scroll the CONTAINER, not the window
     setTimeout(() => {
       const marker = document.getElementById('gc-today-marker');
       if (marker && container) {
-        // Scroll logic: center the marker
-        // container.scrollTop = marker.offsetTop - (container.clientHeight / 2) + (marker.clientHeight / 2);
-        marker.scrollIntoView({ behavior: 'auto', block: 'center' });
+        // Use getBoundingClientRect for robust relative positioning
+        const markerRect = marker.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+        const relativeTop = markerRect.top - containerRect.top;
+
+        // Adjust scroll position to bring marker to top
+        // (Add current relative position to current scroll position)
+        container.scrollTop = container.scrollTop + relativeTop;
       }
     }, 0);
 
