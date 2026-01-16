@@ -766,6 +766,12 @@ img {
         width: 100%;
         height: 380px;
     }
+
+    .bc-calendar {
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* NEWS Window */
