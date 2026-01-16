@@ -2,8 +2,8 @@
 <section class="hero-section">
     <div class="hero-image">
         <picture>
-            <source srcset="{{ "/hero.webp" | relURL }}" type="image/webp">
-            <img src="{{ "/hero.jpg" | relURL }}" alt="Pedro Alcàcer">
+            <source srcset="{{ " /hero.webp" | relURL }}" type="image/webp">
+            <img src="{{ " /hero.jpg" | relURL }}" alt="Pedro Alcàcer">
         </picture>
     </div>
 </section>
@@ -22,7 +22,7 @@
 
 <section class="cta-section">
     <div class="container">
-        <h2><a href="{{ "discs/luis-milan/" | relLangURL }}">{{ i18n "hero_title" }}</a></h2>
+        <h2><a href="{{ " discs/luis-milan/" | relLangURL }}">{{ i18n "hero_title" }}</a></h2>
     </div>
 </section>
 
@@ -35,6 +35,18 @@
             <input type="hidden" name="_next" value="{{ .Site.BaseURL }}">
             <button type="submit">Subscribe</button>
         </form>
+    </div>
+</section>
+
+<section class="epk-section">
+    <div class="container">
+        <div style="padding: 30px; background-color: #f8f8f8; border-radius: 8px; text-align: center;">
+            <h3 style="margin-top: 0; color: #8b7355;">{{ i18n "epk_title" }}</h3>
+            <p style="margin-bottom: 20px;">{{ i18n "epk_description" }}</p>
+            <a href="{{ " epk/" | relLangURL }}"
+                style="display: inline-block; background-color: #222; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: 500; transition: background 0.3s;">{{
+                i18n "epk_button" }}</a>
+        </div>
     </div>
 </section>
 {{ end }}

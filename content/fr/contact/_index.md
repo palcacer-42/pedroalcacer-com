@@ -47,3 +47,11 @@ Suivez Pedro Alcàcer sur les réseaux sociaux :
 ---
 
 *Pour les urgences, utilisez les messages directs sur les réseaux sociaux.*
+
+---
+
+<div style="margin-top: 40px; padding: 30px; background-color: #f8f8f8; border-radius: 8px; text-align: center;">
+    <h3 style="margin-top: 0; color: #8b7355;">Pour Organisateurs & Presse</h3>
+    <p style="margin-bottom: 20px;">Accédez aux photos haute résolution, biographies et fiches techniques.</p>
+    <a href="/fr/epk/" style="display: inline-block; background-color: #222; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: 500; transition: background 0.3s;">Voir le Dossier de Presse (EPK)</a>
+</div>

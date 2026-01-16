@@ -47,3 +47,11 @@ Folgen Sie Pedro Alcàcer auf Social Media:
 ---
 
 *Für dringende Angelegenheiten nutzen Sie bitte direkte Nachrichten in Social Media.*
+
+---
+
+<div style="margin-top: 40px; padding: 30px; background-color: #f8f8f8; border-radius: 8px; text-align: center;">
+    <h3 style="margin-top: 0; color: #8b7355;">Für Veranstalter & Presse</h3>
+    <p style="margin-bottom: 20px;">Zugang zu hochauflösenden Fotos, Biografien und technischen Anforderungen.</p>
+    <a href="/de/epk/" style="display: inline-block; background-color: #222; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: 500; transition: background 0.3s;">Elektronische Pressemappe (EPK)</a>
+</div>

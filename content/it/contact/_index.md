@@ -47,3 +47,11 @@ Segui Pedro Alcàcer sui social media:
 ---
 
 *Per questioni urgenti, utilizzare i messaggi diretti sui social media.*
+
+---
+
+<div style="margin-top: 40px; padding: 30px; background-color: #f8f8f8; border-radius: 8px; text-align: center;">
+    <h3 style="margin-top: 0; color: #8b7355;">Per Organizzatori e Stampa</h3>
+    <p style="margin-bottom: 20px;">Accedi a foto ad alta risoluzione, biografie e schede tecniche.</p>
+    <a href="/it/epk/" style="display: inline-block; background-color: #222; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: 500; transition: background 0.3s;">Visualizza Cartella Stampa (EPK)</a>
+</div>
