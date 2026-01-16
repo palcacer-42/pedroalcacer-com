@@ -1499,7 +1499,7 @@ img {
 
 
 
-}
+
 
 .newsletter-section {
     padding: 60px 20px;
@@ -2545,6 +2545,47 @@ textarea:focus-visible {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Calendar Date Divider */
+.gc-datum-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 0 10px;
+    color: #0687f5;
+    /* Blue as requested */
+    font-weight: 800;
+    font-family: inherit;
+    list-style: none;
+    font-size: 1.1rem;
+    /* Make it clearly visible */
+}
+
+.gc-datum-line span {
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.gc-line {
+    height: 3px;
+    /* Slightly thicker */
+    background-color: #0687f5;
+    width: 100%;
+    flex: 1;
+    border-radius: 2px;
+    opacity: 1;
+    /* Full opacity */
+}
+
+/* Past events specific styling */
+.gc-item-past {
+    opacity: 0.6;
+    background-color: #fafafa;
+    filter: grayscale(100%);
+    /* Optional: make past events grayscale to distinguish further */
 }
 
 .epk-btn {
