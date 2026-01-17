@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedro Alcàcer - Lutenist</title>
+    <meta name="robots" content="noindex, follow">
+    <script>
+        (function() {
+            var supported = ["en", "es", "ca", "de", "fr", "it"];
+            function pick() {
+                var userLangs = navigator.languages || [navigator.language || navigator.userLanguage || "en"];
+                for (var i = 0; i < userLangs.length; i++) {
+                    var tag = userLangs[i].toLowerCase();
+                    var primary = tag.split('-')[0];
+                    if (supported.indexOf(tag) !== -1) return tag;
+                    if (supported.indexOf(primary) !== -1) return primary;
+                }
+                return "en";
+            }
+            var chosen = pick();
+            window.location.replace("/" + chosen + "/");
+        })();
+    </script>
+    <meta http-equiv="refresh" content="0; url=/en/">
+</head>
+<body>
+    <p>Redirecting to / Redirigiendo a <a href="/en/">pedroalcacer.com</a>...</p>
+</body>
+</html>

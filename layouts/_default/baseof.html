@@ -18,63 +18,7 @@
             } catch (e) { }
         })();
     </script>
-    <script>
-        (function () {
-            try {
-                var supportedLangs = [{{- range $i, $l := .Site.Languages }}{{ if $i }}, {{ end }} "{{ $l.Lang }}"{{- end }}];
-        var fallbackLang = "{{ with index .Site.Languages 0 }}{{ .Lang }}{{ else }}en{{ end }}";
-        var pathname = window.location.pathname || "/";
-
-        function hasLangPrefix(p) {
-            for (var i = 0; i < supportedLangs.length; i++) {
-                var code = supportedLangs[i];
-                if (p === ('/' + code) || p.indexOf('/' + code + '/') === 0) return true;
-            }
-            return false;
-        }
-
-        if (hasLangPrefix(pathname)) return;
-
-        var userLangs = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
-
-        function pickLang() {
-            for (var i = 0; i < userLangs.length; i++) {
-                var tag = (userLangs[i] || '').toLowerCase();
-                if (!tag) continue;
-                var primary = tag.split('-')[0];
-                if (supportedLangs.indexOf(tag) !== -1) return tag;
-                if (supportedLangs.indexOf(primary) !== -1) return primary;
-            }
-            return null;
-        }
-
-        var chosen = pickLang() || fallbackLang;
-
-        function buildPath(lang) {
-            if (pathname === '/' || pathname === '') return '/' + lang + '/';
-            var p = pathname.charAt(0) === '/' ? pathname : ('/' + pathname);
-            return '/' + lang + (p === '/' ? '/' : p);
-        }
-
-        var target = buildPath(chosen);
-        // normalize double slashes
-        target = target.replace(/\/\/+/, '/');
-
-        // Verify resource exists before redirecting; fall back to default language if missing.
-        fetch(target, { method: 'HEAD' }).then(function (resp) {
-            if (resp && resp.ok) {
-                location.replace(target + location.search + location.hash);
-            } else {
-                var fb = buildPath(fallbackLang);
-                location.replace(fb + location.search + location.hash);
-            }
-        }).catch(function () {
-            location.replace(target + location.search + location.hash);
-        });
-            }catch (e) { }
-        }) ();
-    </script>
-    <link rel="stylesheet" href="{{ "css/style.css?v=20260109" | relURL }}">
+    <link rel="stylesheet" href="{{ " css/style.css?v=20260109" | relURL }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
@@ -86,20 +30,20 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-<!-- Language Selector -->
-                <div class="language-selector">
-                    {{ range .Site.Languages }}
-                    {{ if eq .Lang $.Page.Lang }}
-                    <span class="lang-current">{{ .Lang }}</span>
-                    {{ else }}
-                    <a href="{{ $.Page.RelPermalink | replaceRE (printf "^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}"
-                        class="lang-link">{{ .Lang }}</a>
-                    {{ end }}
-                    {{ end }}
-                </div>
+            <!-- Language Selector -->
+            <div class="language-selector">
+                {{ range .Site.Languages }}
+                {{ if eq .Lang $.Page.Lang }}
+                <span class="lang-current">{{ .Lang }}</span>
+                {{ else }}
+                <a href="{{ $.Page.RelPermalink | replaceRE (printf " ^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}"
+                    class="lang-link">{{ .Lang }}</a>
+                {{ end }}
+                {{ end }}
+            </div>
 
             <div class="nav-brand">
-                <a href="{{ "/" | relLangURL }}">Pedro Alcàcer</a>
+                <a href="{{ " /" | relLangURL }}">Pedro Alcàcer</a>
             </div>
 
             <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
@@ -112,7 +56,8 @@
                     {{ range .Site.Menus.main }}
                     <li><a href="{{ .URL | relLangURL }}" class="nav-link">{{ .Name }}</a></li>
                     {{ end }}
-                </ul></div>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -143,8 +88,8 @@
             </div>
         </div>
     </footer>
-    <script src="{{ "js/theme-toggle.js" | relURL }}" defer></script>
-    <script src="{{ "js/lightbox.js" | relURL }}"></script>
+    <script src="{{ " js/theme-toggle.js" | relURL }}" defer></script>
+    <script src="{{ " js/lightbox.js" | relURL }}"></script>
 </body>
 
 </html>

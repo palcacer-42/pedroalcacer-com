@@ -79,7 +79,19 @@
 {{ range .Translations }}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
 {{ end }}
+
+{{/* x-default: points to root for the home page, and English version for others */}}
+{{ if .IsHome }}
 <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}">
+{{ else }}
+{{/* For subpages, the 'x-default' is usually the main version (English) */}}
+{{ if eq .Lang "en" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{ else }}
+{{ range .Translations }}{{ if eq .Lang "en" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">{{ end }}{{ end }}
+{{ end }}
+{{ end }}
 
 {{/* Additional Open Graph fields for articles */}}
 {{ if .IsPage }}
