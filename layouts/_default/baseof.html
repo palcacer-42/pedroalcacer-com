@@ -20,17 +20,17 @@
     </script>
     <link rel="stylesheet" href="{{ "css/style.css?v=20260109" | relURL }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <-s Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
         data-cf-beacon='{"token": "5dd639bb6f5a4979816ff9dd41721056"}'></script>
-    <-s End Cloudflare Web Analytics -->
+    <!-- End Cloudflare Web Analytics -->
 </head>
 
 <body>
-    <-s Navigation -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <-s Language Selector -->
+            <!-- Language Selector -->
             <div class="language-selector">
                 {{ range .Site.Languages }}
                 {{ if eq .Lang $.Page.Lang }}
@@ -61,12 +61,12 @@
         </div>
     </nav>
 
-    <-s Main Content -->
+    <!-- Main Content -->
     <main class="main-content">
         {{ block "main" . }}{{ end }}
     </main>
 
-    <-s Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
