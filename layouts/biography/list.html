@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="page-hero">
+    <div class="hero-image" style="height: 75vh; max-height: 800px;">
+        <img src="{{ "/images/bio-instruments-hero.jpg" | relURL }}" alt="Biography" class="hero-image"
+            style="object-position: top;">
+    </div>
+</section>
+
+<section class="bio-section" style="padding-top: 20px;">
+    <div class="container">
+        <div class="bio-card" style="display: block;">
+            <div class="bio-body">
+                <p class="eyebrow">{{ i18n "biography" | default "Biography" }}</p>
+                <h1 class="bio-title">{{ .Title }}</h1>
+                <div class="bio-text post-body">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

@@ -1919,18 +1919,57 @@ textarea:focus-visible {
 
     .media-info {
         padding: 20px;
+        text-align: center;
     }
 
     .media-info h3 {
         margin-bottom: 8px;
+        font-family: 'Merriweather', Georgia, serif;
         font-size: 1.1rem;
+        font-weight: 600;
         color: var(--primary-color);
     }
 
     .media-info p {
+        font-family: 'Avenir', 'Helvetica Neue', sans-serif;
         color: #666;
         font-size: 0.9rem;
     }
+
+    .video-link {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .video-link a {
+        font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+        font-size: 0.85rem;
+        color: var(--accent-color, #8b7355);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .video-link a:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Video link styling (global) */
+.video-link {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.video-link a {
+    font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+    font-size: 0.85rem;
+    color: var(--accent-color, #8b7355);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.video-link a:hover {
+    text-decoration: underline;
 }
 
 /* Instruments Grid Redesign */
@@ -2040,23 +2079,24 @@ textarea:focus-visible {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .media-title {
     font-family: 'Merriweather', Georgia, serif;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--primary-color, #1a1a1a);
     margin: 0 0 8px 0;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.4;
 }
 
 .media-artist {
-    font-family: 'Avenir', sans-serif;
-    font-size: 0.95rem;
+    font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+    font-size: 0.9rem;
     color: #666;
     margin: 0 0 16px 0;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .media-link-small {

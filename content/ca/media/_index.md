@@ -1,6 +1,6 @@
 ---
-title: "Àudio i vídeo"
-description: "Gravacions d'àudio i vídeo de les interpretacions de Pedro Alcàcer"
+title: "Vídeos"
+description: "Vídeos de les interpretacions de Pedro Alcàcer"
 media:
   - title: "Luys Milán - Fantasía 13"
     artist: "Pedro Alcàcer/Vihuela de mano"

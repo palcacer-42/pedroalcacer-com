@@ -22,16 +22,16 @@ defaultContentLanguageInSubdir = true
         url = "/discs/"
         weight = 2
       [[languages.en.menu.main]]
+        name = "Videos"
+        url = "/media/"
+        weight = 3
+      [[languages.en.menu.main]]
         name = "Biography"
         url = "/biography/"
-        weight = 3
+        weight = 4
       [[languages.en.menu.main]]
         name = "Instruments"
         url = "/instruments/"
-        weight = 4
-      [[languages.en.menu.main]]
-        name = "Audio and video"
-        url = "/media/"
         weight = 5
       [[languages.en.menu.main]]
         name = "Programs"
@@ -57,16 +57,16 @@ defaultContentLanguageInSubdir = true
         url = "/discs/"
         weight = 2
       [[languages.es.menu.main]]
+        name = "Vídeos"
+        url = "/media/"
+        weight = 3
+      [[languages.es.menu.main]]
         name = "Biografía"
         url = "/biography/"
-        weight = 3
+        weight = 4
       [[languages.es.menu.main]]
         name = "Instrumentos"
         url = "/instruments/"
-        weight = 4
-      [[languages.es.menu.main]]
-        name = "Audio y video"
-        url = "/media/"
         weight = 5
       [[languages.es.menu.main]]
         name = "Programas"
@@ -92,16 +92,16 @@ defaultContentLanguageInSubdir = true
         url = "/discs/"
         weight = 2
       [[languages.ca.menu.main]]
+        name = "Vídeos"
+        url = "/media/"
+        weight = 3
+      [[languages.ca.menu.main]]
         name = "Biografia"
         url = "/biography/"
-        weight = 3
+        weight = 4
       [[languages.ca.menu.main]]
         name = "Instruments"
         url = "/instruments/"
-        weight = 4
-      [[languages.ca.menu.main]]
-        name = "Àudio i vídeo"
-        url = "/media/"
         weight = 5
       [[languages.ca.menu.main]]
         name = "Programs"
@@ -127,16 +127,16 @@ defaultContentLanguageInSubdir = true
         url = "/discs/"
         weight = 2
       [[languages.de.menu.main]]
+        name = "Videos"
+        url = "/media/"
+        weight = 3
+      [[languages.de.menu.main]]
         name = "Biografie"
         url = "/biography/"
-        weight = 3
+        weight = 4
       [[languages.de.menu.main]]
         name = "Instrumente"
         url = "/instruments/"
-        weight = 4
-      [[languages.de.menu.main]]
-        name = "Audio und Video"
-        url = "/media/"
         weight = 5
       [[languages.de.menu.main]]
         name = "Programme"
@@ -162,16 +162,16 @@ defaultContentLanguageInSubdir = true
         url = "/discs/"
         weight = 2
       [[languages.fr.menu.main]]
+        name = "Vidéos"
+        url = "/media/"
+        weight = 3
+      [[languages.fr.menu.main]]
         name = "Biographie"
         url = "/biography/"
-        weight = 3
+        weight = 4
       [[languages.fr.menu.main]]
         name = "Instruments"
         url = "/instruments/"
-        weight = 4
-      [[languages.fr.menu.main]]
-        name = "Audio et vidéo"
-        url = "/media/"
         weight = 5
       [[languages.fr.menu.main]]
         name = "Programmes"
@@ -197,16 +197,16 @@ defaultContentLanguageInSubdir = true
         url = "/discs/"
         weight = 2
       [[languages.it.menu.main]]
+        name = "Video"
+        url = "/media/"
+        weight = 3
+      [[languages.it.menu.main]]
         name = "Biografia"
         url = "/biography/"
-        weight = 3
+        weight = 4
       [[languages.it.menu.main]]
         name = "Strumenti"
         url = "/instruments/"
-        weight = 4
-      [[languages.it.menu.main]]
-        name = "Audio e video"
-        url = "/media/"
         weight = 5
       [[languages.it.menu.main]]
         name = "Proposte"

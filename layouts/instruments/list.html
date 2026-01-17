@@ -1,0 +1,31 @@
+{{ define "main" }}
+<section class="page-hero">
+    <div class="hero-image" style="height: 75vh; max-height: 800px;">
+        <img src="{{ "/images/bio-instruments-hero.jpg" | relURL }}" alt="Instruments" class="hero-image"
+            style="object-position: 50% 65%;">
+    </div>
+</section>
+
+<section class="page-content" style="padding-top: 20px;">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <div class="post-body">
+            {{ .Content }}
+        </div>
+
+        <div class="instruments-grid">
+            {{ range .Params.instruments }}
+            <div class="instrument-card">
+                <div class="instrument-image">
+                    <img src="{{ .image | relURL }}" alt="{{ .title }}" loading="lazy">
+                </div>
+                <div class="instrument-info">
+                    <h3 class="instrument-title">{{ .title }}</h3>
+                    <p class="instrument-builder">{{ .builder }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

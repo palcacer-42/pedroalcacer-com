@@ -1,6 +1,8 @@
 {{/* SEO partial: meta description, canonical, Open Graph, Twitter Card, hreflang */}}
+{{ $curLang := .Lang }}
 {{ $siteTitle := .Site.Title }}
-{{ $siteDesc := default "Pedro Alcàcer — Lutenist specialising in Renaissance and Baroque repertoire. Concerts, recordings and programs." .Site.Params.description }}
+{{ $siteDesc := default (print "Pedro Alcàcer — Lutenist specialising in Renaissance and Baroque repertoire. Concerts, "
+"recordings and programs.") .Site.Params.description }}
 {{ $title := .Title }}
 {{ if not $title }}{{ $title = $siteTitle }}{{ end }}
 {{/* Avoid repeating site title if already present in the page title */}}
@@ -8,28 +10,29 @@
 {{ $lowerSite := lower $siteTitle }}
 {{/* For list/section/taxonomy pages, append the language name to make titles unique across locales */}}
 {{ $titleSuffix := "" }}
-{{/* Append language suffix for lists/home OR any page that has translations to avoid duplicate titles across locales */}}
+{{/* Append language suffix for lists/home OR any page that has translations to avoid duplicate titles across locales
+*/}}
 {{ if or .IsHome .IsSection .IsNode (eq .Kind "taxonomyTerm") (gt (len .Translations) 0) }}
-  {{ $titleSuffix = (print " — " .Site.Language.LanguageName) }}
+{{ $titleSuffix = (print " — " .Site.Language.LanguageName) }}
 {{ end }}
 {{ if not (in $lowerTitle $lowerSite) }}
-  <title>{{ $title }} - {{ $siteTitle }}{{ $titleSuffix }}</title>
+<title>{{ $title }} - {{ $siteTitle }}{{ $titleSuffix }}</title>
 {{ else }}
-  <title>{{ $title }}{{ $titleSuffix }}</title>
+<title>{{ $title }}{{ $titleSuffix }}</title>
 {{ end }}
 
 {{/* Meta description: page param -> summary -> site param. For list/home pages fall back to site description. */}}
 {{ $metaDesc := "" }}
 {{ if isset .Params "description" }}
-  {{ $metaDesc = .Params.description }}
+{{ $metaDesc = .Params.description }}
 {{ else if ne .Summary "" }}
-  {{ $metaDesc = .Summary }}
+{{ $metaDesc = .Summary }}
 {{ else if .IsHome }}
-  {{ $metaDesc = .Site.Params.description }}
+{{ $metaDesc = .Site.Params.description }}
 {{ else if or .IsSection .IsNode (eq .Kind "taxonomyTerm") }}
-  {{ $metaDesc = cond (ne .Site.Params.description "") .Site.Params.description (print (.Title) " - " .Site.Title) }}
+{{ $metaDesc = cond (ne .Site.Params.description "") .Site.Params.description (print (.Title) " - " .Site.Title) }}
 {{ else }}
-  {{ $metaDesc = .Site.Params.description }}
+{{ $metaDesc = .Site.Params.description }}
 {{ end }}
 {{/* Ensure we always have a description by falling back to site param */}}
 {{ $metaDesc = default $siteDesc $metaDesc }}
@@ -40,7 +43,8 @@
 
 {{/* Open Graph */}}
 <meta property="og:title" content="{{ $title }}">
-{{ if $metaDesc }}<meta property="og:description" content="{{ $metaDesc | plainify | htmlEscape }}">{{ end }}
+{{ if $metaDesc }}
+<meta property="og:description" content="{{ $metaDesc | plainify | htmlEscape }}">{{ end }}
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ $siteTitle }}">
@@ -49,47 +53,108 @@
 {{/* OG image: page featured -> site-level og image */}}
 {{ $ogImage := "" }}
 {{ if isset .Params "featured_image" }}
-  {{ $ogImage = (.Params.featured_image | absURL) }}
+{{ $ogImage = (.Params.featured_image | absURL) }}
 {{ else if .Site.Params.og_image }}
-  {{ $ogImage = (.Site.Params.og_image | absURL) }}
+{{ $ogImage = (.Site.Params.og_image | absURL) }}
 {{ end }}
-{{ if $ogImage }}<meta property="og:image" content="{{ $ogImage }}">{{ end }}
+{{ if $ogImage }}
+<meta property="og:image" content="{{ $ogImage }}">{{ end }}
 
 {{/* Twitter Card */}}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ $title }}">
-{{ if $metaDesc }}<meta name="twitter:description" content="{{ $metaDesc | plainify | htmlEscape }}">{{ end }}
-{{ if $ogImage }}<meta name="twitter:image" content="{{ $ogImage }}">{{ end }}
+{{ if $metaDesc }}
+<meta name="twitter:description" content="{{ $metaDesc | plainify | htmlEscape }}">{{ end }}
+{{ if $ogImage }}
+<meta name="twitter:image" content="{{ $ogImage }}">{{ end }}
+
+{{/* Twitter handle support (set in site params if available) */}}
+{{ with .Site.Params.twitter_site }}
+<meta name="twitter:site" content="@{{ . }}">{{ end }}
+{{ with .Site.Params.twitter_creator }}
+<meta name="twitter:creator" content="@{{ . }}">{{ end }}
 
 {{/* Hreflang / translations: emit current + translations */}}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
 {{ range .Translations }}
-  <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
 {{ end }}
 <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}">
 
+{{/* Additional Open Graph fields for articles */}}
+{{ if .IsPage }}
+{{ with .Lastmod }}
+<meta property="og:updated_time" content="{{ .Format " 2006-01-02T15:04:05Z07:00" }}">{{ end }}
+{{ with .Params.author }}
+<meta property="article:author" content="{{ . }}">{{ end }}
+{{ end }}
+
+{{/* Structured Data: Person */}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pedro Alcàcer",
+  "url": "{{ .Site.BaseURL }}",
+  "sameAs": [
+    "https://www.instagram.com/pedroalcacer/",
+    "https://www.youtube.com/@pedroalcacerlute"
+  ],
+  "jobTitle": "Lutenist",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Berlin",
+    "addressCountry": "DE"
+  }
+}
+</script>
+{{ end }}
+
+{{/* Structured Data: Article (for pages) */}}
+{{ if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ $title }}",
+  "description": "{{ $metaDesc | plainify | htmlEscape }}",
+  "author": {
+    "@type": "Person",
+    "name": "Pedro Alcàcer"
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "image": "{{ $ogImage }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
+{{ end }}
+
 {{/* Location targeting and localized keywords */}}
-{{ $curLang := .Lang }}
 {{ $locKeywords := "" }}
 {{ if eq $curLang "en" }}
-  {{ $locKeywords = "Berlin, Europe, Mexico, Latin America, Italy, Spain, France" }}
+{{ $locKeywords = "Berlin, Europe, Mexico, Latin America, Italy, Spain, France" }}
 {{ else if eq $curLang "de" }}
-  {{ $locKeywords = "Berlin, Deutschland, Europa, Mexiko, Lateinamerika, Italien, Spanien, Frankreich" }}
+{{ $locKeywords = "Berlin, Deutschland, Europa, Mexiko, Lateinamerika, Italien, Spanien, Frankreich" }}
 {{ else if eq $curLang "es" }}
-  {{ $locKeywords = "Berlín, Europa, México, Latinoamérica, Italia, España, Francia" }}
+{{ $locKeywords = "Berlín, Europa, México, Latinoamérica, Italia, España, Francia" }}
 {{ else if eq $curLang "fr" }}
-  {{ $locKeywords = "Berlin, Europe, Mexique, Amérique latine, Italie, Espagne, France" }}
+{{ $locKeywords = "Berlin, Europe, Mexique, Amérique latine, Italie, Espagne, France" }}
 {{ else if eq $curLang "it" }}
-  {{ $locKeywords = "Berlino, Europa, Messico, America Latina, Italia, Spagna, Francia" }}
+{{ $locKeywords = "Berlino, Europa, Messico, America Latina, Italia, Spagna, Francia" }}
 {{ else if eq $curLang "ca" }}
-  {{ $locKeywords = "Berlín, Europa, Mèxic, Amèrica Llatina, Itàlia, Espanya, França" }}
+{{ $locKeywords = "Berlín, Europa, Mèxic, Amèrica Llatina, Itàlia, Espanya, França" }}
 {{ else }}
-  {{ $locKeywords = "Berlin, Europe, Mexico, Latin America, Italy, Spain, France" }}
+{{ $locKeywords = "Berlin, Europe, Mexico, Latin America, Italy, Spain, France" }}
 {{ end }}
 
 <meta name="keywords" content="{{ $locKeywords }}">
 
-{{/* Geo meta tags (centered on Berlin to help local relevance); ICBM/geo.position in lat,long */}}
+{{/* Geo meta tags (centered on Berlin) */}}
 <meta name="geo.placename" content="Berlin">
 <meta name="geo.region" content="DE-BE">
 <meta name="geo.position" content="52.5200;13.4050">
@@ -97,7 +162,7 @@
 
 {{/* Open Graph locale alternates for all site languages */}}
 {{ range .Site.Languages }}
-  {{ if ne .Lang $curLang }}
-    <meta property="og:locale:alternate" content="{{ .Lang }}">
-  {{ end }}
+{{ if ne .Lang $curLang }}
+<meta property="og:locale:alternate" content="{{ .Lang }}">
+{{ end }}
 {{ end }}
