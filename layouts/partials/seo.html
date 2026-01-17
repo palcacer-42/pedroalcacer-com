@@ -88,15 +88,14 @@
 {{ if eq .Lang "en" }}
 <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
 {{ else }}
-{{ range .Translations }}{{ if eq .Lang "en" }}
-<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">{{ end }}{{ end }}
+{{ range .Translations }}{{ if eq .Lang "en" }}<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">{{ end }}{{ end }}
 {{ end }}
 {{ end }}
 
 {{/* Additional Open Graph fields for articles */}}
 {{ if .IsPage }}
 {{ with .Lastmod }}
-<meta property="og:updated_time" content="{{ .Format " 2006-01-02T15:04:05Z07:00" }}">{{ end }}
+<meta property="og:updated_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
 {{ with .Params.author }}
 <meta property="article:author" content="{{ . }}">{{ end }}
 {{ end }}

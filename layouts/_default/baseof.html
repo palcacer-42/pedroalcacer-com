@@ -18,32 +18,32 @@
             } catch (e) { }
         })();
     </script>
-    <link rel="stylesheet" href="{{ " css/style.css?v=20260109" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/style.css?v=20260109" | relURL }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Cloudflare Web Analytics -->
+    <-s Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
         data-cf-beacon='{"token": "5dd639bb6f5a4979816ff9dd41721056"}'></script>
-    <!-- End Cloudflare Web Analytics -->
+    <-s End Cloudflare Web Analytics -->
 </head>
 
 <body>
-    <!-- Navigation -->
+    <-s Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <!-- Language Selector -->
+            <-s Language Selector -->
             <div class="language-selector">
                 {{ range .Site.Languages }}
                 {{ if eq .Lang $.Page.Lang }}
                 <span class="lang-current">{{ .Lang }}</span>
                 {{ else }}
-                <a href="{{ $.Page.RelPermalink | replaceRE (printf " ^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}"
+                <a href="{{ $.Page.RelPermalink | replaceRE (printf "^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}"
                     class="lang-link">{{ .Lang }}</a>
                 {{ end }}
                 {{ end }}
             </div>
 
             <div class="nav-brand">
-                <a href="{{ " /" | relLangURL }}">Pedro Alcàcer</a>
+                <a href="{{ "/" | relLangURL }}">Pedro Alcàcer</a>
             </div>
 
             <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
@@ -61,12 +61,12 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
+    <-s Main Content -->
     <main class="main-content">
         {{ block "main" . }}{{ end }}
     </main>
 
-    <!-- Footer -->
+    <-s Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -88,8 +88,8 @@
             </div>
         </div>
     </footer>
-    <script src="{{ " js/theme-toggle.js" | relURL }}" defer></script>
-    <script src="{{ " js/lightbox.js" | relURL }}"></script>
+    <script src="{{ "js/theme-toggle.js" | relURL }}" defer></script>
+    <script src="{{ "js/lightbox.js" | relURL }}"></script>
 </body>
 
 </html>
