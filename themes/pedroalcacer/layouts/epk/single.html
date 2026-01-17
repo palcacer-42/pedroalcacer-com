@@ -4,7 +4,7 @@
 
         <header class="epk-header">
             <h1 class="epk-title">{{ .Title }}</h1>
-            <p class="epk-subtitle">Electronic Press Kit / Marketing Materials</p>
+            <p class="epk-subtitle">{{ i18n "epk_subtitle" }}</p>
         </header>
 
         <div class="epk-grid">
@@ -15,44 +15,34 @@
                         <img src="/images/biography-hero.jpg" alt="Pedro Alcàcer High Resolution" class="epk-hero-img">
                     </div>
                     <a href="/images/biography-hero.jpg" download class="epk-btn epk-btn-download">
-                        <span class="icon">↓</span> Download High-Res
+                        <span class="icon">↓</span> {{ i18n "epk_download" }}
                     </a>
                 </div>
 
                 <div class="epk-card epk-contact">
-                    <h3>Booking Contact</h3>
+                    <h3>{{ i18n "epk_booking" }}</h3>
                     <p class="email">info@pedroalcacer.com</p>
-                    <a href="/en/contact/" class="epk-btn epk-btn-primary">Book Now</a>
+                    <a href="{{ " contact/" | relLangURL }}" class="epk-btn epk-btn-primary">{{ i18n "epk_book_now"
+                        }}</a>
                 </div>
             </aside>
 
             <!-- Right Column: Biography & Info -->
             <main class="epk-content">
                 <section class="epk-bio-block">
-                    <h2>Short Biography</h2>
-                    <p class="copy-hint">(150 words approx. - For Programs)</p>
+                    <h2>{{ i18n "epk_short_bio" }}</h2>
+                    <p class="copy-hint">{{ i18n "epk_short_bio_hint" }}</p>
                     <div class="bio-text-box">
-                        <p>
-                            Born in Mexico City into a family of musicians, Pedro Alcàcer began his studies in classical
-                            guitar and composition at the National School of Music (UNAM). He specialized in Early
-                            Music, studying Lute and Basso Continuo in Barcelona (Escola Superior de Música de
-                            Catalunya) and Bremen (University of the Arts) with masters such as Xavier Diaz-Latorre,
-                            Joachim Held, and Lee Santana.
-                        </p>
-                        <p>
-                            Based in Berlin, he performs regularly as a soloist and continuo player across Europe's most
-                            prestigious festivals, collaborating with ensembles and conductors including Gabriel
-                            Garrido, Alessandro di Marchi, and Marco Mencoboni.
-                        </p>
+                        <p>{{ i18n "epk_short_bio_text" }}</p>
                     </div>
                     <button class="epk-copy-btn"
-                        onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText); alert('Bio copied!')">Copy
-                        Text</button>
+                        onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText); alert('Bio copied!')">{{
+                        i18n "epk_copy" }}</button>
                 </section>
 
                 <section class="epk-bio-block">
-                    <h2>Full Biography</h2>
-                    <p class="copy-hint">(Detailed - For Press & Websites)</p>
+                    <h2>{{ i18n "epk_full_bio" }}</h2>
+                    <p class="copy-hint">{{ i18n "epk_full_bio_hint" }}</p>
                     <div class="bio-text-box">
                         {{ .Content }}
                     </div>
