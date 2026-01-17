@@ -2491,10 +2491,6 @@ textarea:focus-visible {
 /* EPK (Electronic Press Kit) Styles */
 .epk-section {
     background-color: #f7f9fc;
-}
-
-/* Full EPK page needs min-height */
-.epk-section.epk-page {
     min-height: 80vh;
 }
 
