@@ -21,7 +21,7 @@
     <script>
         (function () {
             try {
-                var supportedLangs = [{{- range $i, $l := .Site.Languages }}{ { if $i } }, { { end } } "{{ $l.Lang }}"{ { - end } }];
+                var supportedLangs = [{{- range $i, $l := .Site.Languages }}{{ if $i }}, {{ end }}"{{ $l.Lang }}"{{- end }}];
         var fallbackLang = "{{ with index .Site.Languages 0 }}{{ .Lang }}{{ else }}en{{ end }}";
         var pathname = window.location.pathname || "/";
 
