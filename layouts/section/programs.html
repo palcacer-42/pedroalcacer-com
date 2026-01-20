@@ -1,7 +1,9 @@
 {{ define "main" }}
-<section class="programs-section" aria-labelledby="programs-heading">
-  <div class="programs-wrapper elegant">
-    <h1 id="programs-heading" class="programs-title">{{ .Title }}</h1>
+<section class="programs-section section-with-gradient" aria-labelledby="programs-heading">
+  <div class="programs-wrapper elegant container">
+    <div class="elegant-card" style="margin-bottom: 20px;">
+      <h1 id="programs-heading" class="programs-title" style="margin-bottom: 0;">{{ .Title }}</h1>
+    </div>
 
     <div class="program-jumps" aria-hidden="false">
       <a href="#solo">Solo</a>
@@ -19,7 +21,7 @@
     {{ $hasGroups := or (gt (len $solo) 0) (gt (len $ens) 0) }}
 
     {{ if $hasGroups }}
-    <h2 id="solo" class="programs-section-heading">Solo programmes</h2>
+    <h2 id="solo" class="programs-section-heading">{{ i18n "solo_programs" | default "Solo programmes" }}</h2>
     <ul class="program-list reduced-list">
       {{ range $solo }}
       {{ $p := . }}
@@ -53,7 +55,8 @@
       {{ end }}
     </ul>
 
-    <h2 id="ensemble" class="programs-section-heading">Ensemble programmes</h2>
+    <h2 id="ensemble" class="programs-section-heading">{{ i18n "ensemble_programs" | default "Ensemble programmes" }}
+    </h2>
     <ul class="program-list reduced-list">
       {{ range $ens }}
       {{ $p := . }}
@@ -89,7 +92,7 @@
 
     {{ $others := where .Pages "Params.group" "" }}
     {{ if gt (len $others) 0 }}
-    <h2 class="programs-section-heading">Other programmes</h2>
+    <h2 class="programs-section-heading">{{ i18n "other_programs" | default "Other programmes" }}</h2>
     <ul class="program-list reduced-list">
       {{ range $others }}
       {{ $p := . }}
@@ -120,7 +123,7 @@
     {{ end }}
 
     {{ else }}
-    <h2 class="programs-section-heading">All programmes</h2>
+    <h2 class="programs-section-heading">{{ i18n "all_programs" | default "All programmes" }}</h2>
     <ul class="program-list reduced-list">
       {{ range .Pages.ByTitle }}
       {{ $p := . }}
@@ -155,7 +158,7 @@
     {{/* leftover pages not assigned to Solo/Ensemble */}}
     {{ $others := where .Pages "Params.group" "" }}
     {{ if gt (len $others) 0 }}
-    <h2 class="programs-section-heading">Other programmes</h2>
+    <h2 class="programs-section-heading">{{ i18n "other_programs" | default "Other programmes" }}</h2>
     <ul class="program-list reduced-list">
       {{ range $others }}
       {{ $p := . }}
@@ -187,12 +190,10 @@
   }
 
   .programs-section {
-    max-width: var(--prog-max-width);
-    margin: 40px auto;
     padding: 30px 20px;
     font-family: Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
     color: #111;
-    background: #fff;
+    background: transparent;
   }
 
   .programs-wrapper.elegant {

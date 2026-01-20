@@ -1,0 +1,41 @@
+{{ define "main" }}
+<section class="page-hero">
+    <div class="hero-image">
+        <picture>
+            <source srcset="{{ "/images/discs-hero.webp" | relURL }}" type="image/webp">
+            <img src="{{ "/images/discs-hero.jpg" | relURL }}" alt="{{ .Title }}" class="hero-image">
+        </picture>
+    </div>
+</section>
+
+<section class="recordings-section section-with-gradient">
+    <div class="container">
+        <div class="recordings-header elegant-card">
+            <h1 class="recordings-title">{{ .Title }}</h1>
+            {{ with .Description }}<p class="recordings-subtitle">{{ . }}</p>{{ end }}
+        </div>
+
+        <div class="discs-grid">
+            {{ range .Params.discs }}
+            <article class="disc-card">
+                {{ if .url }}
+                <a class="disc-card__link" href="{{ .url }}" target="_blank" rel="noopener">
+                    {{ end }}
+                    <div class="disc-cover">
+                        <img src="{{ .image | relURL }}" alt="{{ .title }}">
+                    </div>
+                    <div class="disc-meta">
+                        <p class="disc-title">{{ .title }}</p>
+                        {{ with .artist }}<p class="disc-artist">{{ . }}</p>{{ end }}
+                        {{ with .role }}<p class="disc-role">{{ . }}</p>{{ end }}
+                    </div>
+                    {{ if .url }}<span class="disc-cta" aria-hidden="true">→</span>{{ end }}
+                    {{ if .url }}
+                </a>
+                {{ end }}
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

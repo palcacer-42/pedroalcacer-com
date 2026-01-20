@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="page-content section-with-gradient">
+    <div class="container">
+        <div class="elegant-card">
+            <h1>{{ .Title }}</h1>
+            {{ if .Content }}
+            <div class="post-body">
+                {{ .Content | safeHTML }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

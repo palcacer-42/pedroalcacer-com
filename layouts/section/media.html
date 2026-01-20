@@ -8,12 +8,14 @@
     </picture>
   </div>
 </section>
-<section class="page-content">
+<section class="page-content section-with-gradient">
   <div class="container">
-    <h1>{{ .Title }}</h1>
-    {{ if .Description }}
-    <p class="post-body">{{ .Description }}</p>
-    {{ end }}
+    <div class="elegant-card">
+      <h1>{{ .Title }}</h1>
+      {{ if .Description }}
+      <p class="post-body">{{ .Description }}</p>
+      {{ end }}
+    </div>
 
     <div class="media-grid">
       {{ range .Params.media }}
