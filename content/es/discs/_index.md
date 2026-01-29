@@ -2,6 +2,7 @@
 title: "Recordings"
 description: "Discography and recordings featuring Pedro Alcàcer"
 discs:
+
   - title: 'Luis Milán - Primer libro Intitulado "El Maestro"'
     artist: "Pedro Alcàcer"
     role: "Vihuela"
@@ -12,6 +13,15 @@ discs:
     role: "Gabriel Garrido"
     image: "/images/discs/vanitas-vanitatum.png"
     url: "https://open.spotify.com/intl-es/album/5DZq7XJlrCNJl89apkSlUN"
+  - title: "Il generoso cor"
+    artist: "Suzanne Jerosme, Il Gusto Barocco, Jörg Halubek"
+    image: "/images/discs/il-generoso-cor.jpg"
+    url: "https://open.spotify.com/intl-es/album/4RqrdqDJD7PRHUpzzPGihk"
+  - title: "Sweet Ayres"
+    artist: "Ensemble DAL Barocco"
+    role: "Dearbhla Nolan"
+    image: "/images/discs/sweet-ayres.jpg"
+    url: "https://orcd.co/bkk90go"
   - title: "Kassia"
     artist: "Burak Özdemir"
     role: "Musica Sequenza"
