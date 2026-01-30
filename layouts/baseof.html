@@ -38,18 +38,16 @@
         <div class="container nav-container">
             <!-- Language Selector -->
             <div class="language-selector">
-                {{ range .Site.Languages }}
-                {{ if eq .Lang $.Page.Lang }}
+                {{ if .IsTranslated }}
+                {{ range .Translations }}
+                <a href="{{ .RelPermalink }}" class="lang-link">{{ .Lang }}</a>
+                {{ end }}
+                {{ end }}
                 <span class="lang-current">{{ .Lang }}</span>
-                {{ else }}
-                <a href="{{ $.Page.RelPermalink | replaceRE (printf " ^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}"
-                    class="lang-link">{{ .Lang }}</a>
-                {{ end }}
-                {{ end }}
             </div>
 
             <div class="nav-brand">
-                <a href="{{ " /" | relLangURL }}">Pedro Alcàcer</a>
+                <a href="{{ "/" | relLangURL }}">Pedro Alcàcer</a>
             </div>
 
             <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
@@ -94,8 +92,8 @@
             </div>
         </div>
     </footer>
-    <script src="{{ " js/theme-toggle.js" | relURL }}?v={{ now.Unix }}" defer></script>
-    <script src="{{ " js/lightbox.js" | relURL }}?v={{ now.Unix }}"></script>
+    <script src="{{ "js/theme-toggle.js" | relURL }}?v={{ now.Unix }}" defer></script>
+    <script src="{{ "js/lightbox.js" | relURL }}?v={{ now.Unix }}"></script>
 </body>
 
 </html>
