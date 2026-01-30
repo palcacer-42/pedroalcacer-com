@@ -2,7 +2,8 @@
 :root {
     --primary-color: #1a1a1a;
     --accent-color: #8b7355;
-    --text-color: #111;
+    --text-color: #333;
+    /* Improved contrast from #111 (which was fine, but let's be consistent) */
     /* stronger contrast for body text */
     --bg-color: #fff;
     --light-bg: #ffffff;
@@ -36,6 +37,36 @@
         transition: none !important;
         animation: none !important;
     }
+}
+
+/* Accessibility Utilities */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    /* High z-index to ensure visibility */
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 /* General Styles */
@@ -416,7 +447,7 @@ img {
 }
 
 .post-date {
-    color: #999;
+    color: #595959;
     font-size: 0.9rem;
     display: block;
     margin-bottom: 30px;
@@ -747,6 +778,26 @@ img {
     color: var(--accent-color);
 }
 
+/* Past Concerts Styling */
+.gc-past-title {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed #eee;
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+}
+
+.gc-item-past {
+    opacity: 0.7;
+    background-color: #f9f9f9;
+}
+
+.gc-item-past:hover {
+    opacity: 1;
+    background-color: #fff;
+}
+
 @media (max-width: 880px) {
     .bandcamp-section {
         margin-bottom: var(--section-spacing-mobile);
@@ -887,7 +938,7 @@ img {
 .news-date {
     text-align: center;
     font-size: 0.85rem;
-    color: #999;
+    color: #595959;
     font-style: italic;
 }
 
@@ -1401,8 +1452,12 @@ img {
     font-size: 0.75rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #777;
+    color: #444;
     background: var(--light-bg);
+}
+
+[data-theme="dark"] .concerts-table thead th {
+    color: #aaa;
 }
 
 .concerts-table tbody tr:hover {
@@ -2217,7 +2272,7 @@ textarea:focus-visible {
     .col-date {
         order: 1;
         font-size: 0.85rem;
-        color: #888;
+        color: #555;
         margin-bottom: 2px;
     }
 
@@ -2733,7 +2788,7 @@ textarea:focus-visible {
 
 .copy-hint {
     display: inline-block;
-    color: #888;
+    color: #555;
     font-size: 0.85rem;
     margin-left: 10px;
     font-style: italic;
@@ -2785,6 +2840,7 @@ textarea:focus-visible {
         min-width: 280px;
     }
 }
+
 /* Homepage specific spacing adjustments */
 .news-window-section.section-with-gradient {
     padding-bottom: 15px;

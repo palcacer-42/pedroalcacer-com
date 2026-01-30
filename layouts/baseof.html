@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://static.cloudflareinsights.com">
     {{ partial "seo.html" . }}
     {{ if .IsHome }}
     {{ partial "events-jsonld.html" . }}
@@ -18,15 +20,19 @@
             } catch (e) { }
         })();
     </script>
-    <link rel="stylesheet" href="{{ "css/style.css?v=20260109" | relURL }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v={{ now.Unix }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-        data-cf-beacon='{"token": "5dd639bb6f5a4979816ff9dd41721056"}'></script>
+        data-cf-beacon='{"token": "5dd639bb6f5a4979816ff9dd41721056"}'
+        integrity="sha384-JlW6GJ2poqyyguWSj5VUavjOAILOhWg9zxritin4QrRuGsNtgcwHom4W+Movo2cR"
+        crossorigin="anonymous"></script>
     <!-- End Cloudflare Web Analytics -->
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
@@ -36,14 +42,14 @@
                 {{ if eq .Lang $.Page.Lang }}
                 <span class="lang-current">{{ .Lang }}</span>
                 {{ else }}
-                <a href="{{ $.Page.RelPermalink | replaceRE (printf "^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}"
+                <a href="{{ $.Page.RelPermalink | replaceRE (printf " ^/%s/" $.Page.Lang) (printf "/%s/" .Lang) }}"
                     class="lang-link">{{ .Lang }}</a>
                 {{ end }}
                 {{ end }}
             </div>
 
             <div class="nav-brand">
-                <a href="{{ "/" | relLangURL }}">Pedro Alcàcer</a>
+                <a href="{{ " /" | relLangURL }}">Pedro Alcàcer</a>
             </div>
 
             <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
@@ -62,7 +68,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main id="main-content" class="main-content">
         {{ block "main" . }}{{ end }}
     </main>
 
@@ -72,24 +78,24 @@
             <div class="footer-content">
                 <div class="social-links">
                     <a href="https://www.facebook.com/alcacerliutista/" target="_blank" rel="noopener">
-                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-facebook" loading="lazy"></i>
                     </a>
                     <a href="https://www.youtube.com/palcacer" target="_blank" rel="noopener">
-                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-youtube" loading="lazy"></i>
                     </a>
                     <a href="https://www.instagram.com/palcacerliutista/" target="_blank" rel="noopener">
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram" loading="lazy"></i>
                     </a>
                     <a href="https://de.linkedin.com/in/pedro-alcacer-00895133" target="_blank" rel="noopener">
-                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-linkedin" loading="lazy"></i>
                     </a>
                 </div>
                 <p>&copy; 2026 Pedro Alcàcer. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="{{ "js/theme-toggle.js" | relURL }}" defer></script>
-    <script src="{{ "js/lightbox.js" | relURL }}"></script>
+    <script src="{{ " js/theme-toggle.js" | relURL }}?v={{ now.Unix }}" defer></script>
+    <script src="{{ " js/lightbox.js" | relURL }}?v={{ now.Unix }}"></script>
 </body>
 
 </html>

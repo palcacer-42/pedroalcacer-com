@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} - Pedro Alcàcer</title>
+    <title>{{ if in .Title "Pedro Alcàcer" }}{{ .Title }}{{ else }}{{ .Title }} - Pedro Alcàcer{{ end }}</title>
     <link rel="stylesheet" href="{{ "css/style.css?v=20260108" | relURL }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
@@ -42,7 +43,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main id="main-content" class="main-content">
         {{ block "main" . }}{{ end }}
     </main>
 

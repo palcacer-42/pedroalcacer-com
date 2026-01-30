@@ -2,8 +2,8 @@
 <section class="page-hero">
   <div class="hero-image">
     <picture>
-      <source srcset="{{ "/images/discs-hero.webp" | relURL }}" type="image/webp">
-      <img src="{{ "/images/discs-hero.jpg" | relURL }}" alt="{{ .Title }}" class="hero-image"
+      <source srcset="{{ " /images/discs-hero.webp" | relURL }}" type="image/webp">
+      <img src="{{ " /images/discs-hero.jpg" | relURL }}" alt="{{ .Title }}" class="hero-image"
         style="object-position: bottom;">
     </picture>
   </div>
@@ -33,6 +33,9 @@
           {{ else if eq $prov "vimeo" }}
           <iframe src="https://player.vimeo.com/video/{{ $vid }}" frameborder="0" loading="lazy"
             title="Video: {{ .title }}" allowfullscreen></iframe>
+          {{ else if eq $prov "spotify" }}
+          <iframe src="https://open.spotify.com/embed/album/{{ $vid }}" width="100%" height="380" frameborder="0"
+            allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
           {{ end }}
           {{ else if .video_url }}
           {{ $url := .video_url }}
@@ -63,6 +66,9 @@
           {{ else if eq $prov "vimeo" }}
           <a href="https://vimeo.com/{{ $vid }}" target="_blank" rel="noopener" class="media-link-small"><i
               class="fab fa-vimeo-v"></i> Watch on Vimeo</a>
+          {{ else if eq $prov "spotify" }}
+          <a href="https://open.spotify.com/album/{{ $vid }}" target="_blank" rel="noopener" class="media-link-small"><i
+              class="fab fa-spotify"></i> Listen on Spotify</a>
           {{ end }}
           {{ end }}
         </div>

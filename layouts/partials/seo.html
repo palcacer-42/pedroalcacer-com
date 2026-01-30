@@ -4,22 +4,8 @@
 {{ $siteDesc := default (print "Pedro Alcàcer — Lutenist specialising in Renaissance and Baroque repertoire. Concerts, "
 "recordings and programs.") .Site.Params.description }}
 {{ $title := .Title }}
-{{ if not $title }}{{ $title = $siteTitle }}{{ end }}
-{{/* Avoid repeating site title if already present in the page title */}}
-{{ $lowerTitle := lower $title }}
-{{ $lowerSite := lower $siteTitle }}
-{{/* For list/section/taxonomy pages, append the language name to make titles unique across locales */}}
-{{ $titleSuffix := "" }}
-{{/* Append language suffix for lists/home OR any page that has translations to avoid duplicate titles across locales
-*/}}
-{{ if or .IsHome .IsSection .IsNode (eq .Kind "taxonomyTerm") (gt (len .Translations) 0) }}
-{{ $titleSuffix = (print " — " .Site.Language.LanguageName) }}
-{{ end }}
-{{ if not (in $lowerTitle $lowerSite) }}
-<title>{{ $title }} - {{ $siteTitle }}{{ $titleSuffix }}</title>
-{{ else }}
-<title>{{ $title }}{{ $titleSuffix }}</title>
-{{ end }}
+{{ if not $title }}{{ $title = .Site.Title }}{{ end }}
+<title>{{ if in $title "Pedro Alcàcer" }}{{ $title }}{{ else }}{{ $title }} - Pedro Alcàcer{{ end }}</title>
 
 {{/* Meta description: page param -> summary -> site param. For list/home pages fall back to site description. */}}
 {{ $metaDesc := "" }}
@@ -88,14 +74,15 @@
 {{ if eq .Lang "en" }}
 <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
 {{ else }}
-{{ range .Translations }}{{ if eq .Lang "en" }}<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">{{ end }}{{ end }}
+{{ range .Translations }}{{ if eq .Lang "en" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">{{ end }}{{ end }}
 {{ end }}
 {{ end }}
 
 {{/* Additional Open Graph fields for articles */}}
 {{ if .IsPage }}
 {{ with .Lastmod }}
-<meta property="og:updated_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+<meta property="og:updated_time" content="{{ .Format " 2006-01-02T15:04:05Z07:00" }}">{{ end }}
 {{ with .Params.author }}
 <meta property="article:author" content="{{ . }}">{{ end }}
 {{ end }}

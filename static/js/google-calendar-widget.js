@@ -108,7 +108,7 @@
   }
 
   // Fetch all events (up to 2000) by removing timeMin and increasing maxResults
-  const maxResults = 2000;
+  const maxResults = 2500; // Increased to ensure we get enough past events too
   const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events?key=${encodeURIComponent(apiKey)}&singleEvents=true&orderBy=startTime&maxResults=${maxResults}`;
 
   fetch(url).then(resp => {
@@ -123,9 +123,11 @@
     }
 
     const now = new Date();
-    // Sort ALL events chronologically: Oldest -> Newest
-    const events = data.items.filter(ev => ev.status !== 'cancelled' && (ev.start.dateTime || ev.start.date));
-    events.sort((a, b) => {
+    // Filter cancelled
+    const rawEvents = data.items.filter(ev => ev.status !== 'cancelled' && (ev.start.dateTime || ev.start.date));
+
+    // Sort all by start time ascending (Oldest -> Newest)
+    rawEvents.sort((a, b) => {
       const da = new Date(a.start.dateTime || a.start.date);
       const db = new Date(b.start.dateTime || b.start.date);
       return da - db;
@@ -136,13 +138,13 @@
 
     let dividerInserted = false;
 
-    events.forEach((ev, index) => {
-      const start = ev.start && (ev.start.dateTime || ev.start.date);
+    // We want a single list.
+    // We will insert a visual "today/next" divider before the first future event.
+    rawEvents.forEach(ev => {
+      const start = ev.start.dateTime || ev.start.date;
       const d = new Date(start);
 
-      // Check if we need to insert the divider
-      // We insert it before the first event that is in the future
-      // OR if we are at the end and haven't inserted it (implied all past?) - logic below handles "first future event"
+      // Check if we reached the first future event
       if (!dividerInserted && d >= now) {
         const liDivider = document.createElement('li');
         liDivider.className = 'gc-datum-line';
