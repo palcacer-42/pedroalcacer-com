@@ -53,5 +53,5 @@ Pedro und Hugo sind zwei Freunde und Kollegen, die zufällig im selben Viertel u
 <div class="program-divider"><span>♪</span></div>
 
 <div class="program-download">
-  <a href="/programs/originals/mecatl.pdf" class="download-btn" download>Vollständiges Programm herunterladen</a>
+  <a href="/programs/originals/mecatl.pdf" class="download-btn">Vollständiges Programm herunterladen</a>
 </div>

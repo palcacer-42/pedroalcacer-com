@@ -4,7 +4,7 @@ description: "Un programa de duo d'instruments de corda polsada històrics — g
 weight: 1
 group: "Ensemble"
 image: "/images/programs/mecatl.jpg"
-pdf: "/programs/originals/mecatl.pdf"
+pdf: "/programs/originals/mecatl_ca.pdf"
 musicians:
   - "Pedro Alcàcer Doria — Guitarra barroca, Arxilaüt & Tiorba"
   - "Hugo Miguel de Rodas Sánchez — Guitarra barroca, Arxilaüt & Tiorba"
@@ -53,5 +53,5 @@ Pedro i Hugo són dos amics i col·legues que van créixer i estudiar casualment
 <div class="program-divider"><span>♪</span></div>
 
 <div class="program-download">
-  <a href="/programs/originals/mecatl.pdf" class="download-btn" download>Descarregar programa complet</a>
+  <a href="/programs/originals/mecatl_ca.pdf" class="download-btn">Descarregar programa complet</a>
 </div>

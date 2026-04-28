@@ -4,7 +4,7 @@ description: "Un programme en duo d'instruments historiques à cordes pincées �
 weight: 1
 group: "Ensemble"
 image: "/images/programs/mecatl.jpg"
-pdf: "/programs/originals/mecatl.pdf"
+pdf: "/programs/originals/mecatl_fr.pdf"
 musicians:
   - "Pedro Alcàcer Doria — Guitare baroque, Archiluth & Théorbe"
   - "Hugo Miguel de Rodas Sánchez — Guitare baroque, Archiluth & Théorbe"
@@ -53,5 +53,5 @@ Pedro et Hugo sont deux amis et collègues qui ont grandi et étudié par hasard
 <div class="program-divider"><span>♪</span></div>
 
 <div class="program-download">
-  <a href="/programs/originals/mecatl.pdf" class="download-btn" download>Télécharger le programme complet</a>
+  <a href="/programs/originals/mecatl_fr.pdf" class="download-btn">Télécharger le programme complet</a>
 </div>

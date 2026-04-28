@@ -4,7 +4,7 @@ description: "A duo programme for historical lute instruments — Baroque guitar
 weight: 1
 group: "Ensemble"
 image: "/images/programs/mecatl.jpg"
-pdf: "/programs/originals/mecatl.pdf"
+pdf: "/programs/originals/mecatl_en.pdf"
 musicians:
   - "Pedro Alcàcer Doria — Baroque guitar, Archlute & Theorbo"
   - "Hugo Miguel de Rodas Sánchez — Baroque guitar, Archlute & Theorbo"
@@ -53,5 +53,5 @@ Pedro and Hugo are two friends and colleagues who happened to grow up and study 
 <div class="program-divider"><span>♪</span></div>
 
 <div class="program-download">
-  <a href="/programs/originals/mecatl.pdf" class="download-btn" download>Download Full Program</a>
+  <a href="/programs/originals/mecatl_en.pdf" class="download-btn">Download Full Program</a>
 </div>

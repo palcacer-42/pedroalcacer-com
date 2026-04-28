@@ -4,7 +4,7 @@ description: "Un programma in duo per strumenti a corde storici — chitarra bar
 weight: 1
 group: "Ensemble"
 image: "/images/programs/mecatl.jpg"
-pdf: "/programs/originals/mecatl.pdf"
+pdf: "/programs/originals/mecatl_it.pdf"
 musicians:
   - "Pedro Alcàcer Doria — Chitarra barocca, Arciliuto & Tiorba"
   - "Hugo Miguel de Rodas Sánchez — Chitarra barocca, Arciliuto & Tiorba"
@@ -53,5 +53,5 @@ Pedro e Hugo sono due amici e colleghi che sono cresciuti e hanno studiato per c
 <div class="program-divider"><span>♪</span></div>
 
 <div class="program-download">
-  <a href="/programs/originals/mecatl.pdf" class="download-btn" download>Scarica il programma completo</a>
+  <a href="/programs/originals/mecatl_it.pdf" class="download-btn">Scarica il programma completo</a>
 </div>
