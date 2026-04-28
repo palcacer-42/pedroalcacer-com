@@ -1,6 +1,7 @@
 ---
 title: "Mecatl — Harmonium"
 description: "Un programa de duo d'instruments de corda polsada històrics — guitarra barroca, arxilaüt i tiorba"
+weight: 1
 group: "Ensemble"
 image: "/images/programs/mecatl.jpg"
 pdf: "/programs/originals/mecatl.pdf"

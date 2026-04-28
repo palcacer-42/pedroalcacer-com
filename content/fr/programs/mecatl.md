@@ -1,6 +1,7 @@
 ---
 title: "Mecatl — Harmonium"
 description: "Un programme en duo d'instruments historiques à cordes pincées — guitare baroque, archiluth et théorbe"
+weight: 1
 group: "Ensemble"
 image: "/images/programs/mecatl.jpg"
 pdf: "/programs/originals/mecatl.pdf"

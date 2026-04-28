@@ -1,6 +1,7 @@
 ---
 title: "Mecatl — Harmonium"
 description: "Ein Duo-Programm für historische Lauteninstrumente — Barockgitarre, Arciliuto und Theorbe"
+weight: 1
 group: "Ensemble"
 image: "/images/programs/mecatl.jpg"
 pdf: "/programs/originals/mecatl.pdf"
