@@ -2,5 +2,5 @@ User-agent: *
 Allow: /
 
 # Sitemap (ensure this matches your canonical domain)
-Sitemap: https://pedroalcacer.com/sitemap.xml
-Host: pedroalcacer.com
+Sitemap: https://www.pedroalcacer.com/sitemap.xml
+Host: www.pedroalcacer.com
