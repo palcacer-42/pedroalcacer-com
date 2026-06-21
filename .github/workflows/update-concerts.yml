@@ -39,3 +39,6 @@ jobs:
             git commit -m "Update concerts data from Google Sheet"
             git push
           fi
+
+      - name: Keepalive Workflow
+        uses: gautamkrishnar/keepalive-workflow@v2
