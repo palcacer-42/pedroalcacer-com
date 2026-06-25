@@ -40,5 +40,3 @@ jobs:
             git push
           fi
 
-      - name: Keepalive Workflow
-        uses: gautamkrishnar/keepalive-workflow@v2
