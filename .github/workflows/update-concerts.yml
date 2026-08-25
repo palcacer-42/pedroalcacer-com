@@ -8,6 +8,8 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,17 +28,32 @@ jobs:
         run: |
           python3 scripts/tools/fetch_sheet_and_convert.py --sheet-id "$SHEET_ID" --gid "$SHEET_GID"
 
-      - name: Commit updated data
+      - name: Commit updated data or send keepalive ping
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/concerts.json
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
+          if ! git diff --staged --quiet; then
+            echo "Changes detected in concerts data. Committing updates..."
             git commit -m "Update concerts data from Google Sheet"
             git push
+          else
+            LAST_COMMIT_EPOCH=$(git log -1 --format=%ct)
+            NOW_EPOCH=$(date +%s)
+            DAYS_SINCE_LAST_COMMIT=$(( (NOW_EPOCH - LAST_COMMIT_EPOCH) / 86400 ))
+            echo "No concert data changes detected. Days since last commit: $DAYS_SINCE_LAST_COMMIT"
+
+            if [ "$DAYS_SINCE_LAST_COMMIT" -ge 40 ]; then
+              echo "Repository inactive for $DAYS_SINCE_LAST_COMMIT days. Generating keepalive ping to prevent GitHub workflow auto-disable..."
+              date -u +"%Y-%m-%dT%H:%M:%SZ" > .github/keepalive.txt
+              git add .github/keepalive.txt
+              git commit -m "chore: repository keepalive ping [skip ci]"
+              git push
+            else
+              echo "Repository active (last commit $DAYS_SINCE_LAST_COMMIT days ago). No action required."
+            fi
           fi
+
 
