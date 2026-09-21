@@ -10,15 +10,13 @@ musicians:
   - "Hugo Miguel de Rodas Sánchez — Baroque guitar, Archlute & Theorbo"
 ---
 
-<div class="program-hero">
-  <img src="/images/programs/mecatl.jpg" alt="Mecatl Harmonium — Pedro Alcàcer Doria & Hugo Miguel de Rodas Sánchez">
-</div>
+{{< program_hero image="/images/programs/mecatl.jpg" alt="Mecatl Harmonium — Pedro Alcàcer Doria & Hugo Miguel de Rodas Sánchez" >}}
 
 ## Mecatl — Harmonium
 
 **Historical Lute Instruments**
 
-<div class="program-description-block">
+{{% program_description %}}
 
 **Mecatl** — in Nahuatl, the ancient language of the Aztecs, means *"string"*. **Harmonium** — from the Latin *harmonia*: harmony, accord, consonance.
 
@@ -27,9 +25,9 @@ Pedro and Hugo are two friends and colleagues who happened to grow up and study 
 > *"Plucked instruments are neither perfect nor imperfect, but rather as one plays them…"*
 > — Gaspar Sanz, 1692
 
-</div>
+{{% /program_description %}}
 
-<div class="program-divider"><span>♪</span></div>
+{{< program_divider >}}
 
 ### Programme
 
@@ -50,8 +48,6 @@ Pedro and Hugo are two friends and colleagues who happened to grow up and study 
 
 *Arrangements by Hugo Miguel de Rodas Sánchez*
 
-<div class="program-divider"><span>♪</span></div>
+{{< program_divider >}}
 
-<div class="program-download">
-  <a href="/programs/originals/mecatl_en.pdf" class="download-btn">Download Full Program</a>
-</div>
+{{< program_download pdf="/programs/originals/mecatl_en.pdf" >}}

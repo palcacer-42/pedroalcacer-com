@@ -1,0 +1,7 @@
+{{/* Shortcode: program PDF download button */}}
+{{ $pdf := .Get "pdf" }}
+{{ if $pdf }}
+<div class="program-download">
+  <a href="{{ $pdf | relURL }}" class="download-btn" download>{{ i18n "download_full_program" | default "Download Full Program" }}</a>
+</div>
+{{ end }}

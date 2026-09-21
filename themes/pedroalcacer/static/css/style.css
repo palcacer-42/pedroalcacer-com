@@ -2174,14 +2174,107 @@ textarea:focus-visible {
     text-decoration: underline;
 }
 
+/* Media thumbnail with play button */
+.media-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.92;
+    transition: opacity 0.2s ease;
+}
+
+.media-thumbnail:hover img,
+.media-thumbnail:focus img {
+    opacity: 1;
+}
+
+.media-thumbnail:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: -3px;
+}
+
+.media-play-button {
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+    transition: transform 0.2s ease;
+}
+
+.media-thumbnail:hover .media-play-button,
+.media-thumbnail:focus .media-play-button {
+    transform: scale(1.08);
+}
+
+.media-thumbnail-placeholder {
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+
+.media-thumbnail-placeholder i {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.media-thumbnail-placeholder span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
 @media (max-width: 480px) {
     .media-grid {
         grid-template-columns: 1fr;
     }
 }
 
-/* Concerts Archive (Scrollable Window) */
+/* Concerts Archive (Collapsible Scrollable Window) */
+.concerts-archive {
+    margin: 20px 0;
+}
+
+.concerts-archive-summary {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 16px;
+    background: var(--light-bg, #fff);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: background-color 0.2s ease;
+}
+
+.concerts-archive-summary:hover {
+    background: #f5f5f5;
+}
+
+[data-theme="dark"] .concerts-archive-summary {
+    background: var(--light-bg);
+}
+
+[data-theme="dark"] .concerts-archive-summary:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
 .concerts-archive-container {
+    margin-top: 12px;
     max-height: 500px;
     overflow-y: auto;
     border: 1px solid var(--border-color);
@@ -2848,4 +2941,224 @@ textarea:focus-visible {
 
 .bandcamp-section.section-with-gradient {
     padding-top: 15px;
+}
+
+/* Upcoming Concerts */
+.concerts-section-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.concerts-list.upcoming {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.concert-item.upcoming {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.concert-item.upcoming:last-child {
+    border-bottom: none;
+}
+
+.concert-item.upcoming.concert-italy {
+    border-left: 4px solid #008c45;
+    padding-left: 12px;
+    background: rgba(0, 140, 69, 0.03);
+}
+
+.concert-date {
+    flex: 0 0 110px;
+    font-weight: 700;
+    color: var(--accent-color);
+    font-size: 0.95rem;
+}
+
+.concert-details {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.concert-program {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.05rem;
+}
+
+.concert-ensemble {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.concert-location {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.concert-location i {
+    margin-right: 6px;
+    color: var(--accent-color);
+}
+
+.concert-link {
+    flex: 0 0 auto;
+    display: inline-block;
+    padding: 6px 14px;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.concert-link:hover {
+    background: var(--accent-color);
+}
+
+.concerts-empty {
+    color: #666;
+    font-style: italic;
+}
+
+.concerts-italy-card {
+    margin-bottom: 30px;
+    border-left: 5px solid #008c45;
+}
+
+/* Homepage calendar link */
+.calendar-footer {
+    text-align: right;
+    margin-top: 12px;
+}
+
+.calendar-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.calendar-link:hover {
+    text-decoration: underline;
+}
+
+/* Italy highlight on homepage */
+.italy-highlight-section {
+    padding: 20px 0;
+}
+
+.italy-highlight-card {
+    background: linear-gradient(135deg, #fff 0%, #f8fff9 100%);
+    border-left: 5px solid #008c45;
+}
+
+.italy-highlight-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    color: var(--primary-color);
+}
+
+.italy-events-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+}
+
+.italy-events-list li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.italy-events-list li:last-child {
+    border-bottom: none;
+}
+
+.italy-events-list time {
+    font-weight: 700;
+    color: var(--accent-color);
+    min-width: 100px;
+}
+
+.italy-event-program {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.italy-event-location {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.italy-highlight-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.italy-highlight-link:hover {
+    text-decoration: underline;
+}
+
+/* CTA blocks on biography and contact pages */
+.bio-concerts-cta,
+.contact-concerts-cta {
+    margin-top: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+.bio-concerts-cta p,
+.contact-concerts-cta p {
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+    color: var(--text-color);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+    .concert-item.upcoming {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .concert-date {
+        flex: 0 0 auto;
+    }
+
+    .calendar-footer {
+        text-align: left;
+    }
 }

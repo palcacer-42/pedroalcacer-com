@@ -1,33 +1,44 @@
 ---
 title: "Bologna liutistica"
-description: "Liuto rinascimentale e Tiorba"
-pdf: "/programs/originals/f7ad3b_6d061e6c8f19409ba3f2400fff810c9f.pdf"
+description: "Liuto rinascimentale e tiorba"
+pdf: "/programs/originals/bologna-liutistica_it.pdf"
 image: "/images/programs/bolognaliutistica.avif"
 group: "Solo"
 ---
 
-Scarica il PDF originale: [Scarica PDF](/programs/originals/f7ad3b_6d061e6c8f19409ba3f2400fff810c9f.pdf)
+{{< program_hero image="/images/programs/bolognaliutistica.avif" alt="Bologna liutistica" >}}
 
 ## Bologna liutistica
 
-Liuto rinascimentale e Tiorba
+**Liuto rinascimentale e tiorba**
+
+{{% program_description %}}
+
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programma
 
 ### Liuto
 
-- 3 Fantasie — Francesco Canova da Milano (Intavolatura di Lauto, Venezia 1546)
+- 3 Fantasie — Francesco Canova da Milano (Intavolatura di Lauto, Venice 1546)
 - Passacaglia — Alessandro Piccinini (Bologna 1623)
-- O dulx Roveoir / Ballo Allemano — Giovanni Antonio Terzi (Intavolatura di liuto, Venezia 1593)
+- O dulx Roveoir / Ballo Allemano — Giovanni Antonio Terzi (Intavolatura di liuto, Venice 1593)
 
 ### Tiorba / Chitarrone
 
-- Arpeggiata
-- Toccata prima
-- Opere di Giovanni Girolamo Kapsperger (Roma 1616)
-- Aria di sarabanda
-- Toccata in sol minore
-- Partite sopra quest'aria francese detta l'Alemana
-- Toccata-corrente-gagliarda in sol maggiore (Piccinini)
+- Arpeggiata — Giovanni Girolamo Kapsberger (Rome 1616)
+- Toccata prima — Giovanni Girolamo Kapsberger
+- Aria di sarabanda — Giovanni Girolamo Kapsberger
+- Toccata in G minor — Alessandro Piccinini
+- Partite sopra quest'aria francese detta l'Alemana — Alessandro Piccinini
+- Toccata-corrente-gagliarda in G major — Alessandro Piccinini (Bologna 1623)
 
-### Note
+{{< program_divider >}}
 
-Selezione di partite e danze della tradizione bolognese, con repertorio per liuto e arrangiamenti per tiorba/chitarrone tratti da fonti dei secoli XVI–XVII.
+{{< program_pdf src="/programs/originals/bologna-liutistica_it.pdf" >}}
+
+{{< program_download pdf="/programs/originals/bologna-liutistica_it.pdf" >}}

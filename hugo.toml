@@ -38,9 +38,13 @@ defaultContentLanguageInSubdir = true
         url = "/programs/"
         weight = 6
       [[languages.en.menu.main]]
+        name = "Concerts"
+        url = "/concerts/"
+        weight = 7
+      [[languages.en.menu.main]]
         name = "Contact"
         url = "/contact/"
-        weight = 7
+        weight = 8
   [languages.es]
     languageName = "Español"
     weight = 2
@@ -73,9 +77,13 @@ defaultContentLanguageInSubdir = true
         url = "/programs/"
         weight = 6
       [[languages.es.menu.main]]
+        name = "Conciertos"
+        url = "/concerts/"
+        weight = 7
+      [[languages.es.menu.main]]
         name = "Contacto"
         url = "/contact/"
-        weight = 7
+        weight = 8
   [languages.ca]
     languageName = "Català"
     weight = 3
@@ -108,9 +116,13 @@ defaultContentLanguageInSubdir = true
         url = "/programs/"
         weight = 6
       [[languages.ca.menu.main]]
+        name = "Concerts"
+        url = "/concerts/"
+        weight = 7
+      [[languages.ca.menu.main]]
         name = "Contacte"
         url = "/contact/"
-        weight = 7
+        weight = 8
   [languages.de]
     languageName = "Deutsch"
     weight = 4
@@ -143,9 +155,13 @@ defaultContentLanguageInSubdir = true
         url = "/programs/"
         weight = 6
       [[languages.de.menu.main]]
+        name = "Konzerte"
+        url = "/concerts/"
+        weight = 7
+      [[languages.de.menu.main]]
         name = "Kontakt"
         url = "/contact/"
-        weight = 7
+        weight = 8
   [languages.fr]
     languageName = "Français"
     weight = 5
@@ -178,9 +194,13 @@ defaultContentLanguageInSubdir = true
         url = "/programs/"
         weight = 6
       [[languages.fr.menu.main]]
+        name = "Concerts"
+        url = "/concerts/"
+        weight = 7
+      [[languages.fr.menu.main]]
         name = "Contact"
         url = "/contact/"
-        weight = 7
+        weight = 8
   [languages.it]
     languageName = "Italiano"
     weight = 6
@@ -213,33 +233,46 @@ defaultContentLanguageInSubdir = true
         url = "/programs/"
         weight = 6
       [[languages.it.menu.main]]
+        name = "Concerti"
+        url = "/concerts/"
+        weight = 7
+      [[languages.it.menu.main]]
         name = "Contatto"
         url = "/contact/"
-        weight = 7
+        weight = 8
 
 # Ignore REF_NOT_FOUND errors for missing pages in other languages
 ignoreErrors = ["error-missing-page-ref"]
 
-# Allow HTML in markdown
+# Allow HTML in markdown (required for shortcodes that generate HTML wrappers)
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
 
 # Output formats
-# [outputs]
-#   home = ["HTML", "JSON"]
+[outputs]
+  home = ["HTML", "RSS", "ROBOTS"]
+  page = ["HTML"]
+  section = ["HTML"]
 
 [params]
   [params.googleCalendar]
     # Public calendar ID provided by the user
     calendarId = "hgp3omm8735qu0ame6nj5e7boc@group.calendar.google.com"
     # Google API key for client-side Calendar API access.
-    # It's recommended to restrict this key by HTTP referrer in Google Cloud Console.
-    apiKey = "AIzaSyDaMzqXp70IMb9pSTxZTTF-38gIwnk9ue4"
+    # This value is intentionally left empty here. Provide it at build time via the
+    # HUGO_PARAMS_GOOGLECALENDAR_APIKEY environment variable (e.g. in GitHub Actions
+    # secrets) so the key is not committed to source control.
+    # Restrict the key by HTTP referrer in Google Cloud Console.
+    apiKey = ""
 
   # Default site description used for meta description fallbacks
   description = "Pedro Alcàcer — Lutenist based in Berlin. Specialising in Renaissance Lute, Theorbo, Vihuela, Baroque Guitar, Basso Continuo, and Early Music."
-  
+
   # SEO Keywords
-  keywords = "Renaissance Lute, Theorbo, Vihuela, Baroque Guitar, Early Music, Basso Continuo, Pedro Alcàcer, Berlin, Historical Performance, John Dowland, Kapsberger, Chamber Music" 
+  keywords = "Renaissance Lute, Theorbo, Vihuela, Baroque Guitar, Early Music, Basso Continuo, Pedro Alcàcer, Berlin, Historical Performance, John Dowland, Kapsberger, Chamber Music"
+
+  # Optional: path to a CV / press resume PDF in the static folder.
+  # Example: cv_pdf = "/downloads/pedro-alcacer-cv.pdf"
+  cv_pdf = "" 

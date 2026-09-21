@@ -32,6 +32,9 @@ jobs:
           extended: true
 
       - name: Build
+        env:
+          # Set in repository Settings -> Secrets -> GOOGLE_CALENDAR_API_KEY
+          HUGO_PARAMS_GOOGLECALENDAR_APIKEY: ${{ secrets.GOOGLE_CALENDAR_API_KEY }}
         run: hugo --minify
 
       - name: Validate generated programs page

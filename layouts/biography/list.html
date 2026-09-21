@@ -17,6 +17,11 @@
                 </div>
             </div>
         </div>
+
+        <div class="bio-concerts-cta elegant-card">
+            <p>{{ i18n "see_upcoming_concerts" | default "See upcoming concerts and performance dates" }}</p>
+            <a href="{{ "concerts/" | relLangURL }}" class="btn-primary">{{ i18n "upcoming_concerts" | default "Upcoming Concerts" }}</a>
+        </div>
     </div>
 </section>
 {{ end }}

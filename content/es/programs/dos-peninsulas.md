@@ -1,31 +1,43 @@
 ---
 title: "Dos peninsulas"
-description: "Laúd renacentista y Guitarra barroca"
-pdf: "/programs/originals/f7ad3b_c0c3b0f2d738413b95364ac54af5442b.pdf"
+description: "Laúd renacentista y guitarra barroca"
+pdf: "/programs/originals/dos-peninsulas_es.pdf"
 image: "/images/programs/dospeninsulas.avif"
 group: "Solo"
 ---
 
-Descarga el PDF original: [Descargar PDF](/programs/originals/f7ad3b_c0c3b0f2d738413b95364ac54af5442b.pdf)
+{{< program_hero image="/images/programs/dospeninsulas.avif" alt="Dos peninsulas" >}}
 
-## Dos penínsulas
+## Dos peninsulas
 
-Laúd renacentista y Guitarra barroca
+**Laúd renacentista y guitarra barroca**
+
+{{% program_description %}}
+
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programa
 
 ### Laúd (Renacimiento)
 
-- 5 Fantasías — Francesco Canova da Milano (Venecia 1546)
+- 5 Fantasie — Francesco Canova da Milano (Venezia 1546)
 - Fantasía / Pavana de Alexandre / Romanesca — Alonso de Mudarra (Sevilla 1546)
-- Toccata — Giovanni Girolamo Kapsperger (Roma 1616)
+- Toccata — Giovanni Girolamo Kapsperger (Rome 1616)
 
 ### Guitarra barroca
 
-- Folías españolas e italianas
-- Suite en La menor
-- Preludio, Allemanda, Giga y Burlesca — Santiago de Murcia (ca. 1730)
+- Folias españolas e italianas
+- Suite in A minor
+- Preludio, Allemanda, Giga, Burlesca — Santiago de Murcia (ca. 1730)
 - Pasacalle sobre la D — Gaspar Sanz (1674)
 - Tarantella, Fandango, Canario
 
-### Notas
+{{< program_divider >}}
 
-Diálogo musical entre tradiciones peninsulares, combinando obras de laúd renacentista con repertorio de guitarra barroca.
+{{< program_pdf src="/programs/originals/dos-peninsulas_es.pdf" >}}
+
+{{< program_download pdf="/programs/originals/dos-peninsulas_es.pdf" >}}

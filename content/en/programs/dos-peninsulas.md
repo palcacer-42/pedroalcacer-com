@@ -1,14 +1,26 @@
 ---
 title: "Dos peninsulas"
-description: "Renaissance lute and baroque guitar"
-pdf: "/programs/originals/f7ad3b_c0c3b0f2d738413b95364ac54af5442b.pdf"
+description: "Renaissance Lute and Baroque Guitar"
+pdf: "/programs/originals/dos-peninsulas_en.pdf"
 image: "/images/programs/dospeninsulas.avif"
 group: "Solo"
 ---
 
+{{< program_hero image="/images/programs/dospeninsulas.avif" alt="Dos peninsulas" >}}
+
 ## Dos peninsulas
 
-Renaissance lute and Baroque guitar
+**Renaissance Lute and Baroque Guitar**
+
+{{% program_description %}}
+
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programme
 
 ### Lute (Renaissance)
 
@@ -24,9 +36,8 @@ Renaissance lute and Baroque guitar
 - Pasacalle sobre la D — Gaspar Sanz (1674)
 - Tarantella, Fandango, Canario
 
-### Notes
+{{< program_divider >}}
 
-A dialogue between Iberian and Italian plucked-string traditions, pairing Renaissance lute works with baroque guitar repertoire.
+{{< program_pdf src="/programs/originals/dos-peninsulas_en.pdf" >}}
 
-
-Short description: Renaissance lute and baroque guitar.
+{{< program_download pdf="/programs/originals/dos-peninsulas_en.pdf" >}}

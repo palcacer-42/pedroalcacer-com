@@ -1,16 +1,26 @@
 ---
 title: "Tres territorios"
-description: "Guitare baroque et Tiorbe"
-pdf: "/programs/originals/f7ad3b_573cfc9568444ced8b4a58c39dc5f227.pdf"
+description: "Guitare baroque et théorbe"
+pdf: "/programs/originals/tres-territorios_fr.pdf"
 image: "/images/programs/tresterritorios.avif"
 group: "Solo"
 ---
 
-Télécharger le PDF original : [Télécharger PDF](/programs/originals/f7ad3b_573cfc9568444ced8b4a58c39dc5f227.pdf)
+{{< program_hero image="/images/programs/tresterritorios.avif" alt="Tres territorios" >}}
 
 ## Tres territorios
 
-Guitare baroque et Tiorbe
+**Guitare baroque et théorbe**
+
+{{% program_description %}}
+
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programme
 
 ### Guitare baroque
 
@@ -18,18 +28,19 @@ Guitare baroque et Tiorbe
 - Pavana por la D
 - Pasacalle sobre la D — Gaspar Sanz (Instrucción para sonar la guitarra, Zaragoza 1674)
 - Tarantella
-- Folías Españolas — Santiago de Murcia
+- Folias Españolas — Santiago de Murcia
 
-### Tiorbe
+### Theorbo / Tiorba
 
-- Arpeggiatta
-- Œuvres de Giovanni Girolamo Kapsperger
-- Toccata V
-- Corrente
-- Gagliarda
-- Toccata VIII
-- Partite su l’Alemana / Partite su la Romanesca — Alessandro Piccinini
+- Arpeggiatta — Giovanni Girolamo Kapsberger
+- Toccata V — Giovanni Girolamo Kapsberger
+- Corrente — Giovanni Girolamo Kapsberger
+- Gagliarda — Giovanni Girolamo Kapsberger
+- Toccata VIII — Giovanni Girolamo Kapsberger
+- Partite su l'Alemana / Partite su la Romanesca — Alessandro Piccinini
 
-### Notes
+{{< program_divider >}}
 
-Programme qui mélange formes de danse ibériques pour la guitare et répertoire italien pour la tiorbe, montrant des contrastes stylistiques et des sources historiques.
+{{< program_pdf src="/programs/originals/tres-territorios_fr.pdf" >}}
+
+{{< program_download pdf="/programs/originals/tres-territorios_fr.pdf" >}}

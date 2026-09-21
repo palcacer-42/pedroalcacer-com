@@ -1,33 +1,44 @@
 ---
 title: "Bologna liutistica"
-description: "Laúd renacentista y Tiorba"
-pdf: "/programs/originals/f7ad3b_6d061e6c8f19409ba3f2400fff810c9f.pdf"
+description: "Laúd renacentista y tiorba"
+pdf: "/programs/originals/bologna-liutistica_es.pdf"
 image: "/images/programs/bolognaliutistica.avif"
 group: "Solo"
 ---
 
-Descarga el PDF original: [Descargar PDF](/programs/originals/f7ad3b_6d061e6c8f19409ba3f2400fff810c9f.pdf)
+{{< program_hero image="/images/programs/bolognaliutistica.avif" alt="Bologna liutistica" >}}
 
 ## Bologna liutistica
 
-Laúd renacentista y Tiorba
+**Laúd renacentista y tiorba**
+
+{{% program_description %}}
+
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programa
 
 ### Laúd
 
-- 3 Fantasías — Francesco Canova da Milano (Intavolatura di Lauto, Venecia 1546)
-- Passacaglia — Alessandro Piccinini (Bolonia 1623)
-- O dulx Roveoir / Ballo Allemano — Giovanni Antonio Terzi (Intavolatura di liuto, Venecia 1593)
+- 3 Fantasie — Francesco Canova da Milano (Intavolatura di Lauto, Venice 1546)
+- Passacaglia — Alessandro Piccinini (Bologna 1623)
+- O dulx Roveoir / Ballo Allemano — Giovanni Antonio Terzi (Intavolatura di liuto, Venice 1593)
 
 ### Tiorba / Chitarrone
 
-- Arpeggiata
-- Toccata prima
-- Obras de Giovanni Girolamo Kapsperger (Roma 1616)
-- Aria di sarabanda
-- Toccata en sol menor
-- Partite sopra quest'aria francese detta l'Alemana
-- Toccata-corrente-gagliarda en sol mayor (Piccinini)
+- Arpeggiata — Giovanni Girolamo Kapsberger (Rome 1616)
+- Toccata prima — Giovanni Girolamo Kapsberger
+- Aria di sarabanda — Giovanni Girolamo Kapsberger
+- Toccata in G minor — Alessandro Piccinini
+- Partite sopra quest'aria francese detta l'Alemana — Alessandro Piccinini
+- Toccata-corrente-gagliarda in G major — Alessandro Piccinini (Bologna 1623)
 
-### Notas
+{{< program_divider >}}
 
-Selección de partite y danzas de la tradición de Bolonia, con repertorio para laúd y arreglos para tiorba/chitarrone inspirados en fuentes de los siglos XVI–XVII.
+{{< program_pdf src="/programs/originals/bologna-liutistica_es.pdf" >}}
+
+{{< program_download pdf="/programs/originals/bologna-liutistica_es.pdf" >}}

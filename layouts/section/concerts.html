@@ -1,0 +1,96 @@
+{{ define "main" }}
+{{ $events := site.Data.upcoming }}
+{{ $now := now }}
+{{ $items := slice }}
+{{ $italianItems := slice }}
+{{ range $events }}
+{{ if not (isset . "date") }}{{ continue }}{{ end }}
+{{ $rawDate := printf "%v" (index . "date") }}
+{{ if eq $rawDate "" }}{{ continue }}{{ end }}
+{{ $cleanDate := replace $rawDate "." "/" }}
+{{ $parts := split $cleanDate "/" }}
+{{ if lt (len $parts) 3 }}{{ continue }}{{ end }}
+{{ $day := index $parts 0 }}
+{{ $month := index $parts 1 }}
+{{ $year := index $parts 2 }}
+{{ $monthP := cond (eq (len $month) 1) (print "0" $month) $month }}
+{{ $dayP := cond (eq (len $day) 1) (print "0" $day) $day }}
+{{ $iso := print $year "-" $monthP "-" $dayP }}
+{{ if lt $iso ($now.Format "2006-01-02") }}{{ continue }}{{ end }}
+{{ $city := cond (isset . "city") .city "" }}
+{{ $venue := cond (isset . "venue") .venue "" }}
+{{ $program := cond (isset . "program") .program "" }}
+{{ $ensemble := cond (isset . "ensemble") .ensemble "" }}
+{{ $url := cond (isset . "url") .url "" }}
+{{ $country := "" }}
+{{ with split $city "," }}
+{{ if gt (len .) 1 }}
+{{ $country = strings.TrimSpace (index . (sub (len .) 1)) }}
+{{ end }}
+{{ end }}
+{{ $cityLower := lower $city }}
+{{ $isItaly := or (in $cityLower "italy") (in $cityLower "italia") (in $cityLower "italien") }}
+{{ $item := dict "date" $iso "city" $city "venue" $venue "program" $program "ensemble" $ensemble "url" $url "isItaly" $isItaly }}
+{{ $items = $items | append $item }}
+{{ if $isItaly }}{{ $italianItems = $italianItems | append $item }}{{ end }}
+{{ end }}
+{{ $sorted := sort $items "date" }}
+{{ $italianSorted := sort $italianItems "date" }}
+
+<section class="page-content section-with-gradient">
+  <div class="container">
+    <div class="elegant-card" style="text-align: center; margin-bottom: 30px;">
+      <h1>{{ .Title }}</h1>
+      {{ if .Description }}
+      <p class="post-body">{{ .Description }}</p>
+      {{ end }}
+    </div>
+
+    {{ if gt (len $italianSorted) 0 }}
+    <div class="elegant-card concerts-italy-card">
+      <h2 class="concerts-section-title">{{ i18n "next_concerts_italy" | default "Next concerts in Italy" }}</h2>
+      <ul class="concerts-list upcoming">
+        {{ range $italianSorted }}
+        <li class="concert-item upcoming">
+          <time class="concert-date" datetime="{{ .date }}">{{ dateFormat "02 Jan 2006" .date }}</time>
+          <div class="concert-details">
+            <span class="concert-program">{{ .program }}</span>
+            <span class="concert-ensemble">{{ .ensemble }}</span>
+            <span class="concert-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ .venue }}, {{ .city }}</span>
+          </div>
+          {{ if .url }}
+          <a class="concert-link" href="{{ .url }}" target="_blank" rel="noopener">{{ i18n "tickets_info" | default "Info" }}</a>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    <div class="elegant-card">
+      <h2 class="concerts-section-title">{{ i18n "upcoming_concerts" | default "Upcoming Concerts" }}</h2>
+      {{ if gt (len $sorted) 0 }}
+      <ul class="concerts-list upcoming">
+        {{ range $sorted }}
+        <li class="concert-item upcoming{{ if .isItaly }} concert-italy{{ end }}">
+          <time class="concert-date" datetime="{{ .date }}">{{ dateFormat "02 Jan 2006" .date }}</time>
+          <div class="concert-details">
+            <span class="concert-program">{{ .program }}</span>
+            <span class="concert-ensemble">{{ .ensemble }}</span>
+            <span class="concert-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ .venue }}, {{ .city }}</span>
+          </div>
+          {{ if .url }}
+          <a class="concert-link" href="{{ .url }}" target="_blank" rel="noopener">{{ i18n "tickets_info" | default "Info" }}</a>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+      {{ else }}
+      <p class="concerts-empty">{{ i18n "no_upcoming_concerts" | default "No upcoming concerts announced at the moment." }}</p>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ partial "upcoming-events-jsonld.html" . }}
+{{ end }}

@@ -1,31 +1,43 @@
 ---
 title: "Dos peninsulas"
-description: "Renaissancelauten und Barockgitarre"
-pdf: "/programs/originals/f7ad3b_c0c3b0f2d738413b95364ac54af5442b.pdf"
+description: "Renaissancelaute und Barockgitarre"
+pdf: "/programs/originals/dos-peninsulas_de.pdf"
 image: "/images/programs/dospeninsulas.avif"
 group: "Solo"
 ---
 
-Laden Sie das Originalprogramm als PDF herunter: [PDF herunterladen](/programs/originals/f7ad3b_c0c3b0f2d738413b95364ac54af5442b.pdf)
+{{< program_hero image="/images/programs/dospeninsulas.avif" alt="Dos peninsulas" >}}
 
 ## Dos peninsulas
 
-Renaissancelauten und Barockgitarre
+**Renaissancelaute und Barockgitarre**
+
+{{% program_description %}}
+
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programm
 
 ### Laute (Renaissance)
 
-- 5 Fantasien — Francesco Canova da Milano (Venedig 1546)
-- Fantasia / Pavana de Alexandre / Romanesca — Alonso de Mudarra (Sevilla 1546)
-- Toccata — Giovanni Girolamo Kapsperger (Rom 1616)
+- 5 Fantasie — Francesco Canova da Milano (Venezia 1546)
+- Fantasía / Pavana de Alexandre / Romanesca — Alonso de Mudarra (Sevilla 1546)
+- Toccata — Giovanni Girolamo Kapsperger (Rome 1616)
 
 ### Barockgitarre
 
-- Folías españolas und italienische Folias
-- Suite in A-Moll
-- Preludio, Allemanda, Giga und Burlesca — Santiago de Murcia (ca. 1730)
+- Folias españolas e italianas
+- Suite in A minor
+- Preludio, Allemanda, Giga, Burlesca — Santiago de Murcia (ca. 1730)
 - Pasacalle sobre la D — Gaspar Sanz (1674)
 - Tarantella, Fandango, Canario
 
-### Hinweise
+{{< program_divider >}}
 
-Ein Dialog zwischen iberischer und italienischer Lauten- und Gitarrentradition, Paare von Renaissance-Lautenwerken mit Barockgitarre-Repertoire.
+{{< program_pdf src="/programs/originals/dos-peninsulas_de.pdf" >}}
+
+{{< program_download pdf="/programs/originals/dos-peninsulas_de.pdf" >}}

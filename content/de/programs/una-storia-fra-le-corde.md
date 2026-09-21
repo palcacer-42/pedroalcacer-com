@@ -1,35 +1,47 @@
 ---
 title: "Una storia fra le corde..."
-description: "Vihuela und Tiorba"
-pdf: "/programs/originals/f7ad3b_073b003c65754258bb23276fa946bb9e.pdf"
+description: "Vihuela und Theorbe"
+pdf: "/programs/originals/una-storia-fra-le-corde_de.pdf"
 image: "/images/programs/unastoria.avif"
 group: "Solo"
 ---
 
-Laden Sie das Originalprogramm als PDF herunter: [PDF herunterladen](/programs/originals/f7ad3b_073b003c65754258bb23276fa946bb9e.pdf)
+{{< program_hero image="/images/programs/unastoria.avif" alt="Una storia fra le corde..." >}}
 
 ## Una storia fra le corde...
 
-Vihuela und Tiorba
+**Vihuela und Theorbe**
+
+{{% program_description %}}
+
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programm
 
 ### Vihuela
 
 - Fantasia para desenvolver las manos — Alonso de Mudarra (Tres libros de música en cifras para Vihuela, Sevilla 1546)
-- Fantasia del cuarto tono
+- Fantasia del quarto tono — Alonso de Mudarra
 - Mille Regez — Luis de Narváez (Los seis libros del Delfín, Valladolid 1538)
 - Pavana 4 — Luys Milán (El maestro, Valencia 1536)
-- Romanesca — Alonso de Mudarra
-- Fantasía I (4º libro)
+- Romanesca — Alonso de Mudarra (Tres libros de música en cifras para Vihuela, Sevilla 1546)
+- Fantasía I (4th Book) — Alonso de Mudarra
 - Benedictus — Josquin
 - Soneto lombardo — Enrriquez de Valderrábano (Silva de sirenas, Valladolid 1547)
-- Bassa de contrapunto
+- Bassa de contrapunto — Luis de Narváez
 
-### Chitarrone / Tiorba
+### Theorbe / Chitarrone
 
-- Toccata-corrente-gagliarda in G-Dur — Alessandro Piccinini (Libro di intavolatura di Liuto et di chitarrone, Bologna 1623)
-- Toccata in g-Moll
-- Partite sopra quest'aria francese detta l'Alemana
+- Toccata-corrente-gagliarda in G major — Alessandro Piccinini (Libro di intavolatura di Liuto et di chitarrone, Bologna 1623)
+- Toccata in G minor — Alessandro Piccinini
+- Partite sopra quest'aria francese detta l'Alemana — Alessandro Piccinini
 
-### Hinweise
+{{< program_divider >}}
 
-Programm betont die iberische Vihuela-Tradition zusammen mit Tiorba-Werken aus Italien und bildet eine erzählerische Reise durch die Saiten.
+{{< program_pdf src="/programs/originals/una-storia-fra-le-corde_de.pdf" >}}
+
+{{< program_download pdf="/programs/originals/una-storia-fra-le-corde_de.pdf" >}}

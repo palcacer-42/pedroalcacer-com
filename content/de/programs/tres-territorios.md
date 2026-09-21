@@ -1,16 +1,26 @@
 ---
 title: "Tres territorios"
-description: "Barockgitarre und Tiorba"
-pdf: "/programs/originals/f7ad3b_573cfc9568444ced8b4a58c39dc5f227.pdf"
+description: "Barockgitarre und Theorbe"
+pdf: "/programs/originals/tres-territorios_de.pdf"
 image: "/images/programs/tresterritorios.avif"
 group: "Solo"
 ---
 
-Laden Sie das Originalprogramm als PDF herunter: [PDF herunterladen](/programs/originals/f7ad3b_573cfc9568444ced8b4a58c39dc5f227.pdf)
+{{< program_hero image="/images/programs/tresterritorios.avif" alt="Tres territorios" >}}
 
 ## Tres territorios
 
-Barockgitarre und Tiorba
+**Barockgitarre und Theorbe**
+
+{{% program_description %}}
+
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programm
 
 ### Barockgitarre
 
@@ -20,16 +30,17 @@ Barockgitarre und Tiorba
 - Tarantella
 - Folias Españolas — Santiago de Murcia
 
-### Tiorba / Tiorba
+### Theorbo / Tiorba
 
-- Arpeggiatta
-- Werke von Giovanni Girolamo Kapsperger
-- Toccata V
-- Corrente
-- Gagliarda
-- Toccata VIII
-- Partite su l’Alemana / Partite su la Romanesca — Alessandro Piccinini
+- Arpeggiatta — Giovanni Girolamo Kapsberger
+- Toccata V — Giovanni Girolamo Kapsberger
+- Corrente — Giovanni Girolamo Kapsberger
+- Gagliarda — Giovanni Girolamo Kapsberger
+- Toccata VIII — Giovanni Girolamo Kapsberger
+- Partite su l'Alemana / Partite su la Romanesca — Alessandro Piccinini
 
-### Hinweise
+{{< program_divider >}}
 
-Programm kombiniert iberische Gitarrentänze mit italienischem Tiorba-Repertoire und zeigt stilistische Kontraste und historische Quellen.
+{{< program_pdf src="/programs/originals/tres-territorios_de.pdf" >}}
+
+{{< program_download pdf="/programs/originals/tres-territorios_de.pdf" >}}

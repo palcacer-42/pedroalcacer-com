@@ -16,13 +16,20 @@ This document describes how to show upcoming concerts from a Google Calendar on 
 
 3) Configure your site
 
-Add the following to `hugo.toml` (or your site params) under `[params]`:
+Add the calendar ID to `hugo.toml` under `[params.googleCalendar]`. Leave `apiKey` empty in the file — the key is injected at build time so it is never committed:
 
 [params.googleCalendar]
   calendarId = "your_calendar_id@group.calendar.google.com"
-  apiKey = "YOUR_GOOGLE_API_KEY"
+  apiKey = ""
 
-Then rebuild your site.
+Then set the build environment variable:
+
+```bash
+export HUGO_PARAMS_GOOGLECALENDAR_APIKEY="YOUR_GOOGLE_API_KEY"
+hugo
+```
+
+For GitHub Pages deployments, add `GOOGLE_CALENDAR_API_KEY` as a repository secret (Settings → Secrets). The `deploy.yml` workflow reads it automatically.
 
 4) What the widget does
 
@@ -41,13 +48,15 @@ If you need to access a private calendar, you'll need a server-side proxy that p
 
 Security and behavior notes
 
-- API-key approach (what we implemented): quick and easy. Add your API key to `hugo.toml` under `params.googleCalendar.apiKey` (we added it for you while testing). Restrict the key by HTTP referrers to your domain and localhost during development.
+- API-key approach (what we implemented): quick and easy. Provide the API key via the `HUGO_PARAMS_GOOGLECALENDAR_APIKEY` environment variable at build time; do **not** commit it to `hugo.toml`. Restrict the key by HTTP referrers to your domain and localhost during development.
 - Link behavior: event titles are rendered as links (open in a new tab). Event notes are available inline via the small expander; this keeps the homepage compact while making full info accessible.
 - If you prefer no client API key, use the serverless endpoint (no Google API usage) or the iframe embed fallback.
 
 Deployment checklist
 
-- Add the `params.googleCalendar` block to `hugo.toml` if not present: calendar ID and either `apiKey` (API approach) or `endpoint` (serverless approach).
+- Add the `params.googleCalendar` block to `hugo.toml` if not present. Keep `apiKey = ""` in the file.
+- If using the API key: set `GOOGLE_CALENDAR_API_KEY` as a GitHub Actions secret (deployments) or export `HUGO_PARAMS_GOOGLECALENDAR_APIKEY` locally.
+- If using the serverless endpoint: set `params.googleCalendar.endpoint` in `hugo.toml`.
 - Optional: set up the `scripts/fetch_calendar.py` in CI to generate `data/calendar_events.json` for static builds.
 - If using the API key: restrict the key in Google Cloud Console (HTTP referrers + API restriction to Google Calendar API).
 - If using Netlify functions: add `CALENDAR_ID` or `CALENDAR_ICS_URL` as environment variables in Netlify site settings.
@@ -82,5 +91,5 @@ Embed iframe fallback (no API key required):
 <iframe src="https://calendar.google.com/calendar/embed?src=hgp3omm8735qu0ame6nj5e7boc%40group.calendar.google.com&ctz=Europe%2FBerlin" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
 Notes:
-- The client-side widget (recommended) shows a compact next-events list but requires a Google API key in `params.googleCalendar.apiKey`.
+- The client-side widget (recommended) shows a compact next-events list but requires a Google API key supplied via the `HUGO_PARAMS_GOOGLECALENDAR_APIKEY` environment variable.
 - If you prefer the built-in Google embed grid/calendar, use the iframe above (already public). The iframe updates automatically from Google.

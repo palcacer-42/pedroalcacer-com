@@ -1,18 +1,26 @@
 ---
 title: "Tanyer de gala"
-description: "Vihuela and baroque guitar"
-pdf: "/programs/originals/f7ad3b_830157a1ff80493398d18394931eddef.pdf"
+description: "Vihuela and Baroque Guitar"
+pdf: "/programs/originals/tanyer-de-gala_en.pdf"
 image: "/images/programs/tanyerdegala.avif"
 group: "Solo"
 ---
 
-Download the original program PDF: [Download PDF](/programs/originals/f7ad3b_830157a1ff80493398d18394931eddef.pdf)
-
-Short description: Vihuela and baroque guitar.
+{{< program_hero image="/images/programs/tanyerdegala.avif" alt="Tanyer de gala" >}}
 
 ## Tanyer de gala
 
-Vihuela and Baroque guitar
+**Vihuela and Baroque Guitar**
+
+{{% program_description %}}
+
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programme
 
 ### Vihuela
 
@@ -29,6 +37,8 @@ Vihuela and Baroque guitar
 - Marionas; Folias Españolas; Fangango — Santiago de Murcia
 - Canario — Gaspar Sanz
 
-### Notes
+{{< program_divider >}}
 
-Festive program celebrating Spanish vihuela and baroque guitar traditions with dance forms, fantasias, and virtuosic pieces.
+{{< program_pdf src="/programs/originals/tanyer-de-gala_en.pdf" >}}
+
+{{< program_download pdf="/programs/originals/tanyer-de-gala_en.pdf" >}}

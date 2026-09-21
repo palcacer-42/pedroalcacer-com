@@ -10,15 +10,13 @@ musicians:
   - "Hugo Miguel de Rodas Sánchez — Barockgitarre, Arciliuto & Theorbe"
 ---
 
-<div class="program-hero">
-  <img src="/images/programs/mecatl.jpg" alt="Mecatl Harmonium — Pedro Alcàcer Doria & Hugo Miguel de Rodas Sánchez">
-</div>
+{{< program_hero image="/images/programs/mecatl.jpg" alt="Mecatl Harmonium — Pedro Alcàcer Doria & Hugo Miguel de Rodas Sánchez" >}}
 
 ## Mecatl — Harmonium
 
 **Historische Lauteninstrumente**
 
-<div class="program-description-block">
+{{% program_description %}}
 
 **Mecatl** — auf Nahuatl, der antiken Sprache der Azteken, bedeutet *„Saite"*. **Harmonium** — aus dem Lateinischen *harmonia*: Harmonie, Übereinstimmung, Konsonanz.
 
@@ -27,9 +25,9 @@ Pedro und Hugo sind zwei Freunde und Kollegen, die zufällig im selben Viertel u
 > *„Die Zupfinstrumente sind weder perfekt noch unperfekt, sondern so, wie man sie spielt…"*
 > — Gaspar Sanz, 1692
 
-</div>
+{{% /program_description %}}
 
-<div class="program-divider"><span>♪</span></div>
+{{< program_divider >}}
 
 ### Programm
 
@@ -50,8 +48,6 @@ Pedro und Hugo sind zwei Freunde und Kollegen, die zufällig im selben Viertel u
 
 *Arrangements von Hugo Miguel de Rodas Sánchez*
 
-<div class="program-divider"><span>♪</span></div>
+{{< program_divider >}}
 
-<div class="program-download">
-  <a href="/programs/originals/mecatl.pdf" class="download-btn">Vollständiges Programm herunterladen</a>
-</div>
+{{< program_download pdf="/programs/originals/mecatl.pdf" >}}

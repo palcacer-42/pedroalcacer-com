@@ -4,19 +4,37 @@ description: "Ensemble programmes and concert projects by Pedro Alcàcer — bar
 group: "Ensemble"
 ---
 
-<div class="ensemble-intro">
+{{% ensemble_intro %}}
 Pedro Alcàcer performs with distinguished early music ensembles, bringing to life the rich repertoire of Renaissance and Baroque chamber music through collaborations with exceptional musicians across Europe.
-</div>
+{{% /ensemble_intro %}}
+
+---
+
+### Corde, Pelli e Passioni, Dalla Vihuela alla Chitarra Barocca
+
+{{% program_description %}}
+Spagna e Italia tra Rinascimento e Barocco. Un viaggio attraverso un’epoca in cui la musica non conosceva confini e melodie, strumenti e ritmi viaggiavano tra corti, città e territori.
+[Read more](/en/programs/dalla-vihuela-alla-chitarra-barocca)
+{{% /program_description %}}
+
+{{% ensemble_members %}}
+
+**Ensemble:**
+
+- **Pedro Alcàcer Doria** — Vihuela e Chitarra barocca
+- **Matteo Rabolini** — Percussioni
+
+{{% /ensemble_members %}}
 
 ---
 
 ### Arlecchino innamorato
 
-<div class="program-description">
+{{% program_description %}}
 A captivating theatrical-musical programme that brings to life the beloved commedia dell'arte character of Harlequin in all his amorous adventures. This enchanting production weaves together music, theatre, and emotion in the authentic spirit of the Italian baroque tradition.
-</div>
+{{% /program_description %}}
 
-<div class="ensemble-members">
+{{% ensemble_members %}}
 
 **Ensemble:**
 
@@ -25,17 +43,17 @@ A captivating theatrical-musical programme that brings to life the beloved comme
 - **Pedro Alcàcer Doria** — Theorbo & Baroque Guitar  
 - **Marco Mencoboni** — Harpsichord & Musical Direction
 
-</div>
+{{% /ensemble_members %}}
 
 ---
 
 ### Les musiques du Roi Soleil
 
-<div class="program-description">
+{{% program_description %}}
 An intimate journey through the magnificent music from the court of Louis XIV, the Sun King. This refined programme showcases the sublime interplay between viols and theorbo, capturing the elegance and grandeur of the French Baroque.
-</div>
+{{% /program_description %}}
 
-<div class="ensemble-members">
+{{% ensemble_members %}}
 
 **Ensemble:**
 
@@ -43,4 +61,4 @@ An intimate journey through the magnificent music from the court of Louis XIV, t
 - **Victor Aragón** — Viola da gamba  
 - **Pedro Alcàcer Doria** — Theorbo
 
-</div>
+{{% /ensemble_members %}}

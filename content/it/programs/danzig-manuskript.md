@@ -1,30 +1,26 @@
 ---
 title: "Il Manoscritto di Danzica"
 description: "Un'eco europea del Rinascimento — Liuto rinascimentale"
-pdf: "/programs/originals/danzig-manuskript.pdf"
+pdf: "/programs/originals/danzig-manuskript_it.pdf"
 image: "/images/programs/danzig-manuskript.png"
 group: "Solo"
 ---
 
-<div class="program-hero">
-  <img src="/images/programs/danzig-manuskript.png" alt="Il Manoscritto di Danzica - Intavolatura storica per liuto">
-</div>
+{{< program_hero image="/images/programs/danzig-manuskript.png" alt="Il Manoscritto di Danzica - Historical Lute Tablature" >}}
 
 ## Il Manoscritto di Danzica
-## Un'eco europea del Rinascimento
+### Un'eco europea del Rinascimento — Liuto rinascimentale
 
-**Liuto rinascimentale**
+**Renaissance Lute**
 
-<div class="program-description-block">
+{{% program_description %}}
 
-Questo programma è dedicato a una delle fonti più affascinanti per il liuto rinascimentale: il **Manoscritto di Danzica**, conservato presso la Biblioteca di Stato di Berlino. Un autore ignoto vi raccolse tesori musicali provenienti da Polonia, Francia, Inghilterra, Germania, Paesi Bassi, Italia, Ungheria e Spagna.
+Questo programma è dedicato a una delle fonti più affascinanti per il liuto rinascimentale: il **Manoscritto di Danzica**, conservato presso la Biblioteca di Stato di Berlino. Un autore sconosciuto compilò tesori musicali da Polonia, Francia, Inghilterra, Germania, Paesi Bassi, Italia, Ungheria e Spagna.
 
-Il repertorio include un **Preludium** di *Nani di Milano*, **Courantes** di *Robert Ballard*, *René Saman*, *Jean Perrichon* e *Gautier*, la **Bolouina** di *Vincenzo Bernia*, una **Sarabanda** di *Alessandro Piccinini*, un **Ballet**, una **Volte**, un **Bergamasco**, una **Galliard** e una **Fantasia** di compositori anonimi, il **Balletto de Florenza**, una **Courante del balletto**, **A lieta vita** di *G. Gastoldi*, **Fortune my Foe** di *John Dowland*, la **Courante of the prince of England** di *Robert Johnson*, un **Passamezzo e Galliard** di *Emmanuel Adrianssen*, oltre a un'altra **Fantasia**, **Mal sims**, una **Courante** e una **Duola** di autori anonimi.
+The repertoire includes a **Preludium** by *Nani di Milano*, **Courantes** by *Robert Ballard*, *René Saman*, *Jean Perrichon*, and *Gautier*, the **Bolouina** by *Vincenzo Bernia*, a **Sarabanda** by *Alessandro Piccinini*, a **Ballet**, a **Volte**, a **Bergamasco**, a **Galliard**, and a **Fantasia** by anonymous composers, the **Balletto de Florenza**, a **Courante del balletto**, **A lieta vita** by *G. Gastoldi*, **Fortune my Foe** by *John Dowland*, the **Courante of the prince of England** by *Robert Johnson*, a **Passamezzo and Galliard** by *Emmanuel Adrianssen*, as well as another **Fantasia**, **Mal sims**, a **Courante**, and a **Duola** by anonymous authors.
 
-</div>
+{{% /program_description %}}
 
-<div class="program-divider"><span>♪</span></div>
+{{< program_divider >}}
 
-<div class="program-download">
-  <a href="/programs/originals/danzig-manuskript.pdf" class="download-btn" download>Scarica il programma completo</a>
-</div>
+{{< program_download pdf="/programs/originals/danzig-manuskript_it.pdf" >}}

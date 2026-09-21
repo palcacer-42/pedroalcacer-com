@@ -21,7 +21,7 @@
 
                 <div class="epk-card epk-contact">
                     <h3>{{ i18n "epk_booking" }}</h3>
-                    <p class="email">info@pedroalcacer.com</p>
+                    <p class="email"><span class="js-email" data-u="info" data-d="pedroalcacer.com"></span></p>
                     <a href="{{ "contact/" | relLangURL }}" class="epk-btn epk-btn-primary">{{ i18n "epk_book_now"
                         }}</a>
                 </div>
@@ -52,4 +52,15 @@
 
     </div>
 </section>
+<script>
+(function () {
+  document.querySelectorAll('.js-email').forEach(function (el) {
+    var user = el.getAttribute('data-u');
+    var domain = el.getAttribute('data-d');
+    if (user && domain) {
+      el.textContent = user + '@' + domain;
+    }
+  });
+})();
+</script>
 {{ end }}

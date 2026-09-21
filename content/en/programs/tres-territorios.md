@@ -1,16 +1,26 @@
 ---
 title: "Tres territorios"
-description: "Baroque guitar and theorbo"
-pdf: "/programs/originals/f7ad3b_573cfc9568444ced8b4a58c39dc5f227.pdf"
+description: "Baroque Guitar and Theorbo"
+pdf: "/programs/originals/tres-territorios_en.pdf"
 image: "/images/programs/tresterritorios.avif"
 group: "Solo"
 ---
 
-Download the original program PDF: [Download PDF](/programs/originals/f7ad3b_573cfc9568444ced8b4a58c39dc5f227.pdf)
+{{< program_hero image="/images/programs/tresterritorios.avif" alt="Tres territorios" >}}
 
 ## Tres territorios
 
-Baroque guitar and Theorbo
+**Baroque Guitar and Theorbo**
+
+{{% program_description %}}
+
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programme
 
 ### Baroque Guitar
 
@@ -22,14 +32,15 @@ Baroque guitar and Theorbo
 
 ### Theorbo / Tiorba
 
-- Arpeggiatta
-- Works by Giovanni Girolamo Kapsberger (Kapsberger repertory)
-- Toccata V
-- Corrente
-- Gagliarda
-- Toccata VIII
-- Partite su l’Alemana / Partite su la Romanesca — Alessandro Piccinini
+- Arpeggiatta — Giovanni Girolamo Kapsberger
+- Toccata V — Giovanni Girolamo Kapsberger
+- Corrente — Giovanni Girolamo Kapsberger
+- Gagliarda — Giovanni Girolamo Kapsberger
+- Toccata VIII — Giovanni Girolamo Kapsberger
+- Partite su l'Alemana / Partite su la Romanesca — Alessandro Piccinini
 
-### Notes
+{{< program_divider >}}
 
-Program mixes Iberian guitar dance forms and Italian theorbo repertoire, showcasing stylistic contrasts and historical sources.
+{{< program_pdf src="/programs/originals/tres-territorios_en.pdf" >}}
+
+{{< program_download pdf="/programs/originals/tres-territorios_en.pdf" >}}

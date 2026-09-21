@@ -1,0 +1,8 @@
+{{/* Shortcode: program hero image */}}
+{{ $image := .Get "image" }}
+{{ $alt := .Get "alt" }}
+{{ if $image }}
+<div class="program-hero">
+  <img src="{{ $image | relURL }}" alt="{{ $alt }}">
+</div>
+{{ end }}

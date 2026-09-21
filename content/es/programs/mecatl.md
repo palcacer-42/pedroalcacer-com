@@ -10,15 +10,13 @@ musicians:
   - "Hugo Miguel de Rodas Sánchez — Guitarra barroca, Archilaúd & Tiorba"
 ---
 
-<div class="program-hero">
-  <img src="/images/programs/mecatl.jpg" alt="Mecatl Harmonium — Pedro Alcàcer Doria & Hugo Miguel de Rodas Sánchez">
-</div>
+{{< program_hero image="/images/programs/mecatl.jpg" alt="Mecatl Harmonium — Pedro Alcàcer Doria & Hugo Miguel de Rodas Sánchez" >}}
 
 ## Mecatl — Harmonium
 
 **Instrumentos históricos de cuerda pulsada**
 
-<div class="program-description-block">
+{{% program_description %}}
 
 **Mecatl** — en náhuatl, la lengua antigua de los aztecas, significa *"cuerda"*. **Harmonium** — del latín *harmonia*: armonía, acuerdo, consonancia.
 
@@ -27,9 +25,9 @@ Pedro y Hugo son dos amigos y colegas que, por azar, crecieron y estudiaron en e
 > *"Los instrumentos de cuerda pulsada no son ni perfectos ni imperfectos, sino tal como se tocan…"*
 > — Gaspar Sanz, 1692
 
-</div>
+{{% /program_description %}}
 
-<div class="program-divider"><span>♪</span></div>
+{{< program_divider >}}
 
 ### Programa
 
@@ -50,8 +48,6 @@ Pedro y Hugo son dos amigos y colegas que, por azar, crecieron y estudiaron en e
 
 *Arreglos de Hugo Miguel de Rodas Sánchez*
 
-<div class="program-divider"><span>♪</span></div>
+{{< program_divider >}}
 
-<div class="program-download">
-  <a href="/programs/originals/mecatl_es.pdf" class="download-btn">Descargar programa completo</a>
-</div>
+{{< program_download pdf="/programs/originals/mecatl_es.pdf" >}}

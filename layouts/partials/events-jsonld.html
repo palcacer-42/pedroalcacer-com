@@ -31,7 +31,7 @@ Date format in data: DD/MM/YYYY
 {{ $country := "" }}
 {{ with split $city "," }}
 {{ if gt (len .) 1 }}
-{{ $country = (index . (sub (len .) 1) | trim) }}
+{{ $country = strings.TrimSpace (index . (sub (len .) 1)) }}
 {{ end }}
 {{ end }}
 {{ $item := dict
@@ -47,5 +47,5 @@ Date format in data: DD/MM/YYYY
 {{ $sorted := sort $items "startDate" }}
 {{ $limited := first 10 $sorted }}
 <script type="application/ld+json">
-{{ jsonify (dict "@context" "https://schema.org" "@graph" $limited) }}
+{{ jsonify (dict "@context" "https://schema.org" "@graph" $limited) | safeJS }}
 </script>

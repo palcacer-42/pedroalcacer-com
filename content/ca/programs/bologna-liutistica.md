@@ -1,33 +1,44 @@
 ---
 title: "Bologna liutistica"
-description: "Laüt renaixentista i Tiorba"
-pdf: "/programs/originals/f7ad3b_6d061e6c8f19409ba3f2400fff810c9f.pdf"
+description: "Llaüt renaixentista i tiorba"
+pdf: "/programs/originals/bologna-liutistica_ca.pdf"
 image: "/images/programs/bolognaliutistica.avif"
 group: "Solo"
 ---
 
-Descarrega el PDF original: [Descarregar PDF](/programs/originals/f7ad3b_6d061e6c8f19409ba3f2400fff810c9f.pdf)
+{{< program_hero image="/images/programs/bolognaliutistica.avif" alt="Bologna liutistica" >}}
 
 ## Bologna liutistica
 
-Laüt renaixentista i Tiorba
+**Llaüt renaixentista i tiorba**
 
-### Laüt
+{{% program_description %}}
 
-- 3 Fantasies — Francesco Canova da Milano (Intavolatura di Lauto, Venècia 1546)
-- Passacaglia — Alessandro Piccinini (Bolonya 1623)
-- O dulx Roveoir / Ballo Allemano — Giovanni Antonio Terzi (Intavolatura di liuto, Venècia 1593)
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programa
+
+### Llaüt
+
+- 3 Fantasie — Francesco Canova da Milano (Intavolatura di Lauto, Venice 1546)
+- Passacaglia — Alessandro Piccinini (Bologna 1623)
+- O dulx Roveoir / Ballo Allemano — Giovanni Antonio Terzi (Intavolatura di liuto, Venice 1593)
 
 ### Tiorba / Chitarrone
 
-- Arpeggiata
-- Toccata primera
-- Obres de Giovanni Girolamo Kapsperger (Roma 1616)
-- Aria de sarabanda
-- Toccata en sol menor
-- Partite sopra quest'aria francese detta l'Alemana
-- Toccata-corrente-gagliarda en sol major (Piccinini)
+- Arpeggiata — Giovanni Girolamo Kapsberger (Rome 1616)
+- Toccata prima — Giovanni Girolamo Kapsberger
+- Aria di sarabanda — Giovanni Girolamo Kapsberger
+- Toccata in G minor — Alessandro Piccinini
+- Partite sopra quest'aria francese detta l'Alemana — Alessandro Piccinini
+- Toccata-corrente-gagliarda in G major — Alessandro Piccinini (Bologna 1623)
 
-### Notes
+{{< program_divider >}}
 
-Selecció de partite i danses de la tradició de Bolonya, amb repertori per a laüt i arranjaments per a tiorba/chitarrone inspirats en fonts dels segles XVI–XVII.
+{{< program_pdf src="/programs/originals/bologna-liutistica_ca.pdf" >}}
+
+{{< program_download pdf="/programs/originals/bologna-liutistica_ca.pdf" >}}

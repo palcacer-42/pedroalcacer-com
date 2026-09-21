@@ -26,7 +26,7 @@
       {{ range $solo }}
       {{ $p := . }}
       <li class="program-item reduced">
-        {{ with $p.Params.image }}<div class="program-thumb"><img src="{{ . | relURL }}" alt="{{ $p.Title }}"></div>{{
+        {{ with $p.Params.image }}<div class="program-thumb"><img src="{{ . | relURL }}" alt="{{ $p.Title }}" loading="lazy" decoding="async"></div>{{
         end }}
         <div class="program-meta">
           {{ if $p.Params.shortinfo }}
@@ -58,10 +58,10 @@
     <h2 id="ensemble" class="programs-section-heading">{{ i18n "ensemble_programs" | default "Ensemble programmes" }}
     </h2>
     <ul class="program-list reduced-list">
-      {{ range $ens }}
+      {{ range $ens.ByWeight }}
       {{ $p := . }}
       <li class="program-item reduced">
-        {{ with $p.Params.image }}<div class="program-thumb"><img src="{{ . | relURL }}" alt="{{ $p.Title }}"></div>{{
+        {{ with $p.Params.image }}<div class="program-thumb"><img src="{{ . | relURL }}" alt="{{ $p.Title }}" loading="lazy" decoding="async"></div>{{
         end }}
         <div class="program-meta">
           {{ if $p.Params.shortinfo }}
@@ -97,7 +97,7 @@
       {{ range $others }}
       {{ $p := . }}
       <li class="program-item reduced">
-        {{ with $p.Params.image }}<div class="program-thumb"><img src="{{ . | relURL }}" alt="{{ $p.Title }}"></div>{{
+        {{ with $p.Params.image }}<div class="program-thumb"><img src="{{ . | relURL }}" alt="{{ $p.Title }}" loading="lazy" decoding="async"></div>{{
         end }}
         <div class="program-meta">
           {{ if $p.Params.shortinfo }}
@@ -128,7 +128,7 @@
       {{ range .Pages.ByTitle }}
       {{ $p := . }}
       <li class="program-item reduced">
-        {{ with $p.Params.image }}<div class="program-thumb"><img src="{{ . | relURL }}" alt="{{ $p.Title }}"></div>{{
+        {{ with $p.Params.image }}<div class="program-thumb"><img src="{{ . | relURL }}" alt="{{ $p.Title }}" loading="lazy" decoding="async"></div>{{
         end }}
         <div class="program-meta">
           {{ if $p.Params.shortinfo }}
@@ -163,7 +163,7 @@
       {{ range $others }}
       {{ $p := . }}
       <li class="program-item reduced">
-        {{ with $p.Params.image }}<div class="program-thumb"><img src="{{ . | relURL }}" alt="{{ $p.Title }}"></div>{{
+        {{ with $p.Params.image }}<div class="program-thumb"><img src="{{ . | relURL }}" alt="{{ $p.Title }}" loading="lazy" decoding="async"></div>{{
         end }}
         <div class="program-meta">
           <a class="program-name" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>

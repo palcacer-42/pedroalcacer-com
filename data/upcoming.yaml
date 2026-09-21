@@ -1,0 +1,22 @@
+# Upcoming concerts for Pedro Alcàcer.
+# This file feeds the /concerts/ page and the homepage "Upcoming Concerts" section.
+# It also generates schema.org Event JSON-LD for search engines.
+#
+# Format for each entry:
+#   date:    DD/MM/YYYY or DD.MM.YYYY
+#   city:    "City, Country"  (e.g. "Bologna, Italy" or "Roma, Italia")
+#   venue:   "Venue name"
+#   program: "Program title"
+#   ensemble: "Ensemble / collaborators"
+#   url:     "https://..."  # optional ticket/event link
+#
+# Events with city in Italy will be highlighted as "Italy concerts".
+# Example entry (replace with real dates or remove):
+# - date: "15.09.2026"
+#   city: "Bologna, Italy"
+#   venue: "San Colombano"
+#   program: "Bologna liutistica"
+#   ensemble: "Pedro Alcàcer"
+#   url: ""
+
+[]

@@ -3,26 +3,29 @@
 {{ if not $events }}
 <p>No concerts found.</p>
 {{ else }}
-<div class="concerts-archive-container">
-  <div class="concerts-header">
-    <span class="col-date">Date</span>
-    <span class="col-city">City</span>
-    <span class="col-venue">Venue</span>
-    <span class="col-program">Program</span>
-    <span class="col-ensemble">Ensemble</span>
+<details class="concerts-archive">
+  <summary class="concerts-archive-summary">{{ i18n "concerts_archive_toggle" | default "Show concerts archive" }}</summary>
+  <div class="concerts-archive-container">
+    <div class="concerts-header">
+      <span class="col-date">Date</span>
+      <span class="col-city">City</span>
+      <span class="col-venue">Venue</span>
+      <span class="col-program">Program</span>
+      <span class="col-ensemble">Ensemble</span>
+    </div>
+    <ul class="concerts-list">
+      {{ range $i, $e := $events }}
+      <li class="concert-item">
+        <div class="concert-row">
+          <span class="col-date">{{ $e.date }}</span>
+          <span class="col-city">{{ $e.city }}</span>
+          <span class="col-venue">{{ $e.venue }}</span>
+          <span class="col-program">{{ $e.program }}</span>
+          <span class="col-ensemble">{{ $e.ensemble }}</span>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
   </div>
-  <ul class="concerts-list">
-    {{ range $i, $e := $events }}
-    <li class="concert-item">
-      <div class="concert-row">
-        <span class="col-date">{{ $e.date }}</span>
-        <span class="col-city">{{ $e.city }}</span>
-        <span class="col-venue">{{ $e.venue }}</span>
-        <span class="col-program">{{ $e.program }}</span>
-        <span class="col-ensemble">{{ $e.ensemble }}</span>
-      </div>
-    </li>
-    {{ end }}
-  </ul>
-</div>
+</details>
 {{ end }}

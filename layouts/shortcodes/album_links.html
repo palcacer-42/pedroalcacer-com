@@ -3,7 +3,7 @@
 {{ if $album }}
 <div class="album-card">
   {{ with $album.cover }}
-    <div class="album-card__cover"><img src="{{ . }}" alt="{{ $album.title }} cover"></div>
+    <div class="album-card__cover"><img src="{{ . }}" alt="{{ $album.title }} cover" loading="lazy" decoding="async"></div>
   {{ end }}
 
   <div>

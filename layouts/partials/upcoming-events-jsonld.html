@@ -1,0 +1,48 @@
+{{/* JSON-LD for upcoming concerts using data/upcoming.yaml */}}
+{{ $events := site.Data.upcoming }}
+{{ if not $events }}{{ return }}{{ end }}
+{{ $now := now }}
+{{ $baseURL := site.BaseURL }}
+{{ $items := slice }}
+{{ range $events }}
+{{ $rawDate := .date }}
+{{ if not $rawDate }}{{ continue }}{{ end }}
+{{ $cleanDate := replace $rawDate "." "/" }}
+{{ $parts := split $cleanDate "/" }}
+{{ if lt (len $parts) 3 }}{{ continue }}{{ end }}
+{{ $day := index $parts 0 }}
+{{ $month := index $parts 1 }}
+{{ $year := index $parts 2 }}
+{{ $monthP := cond (eq (len $month) 1) (print "0" $month) $month }}
+{{ $dayP := cond (eq (len $day) 1) (print "0" $day) $day }}
+{{ $iso := print $year "-" $monthP "-" $dayP }}
+{{ if lt $iso ($now.Format "2006-01-02") }}{{ continue }}{{ end }}
+{{ $city := default "" .city }}
+{{ $venue := default "" .venue }}
+{{ $program := default "" .program }}
+{{ $ensemble := default "" .ensemble }}
+{{ $url := default "" .url }}
+{{ $country := "" }}
+{{ with split $city "," }}
+{{ if gt (len .) 1 }}
+{{ $country = strings.TrimSpace (index . (sub (len .) 1)) }}
+{{ end }}
+{{ end }}
+{{ $item := dict
+  "@type" "Event"
+  "name" (print $program " — " $ensemble)
+  "startDate" $iso
+  "eventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode"
+  "eventStatus" "https://schema.org/EventScheduled"
+  "location" (dict "@type" "Place" "name" $venue "address" (dict "addressLocality" $city "addressCountry" $country))
+  "performer" (dict "@type" "Person" "name" "Pedro Alcàcer" "url" $baseURL)
+}}
+{{ with $url }}{{ if ne . "" }}{{ $item = merge $item (dict "url" .) }}{{ end }}{{ end }}
+{{ $items = $items | append $item }}
+{{ end }}
+{{ if eq (len $items) 0 }}{{ return }}{{ end }}
+{{ $sorted := sort $items "startDate" }}
+{{ $limited := first 20 $sorted }}
+<script type="application/ld+json">
+{{ jsonify (dict "@context" "https://schema.org" "@graph" $limited) | safeJS }}
+</script>

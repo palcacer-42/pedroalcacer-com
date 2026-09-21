@@ -95,9 +95,56 @@
                 {{ end }}
                 {{ end }}
             </div>
+            <div class="calendar-footer">
+                <a href="{{ "concerts/" | relLangURL }}" class="calendar-link">{{ i18n "view_all_concerts" | default "View all upcoming concerts" }} →</a>
+            </div>
         </div>
     </div>
 </section>
+
+{{/* Italy highlight: only shows when there are upcoming concerts in Italy */}}
+{{ $upcoming := site.Data.upcoming }}
+{{ $now := now }}
+{{ $italyEvents := slice }}
+{{ range $upcoming }}
+{{ if not (isset . "date") }}{{ continue }}{{ end }}
+{{ $rawDate := printf "%v" (index . "date") }}
+{{ if eq $rawDate "" }}{{ continue }}{{ end }}
+{{ $cleanDate := replace $rawDate "." "/" }}
+{{ $parts := split $cleanDate "/" }}
+{{ if lt (len $parts) 3 }}{{ continue }}{{ end }}
+{{ $day := index $parts 0 }}
+{{ $month := index $parts 1 }}
+{{ $year := index $parts 2 }}
+{{ $monthP := cond (eq (len $month) 1) (print "0" $month) $month }}
+{{ $dayP := cond (eq (len $day) 1) (print "0" $day) $day }}
+{{ $iso := print $year "-" $monthP "-" $dayP }}
+{{ if lt $iso ($now.Format "2006-01-02") }}{{ continue }}{{ end }}
+{{ $city := cond (isset . "city") .city "" }}
+{{ $cityLower := lower $city }}
+{{ if or (in $cityLower "italy") (in $cityLower "italia") (in $cityLower "italien") }}
+{{ $italyEvents = $italyEvents | append (dict "date" $iso "city" $city "venue" (cond (isset . "venue") .venue "") "program" (cond (isset . "program") .program "") "ensemble" (cond (isset . "ensemble") .ensemble "")) }}
+{{ end }}
+{{ end }}
+{{ if gt (len $italyEvents) 0 }}
+<section class="italy-highlight-section section-with-gradient">
+    <div class="container">
+        <div class="elegant-card italy-highlight-card">
+            <h2 class="italy-highlight-title">{{ i18n "next_concerts_italy" | default "Next concerts in Italy" }}</h2>
+            <ul class="italy-events-list">
+                {{ range sort $italyEvents "date" }}
+                <li>
+                    <time datetime="{{ .date }}">{{ dateFormat "02 Jan 2006" .date }}</time>
+                    <span class="italy-event-program">{{ .program }}</span>
+                    <span class="italy-event-location">{{ .venue }}, {{ .city }}</span>
+                </li>
+                {{ end }}
+            </ul>
+            <a href="{{ "concerts/" | relLangURL }}" class="italy-highlight-link">{{ i18n "view_all_concerts" | default "View all upcoming concerts" }} →</a>
+        </div>
+    </div>
+</section>
+{{ end }}
 
 <section class="newsletter-section section-with-gradient">
     <div class="container">
@@ -137,7 +184,14 @@
             <a href="{{ "epk/" | relLangURL }}"
                 style="display: inline-block; margin-left: 15px; background-color: #222; color: #fff; padding: 8px 18px; text-decoration: none; border-radius: 4px; font-size: 0.85rem;">{{
                 i18n "epk_button" }}</a>
+            {{ with .Site.Params.cv_pdf }}
+            <a href="{{ . | relURL }}" download
+                style="display: inline-block; margin-left: 10px; background-color: #fff; color: #222; border: 1px solid #222; padding: 8px 18px; text-decoration: none; border-radius: 4px; font-size: 0.85rem;">{{
+                i18n "cv_download" }}</a>
+            {{ end }}
         </div>
     </div>
 </section>
+
+{{ partial "upcoming-events-jsonld.html" . }}
 {{ end }}

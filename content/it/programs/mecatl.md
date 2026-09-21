@@ -10,15 +10,13 @@ musicians:
   - "Hugo Miguel de Rodas Sánchez — Chitarra barocca, Arciliuto & Tiorba"
 ---
 
-<div class="program-hero">
-  <img src="/images/programs/mecatl.jpg" alt="Mecatl Harmonium — Pedro Alcàcer Doria & Hugo Miguel de Rodas Sánchez">
-</div>
+{{< program_hero image="/images/programs/mecatl.jpg" alt="Mecatl Harmonium — Pedro Alcàcer Doria & Hugo Miguel de Rodas Sánchez" >}}
 
 ## Mecatl — Harmonium
 
 **Strumenti a corde storici**
 
-<div class="program-description-block">
+{{% program_description %}}
 
 **Mecatl** — in nahuatl, l'antica lingua degli Aztechi, significa *"corda"*. **Harmonium** — dal latino *harmonia*: armonia, accordo, consonanza.
 
@@ -27,9 +25,9 @@ Pedro e Hugo sono due amici e colleghi che sono cresciuti e hanno studiato per c
 > *«Gli strumenti a pizzico non sono né perfetti né imperfetti, ma tali come li si suona…»*
 > — Gaspar Sanz, 1692
 
-</div>
+{{% /program_description %}}
 
-<div class="program-divider"><span>♪</span></div>
+{{< program_divider >}}
 
 ### Programma
 
@@ -50,8 +48,6 @@ Pedro e Hugo sono due amici e colleghi che sono cresciuti e hanno studiato per c
 
 *Arrangiamenti di Hugo Miguel de Rodas Sánchez*
 
-<div class="program-divider"><span>♪</span></div>
+{{< program_divider >}}
 
-<div class="program-download">
-  <a href="/programs/originals/mecatl_it.pdf" class="download-btn">Scarica il programma completo</a>
-</div>
+{{< program_download pdf="/programs/originals/mecatl_it.pdf" >}}

@@ -132,6 +132,36 @@
 </script>
 {{ end }}
 
+{{/* Structured Data: MusicAlbum */}}
+{{ if .Params.album_id }}
+{{ $album := index .Site.Data.albums .Params.album_id }}
+{{ if $album }}
+{{ $albumLinks := slice }}
+{{ range $album.links }}{{ $albumLinks = $albumLinks | append . }}{{ end }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicAlbum",
+  "name": "{{ $album.title }}",
+  "byArtist": {
+    "@type": "MusicGroup",
+    "name": "Pedro Alcàcer"
+  },
+  {{ with $album.year }}"datePublished": "{{ . }}",{{ end }}
+  {{ with $album.cover }}"image": "{{ . | absURL }}",{{ end }}
+  "url": "{{ .Permalink }}"
+  {{ if gt (len $albumLinks) 0 }},
+  "sameAs": [
+    {{ range $i, $v := $albumLinks }}
+    "{{ $v }}"{{ if ne $i (sub (len $albumLinks) 1) }},{{ end }}
+    {{ end }}
+  ]
+  {{ end }}
+}
+</script>
+{{ end }}
+{{ end }}
+
 {{/* Location targeting and localized keywords */}}
 {{ $locKeywords := "" }}
 {{ if eq $curLang "en" }}
@@ -163,4 +193,38 @@
 {{ if ne .Lang $curLang }}
 <meta property="og:locale:alternate" content="{{ .Lang }}">
 {{ end }}
+{{ end }}
+
+{{/* Structured Data: WebSite with SearchAction */}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ $siteTitle }}",
+  "url": "{{ .Site.BaseURL }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ .Site.BaseURL }}?s={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{{ end }}
+
+{{/* Structured Data: BreadcrumbList */}}
+{{ if not .IsHome }}
+{{ $crumbs := slice }}
+{{ $position := 1 }}
+{{ range .Ancestors.Reverse }}
+{{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $position "name" .Title "item" .Permalink) }}
+{{ $position = add $position 1 }}
+{{ end }}
+{{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $position "name" $title "item" .Permalink) }}
+<script type="application/ld+json">
+{{ jsonify (dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs) | safeJS }}
+</script>
 {{ end }}

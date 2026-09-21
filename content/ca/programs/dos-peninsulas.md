@@ -1,31 +1,43 @@
 ---
 title: "Dos peninsulas"
-description: "Laüt renaixentista i Guitarra barroca"
-pdf: "/programs/originals/f7ad3b_c0c3b0f2d738413b95364ac54af5442b.pdf"
+description: "Llaüt renaixentista i guitarra barroca"
+pdf: "/programs/originals/dos-peninsulas_ca.pdf"
 image: "/images/programs/dospeninsulas.avif"
 group: "Solo"
 ---
 
-Descarrega el PDF original: [Descarregar PDF](/programs/originals/f7ad3b_c0c3b0f2d738413b95364ac54af5442b.pdf)
+{{< program_hero image="/images/programs/dospeninsulas.avif" alt="Dos peninsulas" >}}
 
-## Dos penínsules
+## Dos peninsulas
 
-Laüt renaixentista i Guitarra barroca
+**Llaüt renaixentista i guitarra barroca**
 
-### Laüt (Renaixement)
+{{% program_description %}}
 
-- 5 Fantasies — Francesco Canova da Milano (Venècia 1546)
-- Fantasia / Pavana de Alexandre / Romanesca — Alonso de Mudarra (Sevilla 1546)
-- Toccata — Giovanni Girolamo Kapsperger (Roma 1616)
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programa
+
+### Llaüt (Renaixement)
+
+- 5 Fantasie — Francesco Canova da Milano (Venezia 1546)
+- Fantasía / Pavana de Alexandre / Romanesca — Alonso de Mudarra (Sevilla 1546)
+- Toccata — Giovanni Girolamo Kapsperger (Rome 1616)
 
 ### Guitarra barroca
 
-- Folías espanyoles i italianes
-- Suite en La menor
-- Preludi, Allemanda, Giga i Burlesca — Santiago de Murcia (ca. 1730)
+- Folias españolas e italianas
+- Suite in A minor
+- Preludio, Allemanda, Giga, Burlesca — Santiago de Murcia (ca. 1730)
 - Pasacalle sobre la D — Gaspar Sanz (1674)
 - Tarantella, Fandango, Canario
 
-### Notes
+{{< program_divider >}}
 
-Diàleg musical entre tradicions peninsulars, combinant obres de laüt renaixentista amb repertori de guitarra barroca.
+{{< program_pdf src="/programs/originals/dos-peninsulas_ca.pdf" >}}
+
+{{< program_download pdf="/programs/originals/dos-peninsulas_ca.pdf" >}}

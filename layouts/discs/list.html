@@ -22,7 +22,7 @@
                 <a class="disc-card__link" href="{{ .url }}" target="_blank" rel="noopener">
                     {{ end }}
                     <div class="disc-cover">
-                        <img src="{{ .image | relURL }}" alt="{{ .title }}">
+                        <img src="{{ .image | relURL }}" alt="{{ .title }}" loading="lazy" decoding="async">
                     </div>
                     <div class="disc-meta">
                         <p class="disc-title">{{ .title }}</p>

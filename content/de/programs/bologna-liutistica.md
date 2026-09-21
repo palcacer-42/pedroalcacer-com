@@ -1,33 +1,44 @@
 ---
 title: "Bologna liutistica"
-description: "Renaissancelauten und Tiorba"
-pdf: "/programs/originals/f7ad3b_6d061e6c8f19409ba3f2400fff810c9f.pdf"
+description: "Renaissancelaute und Theorbe"
+pdf: "/programs/originals/bologna-liutistica_de.pdf"
 image: "/images/programs/bolognaliutistica.avif"
 group: "Solo"
 ---
 
-Laden Sie das Originalprogramm als PDF herunter: [PDF herunterladen](/programs/originals/f7ad3b_6d061e6c8f19409ba3f2400fff810c9f.pdf)
+{{< program_hero image="/images/programs/bolognaliutistica.avif" alt="Bologna liutistica" >}}
 
 ## Bologna liutistica
 
-Renaissancelauten und Tiorba
+**Renaissancelaute und Theorbe**
+
+{{% program_description %}}
+
+<!-- TODO: Insert proper program explanation here -->
+
+{{% /program_description %}}
+
+{{< program_divider >}}
+
+### Programm
 
 ### Laute
 
-- 3 Fantasien — Francesco Canova da Milano (Intavolatura di Lauto, Venedig 1546)
+- 3 Fantasie — Francesco Canova da Milano (Intavolatura di Lauto, Venice 1546)
 - Passacaglia — Alessandro Piccinini (Bologna 1623)
-- O dulx Roveoir / Ballo Allemano — Giovanni Antonio Terzi (Intavolatura di liuto, Venedig 1593)
+- O dulx Roveoir / Ballo Allemano — Giovanni Antonio Terzi (Intavolatura di liuto, Venice 1593)
 
-### Tiorba / Chitarrone
+### Theorbe / Chitarrone
 
-- Arpeggiata
-- Toccata prima
-- Werke von Giovanni Girolamo Kapsperger (Rom 1616)
-- Aria di sarabanda
-- Toccata in g-Moll
-- Partite sopra quest'aria francese detta l'Alemana
-- Toccata-corrente-gagliarda in G-Dur (Piccinini)
+- Arpeggiata — Giovanni Girolamo Kapsberger (Rome 1616)
+- Toccata prima — Giovanni Girolamo Kapsberger
+- Aria di sarabanda — Giovanni Girolamo Kapsberger
+- Toccata in G minor — Alessandro Piccinini
+- Partite sopra quest'aria francese detta l'Alemana — Alessandro Piccinini
+- Toccata-corrente-gagliarda in G major — Alessandro Piccinini (Bologna 1623)
 
-### Hinweise
+{{< program_divider >}}
 
-Ausgewählte Partiten und Tänze aus der Bologneser Tradition, mit Lautenrepertoire und Tiorba/Chitarrone-Arrangements aus Quellen des 16.–17. Jahrhunderts.
+{{< program_pdf src="/programs/originals/bologna-liutistica_de.pdf" >}}
+
+{{< program_download pdf="/programs/originals/bologna-liutistica_de.pdf" >}}
