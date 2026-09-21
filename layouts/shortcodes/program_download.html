@@ -2,6 +2,6 @@
 {{ $pdf := .Get "pdf" }}
 {{ if $pdf }}
 <div class="program-download">
-  <a href="{{ $pdf | relURL }}" class="download-btn" download>{{ i18n "download_full_program" | default "Download Full Program" }}</a>
+  <a href="{{ $pdf | relURL }}?v={{ now.Unix }}" class="download-btn" target="_blank" rel="noopener noreferrer">{{ i18n "download_full_program" | default "Download Full Program" }}</a>
 </div>
 {{ end }}

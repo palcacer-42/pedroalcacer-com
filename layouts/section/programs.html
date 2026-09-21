@@ -42,7 +42,7 @@
         </div>
         <div class="program-download">
           {{ if $p.Params.pdf }}
-          <a class="pdf-cta small" href="{{ $p.Params.pdf }}" aria-label="Download PDF for {{ $p.Title }}">
+          <a class="pdf-cta small" href="{{ $p.Params.pdf }}?v={{ now.Unix }}" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for {{ $p.Title }}">
             <i class="fas fa-file-pdf" aria-hidden="true"></i><span class="sr-only">Download PDF</span>
           </a>
           {{ else }}
@@ -77,7 +77,7 @@
         </div>
         <div class="program-download">
           {{ if $p.Params.pdf }}
-          <a class="pdf-cta small" href="{{ $p.Params.pdf }}" aria-label="Download PDF for {{ $p.Title }}">
+          <a class="pdf-cta small" href="{{ $p.Params.pdf }}?v={{ now.Unix }}" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for {{ $p.Title }}">
             <i class="fas fa-file-pdf" aria-hidden="true"></i><span class="sr-only">Download PDF</span>
           </a>
           {{ else }}
@@ -114,7 +114,7 @@
         <div class="program-download">
           <a class="programme-link small" href="{{ $p.RelPermalink }}" aria-label="Open programme for {{ $p.Title }}"><i
               class="fas fa-file-lines" aria-hidden="true"></i><span class="sr-only">Open programme</span></a>
-          {{ with $p.Params.pdf }}<a class="pdf-cta small" href="{{ . }}" aria-label="Download for {{ $p.Title }}"><i
+          {{ with $p.Params.pdf }}<a class="pdf-cta small" href="{{ . }}?v={{ now.Unix }}" target="_blank" rel="noopener noreferrer" aria-label="Download for {{ $p.Title }}"><i
               class="fas fa-file-pdf" aria-hidden="true"></i><span class="sr-only">Download PDF</span></a>{{ end }}
         </div>
       </li>
@@ -141,7 +141,7 @@
         </div>
         <div class="program-download">
           {{ if $p.Params.pdf }}
-          <a class="pdf-cta small" href="{{ $p.Params.pdf }}" aria-label="Download PDF for {{ $p.Title }}">
+          <a class="pdf-cta small" href="{{ $p.Params.pdf }}?v={{ now.Unix }}" target="_blank" rel="noopener noreferrer" aria-label="Download PDF for {{ $p.Title }}">
             <i class="fas fa-file-pdf" aria-hidden="true"></i><span class="sr-only">Download PDF</span>
           </a>
           {{ else }}
@@ -169,7 +169,7 @@
           <a class="program-name" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
           {{ with $p.Params.subtitle }}<div class="program-subtitle">{{ . }}</div>{{ end }}
         </div>
-        {{ with $p.Params.pdf }}<div class="program-download"><a class="pdf-cta small" href="{{ . }}"
+        {{ with $p.Params.pdf }}<div class="program-download"><a class="pdf-cta small" href="{{ . }}?v={{ now.Unix }}" target="_blank" rel="noopener noreferrer"
             aria-label="Download for {{ $p.Title }}">📄</a></div>{{ end }}
       </li>
       {{ end }}
