@@ -3,14 +3,14 @@ title: "Corde, Pelli e Passioni, Dalla Vihuela alla Chitarra Barocca"
 description: "Vihuela y guitarra barroca con percusión histórica"
 group: "Ensemble"
 weight: 1
-image: "/images/programs/cordepelliepassioni.jpg"
+image: "/images/programs/dalla-vihuela.jpg"
 pdf: "/programs/originals/dalla-vihuela-alla-chitarra-barocca_es.pdf"
 musicians:
   - "Pedro Alcàcer Doria — Vihuela e Chitarra barocca"
   - "Matteo Rabolini — Percussioni"
 ---
 
-{{< program_hero image="/images/programs/cordepelliepassioni.jpg" alt="Corde, Pelli e Passioni — Pedro Alcàcer Doria & Matteo Rabolini" >}}
+{{< program_hero image="/images/programs/dalla-vihuela.jpg" alt="Corde, Pelli e Passioni — Pedro Alcàcer Doria & Matteo Rabolini" >}}
 
 ## Corde, Pelli e Passioni
 ### Dalla Vihuela alla Chitarra Barocca
