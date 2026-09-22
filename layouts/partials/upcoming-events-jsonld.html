@@ -1,5 +1,5 @@
 {{/* JSON-LD for upcoming concerts using data/upcoming.yaml */}}
-{{ $events := site.Data.upcoming }}
+{{ $events := site.Data.concerts }}
 {{ if not $events }}{{ return }}{{ end }}
 {{ $now := now }}
 {{ $baseURL := site.BaseURL }}

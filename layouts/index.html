@@ -103,7 +103,7 @@
 </section>
 
 {{/* Italy highlight: only shows when there are upcoming concerts in Italy */}}
-{{ $upcoming := site.Data.upcoming }}
+{{ $upcoming := site.Data.concerts }}
 {{ $now := now }}
 {{ $italyEvents := slice }}
 {{ range $upcoming }}

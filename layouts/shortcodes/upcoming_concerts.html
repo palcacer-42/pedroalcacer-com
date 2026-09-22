@@ -1,6 +1,6 @@
 {{/* Shortcode: render upcoming concerts list */}}
 {{ $limit := .Get "limit" | default 10 }}
-{{ $events := site.Data.upcoming }}
+{{ $events := site.Data.concerts }}
 {{ $now := now }}
 {{ $items := slice }}
 {{ range $events }}
