@@ -16,7 +16,7 @@
 {{ $monthP := cond (eq (len $month) 1) (print "0" $month) $month }}
 {{ $dayP := cond (eq (len $day) 1) (print "0" $day) $day }}
 {{ $iso := print $year "-" $monthP "-" $dayP }}
-{{ if lt $iso ($now.Format "2006-01-02") }}{{ continue }}{{ end }}
+{{ $isPast := lt $iso ($now.Format "2006-01-02") }}
 {{ $city := cond (isset . "city") .city "" }}
 {{ $venue := cond (isset . "venue") .venue "" }}
 {{ $program := cond (isset . "program") .program "" }}
@@ -32,9 +32,9 @@
 {{ $isItaly := or (in $cityLower "italy") (in $cityLower "italia") (in $cityLower "italien") }}
 {{ $item := dict "date" $iso "city" $city "venue" $venue "program" $program "ensemble" $ensemble "url" $url "isItaly" $isItaly }}
 {{ $items = $items | append $item }}
-{{ if $isItaly }}{{ $italianItems = $italianItems | append $item }}{{ end }}
+{{ if and $isItaly (not $isPast) }}{{ $italianItems = $italianItems | append $item }}{{ end }}
 {{ end }}
-{{ $sorted := sort $items "date" }}
+{{ $sorted := sort $items "date" "desc" }}
 {{ $italianSorted := sort $italianItems "date" }}
 
 <section class="page-content section-with-gradient">
@@ -67,8 +67,41 @@
     </div>
     {{ end }}
 
-    <div class="elegant-card">
+    <div class="elegant-card large-calendar-container" style="margin-bottom: 40px;">
       <h2 class="concerts-section-title">{{ i18n "upcoming_concerts" | default "Upcoming Concerts" }}</h2>
+      
+      {{ $cal := .Site.Params.googleCalendar }}
+      {{ if $cal }}
+      <div id="google-calendar-widget" data-calendar-id="{{ $cal.calendarId }}" data-api-key="{{ $cal.apiKey }}" {{ if $cal.endpoint }}data-endpoint="{{ $cal.endpoint }}"{{ end }}></div>
+      <script src="{{ "js/google-calendar-widget.js" | relURL }}?v={{ now.Unix }}" defer></script>
+      
+      <style>
+        .large-calendar-container .gc-list-container {
+            font-size: 1.3em;
+            padding: 20px;
+        }
+        .large-calendar-container .gc-item {
+            padding: 15px 0;
+        }
+        .large-calendar-container .gc-title-text, .large-calendar-container .gc-title-link {
+            font-size: 1.3em;
+        }
+        .large-calendar-container .gc-date-line1, .large-calendar-container .gc-date-line2 {
+            font-size: 1.1em;
+        }
+        .large-calendar-container .gc-details {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+      </style>
+      {{ else }}
+      <p class="concerts-empty">Calendar not configured.</p>
+      {{ end }}
+    </div>
+
+    <div class="elegant-card">
+      <h2 class="concerts-section-title">Past Concerts Archive</h2>
       {{ if gt (len $sorted) 0 }}
       <ul class="concerts-list upcoming">
         {{ range $sorted }}
